@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#E04E39">
+    <title>Ember.js - Ember Data v1.0.0-beta.12 Released</title>
+    <meta property="st:title" content="Ember.js: Ember Data v1.0.0-beta.12 Released" />
+    <meta property="og:title" content="Ember.js: Ember Data v1.0.0-beta.12 Released" />
+    <meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
+    <meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@emberjs" />
+    <meta name="twitter:title" content="Ember Data v1.0.0-beta.12 Released"/>
+    <meta name="google-site-verification" content="N9yOP2jCLcZBMHUet-JRqU2jnLVPeLDaePpkCqXGQXM" />
+    <meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
+    <link rel="shortcut icon" href="/images/favicon-b8f150dd.png" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
+    <!--[if lte IE 7 ]><link href="/stylesheets/fonts/fontello-ie7-e008d616.css" rel="stylesheet" /><![endif]-->
+    <link href="/stylesheets/site-364c2a35.css" rel="stylesheet" />
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-cf72b59a166beb307683d9d0dae6bb0f.css" />
+    
+  </head>
+
+  <body class="blog blog_2014 blog_2014_11 blog_2014_11_24 blog_2014_11_24_ember-data-1-0-beta-12-released responsive">
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/common-old-ie-a6691877.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script type="text/javascript" src="/javascripts/common-modern-7c867c7e.js"></script>
+    <!--<![endif]-->
+    <header>
+<nav class="navbar navbar-inverse">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="/"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home" /></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Docs <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="//guides.emberjs.com">Guides</a></li>
+      <li><a href="/api/ember/release">API Reference</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/learn">Learn Ember</a></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Releases <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/builds">Channels</a></li>
+      <li><a href="/builds/release">-- Stable</a></li>
+      <li><a href="/builds/beta">-- Beta</a></li>
+      <li><a href="/builds/canary">-- Canary</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/deprecations">Deprecations</a></li>
+      <li><a href="/statusboard">Status Board</a></li>
+     </ul>
+    </li>
+    <li><a href="/blog">Blog</a></li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/community">The Ember Community</a>
+       <li><a href="/guidelines">Guidelines</a></li>
+       <li><a href="http://github.com/emberjs/">Contribute (Github)</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/community/meetups">Meetups</a></li>
+       <li><a href="http://jobs.emberjs.com/">Job Board</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberconf.com/">Ember Conf</a></li>
+     </ul>
+     </li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="/team">The Team</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/logos">Logos</a></li>
+       <li><a href="/mascots">Mascots</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/ember-users">Who Uses Ember</a></li>
+       <li><a href="/sponsors">Sponsors</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/legal">Legal</a></li>
+       <li><a href="/security">Security</a></li>       
+      </ul>
+     </li>
+   </ul>
+   <form class="navbar-form navbar-right searchbox">
+    <div class="input-group">
+      <label for="search-input" class="control-label sr-only">Search</label>
+        <input type="text" 
+        class="form-control search input ds-input" 
+        placeholder="Search..." 
+        id="search-input" 
+        role="combobox" 
+        aria-expanded="false" 
+        aria-owns="algolia-autocomplete-listbox-0" 
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false" 
+        />
+        <span></span>
+    </div>
+   </form>
+  </div>
+  <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container-fluid -->
+</nav>
+</header>
+
+
+    
+
+    <div id="content-wrapper" class="content-wrapper">
+        <div id="sidebar" class="sidebar" role="complementary">
+          <ol id='toc-list' class="blog-sidebar">
+  <li class='level-1'>
+    <a href="/blog/tags/recent-posts.html">Recent Posts</a>
+    <ol style="display:block">
+      <li class='level-3'><a href="/blog/2018/02/21/2018-ember-community-survey.html">2018 Ember Community Survey</a></li>
+      <li class='level-3'><a href="/blog/2017/10/10/glimmer-progress-report.html">Glimmer.js Progress Report</a></li>
+      <li class='level-3'><a href="/blog/2017/10/03/the-road-to-ember-3-0.html">The Road to Ember 3.0</a></li>
+      <li class='level-3'><a href="/blog/2017/04/05/emberconf-2017-state-of-the-union.html">EmberConf 2017: State of the Union</a></li>
+      <li class='level-3'><a href="/blog/2017/02/28/2017-ember-community-survey.html">2017 Ember Community Survey</a></li>
+    </ol>
+  </li>
+  <li class='level-1'>
+    <a href="/blog/tags/releases.html">Releases</a>
+    <ol style="display:block">
+      <li class='level-3'><a href="/blog/2018/04/13/ember-3-1-released.html">Ember 3.1 and 3.2 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2018/02/16/ember-3-1-beta-released.html">Ember 3.1 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2018/02/14/ember-3-0-released.html">Ember 3.0 Released</a></li>
+      <li class='level-3'><a href="/blog/2018/01/01/ember-2-18-released.html">Ember 2.18 and 3.0 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/11/20/ember-2-17-released.html">Ember 2.16-LTS, Ember 2.17 and 2.18 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/10/11/ember-2-16-released.html">Ember 2.16 and 2.17 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/09/01/ember-2-15-released.html">Ember 2.15 and 2.16 Beta Released</a></li>
+    </ol>
+  </li>
+</ol>
+
+          <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
+        </div>
+      <div id="content" class="main has-sidebar" role="main">
+          
+  <article class="blog-post">
+    <div class="blog-post-header">
+      <h1 class="blog-post-title">Ember Data v1.0.0-beta.12 Released</h1>
+      <div class="blog-post-meta">
+          <time class="blog-post-date">November 24, 2014</time>
+          <div class="blog-post-author">By Stanley Stuart</div>
+      </div>
+    </div>
+    <div class="blog-post-body" id="toc-content">
+      <h2 class='anchorable-toc' id='toc_new-core-contributors'>New Core Contributors</h2>
+<p>Long-time contributors <a href="https://github.com/bmac">Brendan McLoughlin</a> and <a href="https://github.com/sly7-7">Sylvain Mina</a>
+have been given collaborator status and will help us triage issues, merge pull
+requests, and contribute bugfixes and documentation.</p>
+<h2 class='anchorable-toc' id='toc_new-features'>New Features</h2><h3 class='anchorable-toc' id='toc_store-fetch'>store.fetch</h3>
+<p>When using Ember Data, the most common pattern in the <code>model</code> hook is to call
+<code>store.find</code> for your model:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">default</span> <span class="keyword">var</span> PostRoute = Ember.Route.extend({
+  <span class="function">model</span>: <span class="keyword">function</span>(params) {
+    <span class="keyword">return</span> <span class="local-variable">this</span>.store.find(<span class="string"><span class="delimiter">'</span><span class="content">post</span><span class="delimiter">'</span></span>, params.post_id);
+  }
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p><code>store.find</code> will return the instance of the <code>Post</code> record if it has already
+been fetched in the store. Sometimes, this is not desirable. For example, you
+may not know if you have already loaded the post in another request via
+sideloading, or you want the most up to date information. You could either
+check if the record existed using
+<a href="http://emberjs.com/api/data/classes/DS.Store.html#method_hasRecordForId">store.hasRecordForId</a>, or just always call
+<a href="http://emberjs.com/api/data/classes/DS.Model.html#method_reload">reload</a> on your model in the route&#39;s <code>afterModel</code>hook.</p>
+
+<p><code>store.fetch</code> wraps this common pattern by reloading a record if it exists in
+the store, or reloads the record if it doesn&#39;t exist:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+</pre></td>
+  <td class="code"><pre><span class="function">model</span>: <span class="keyword">function</span>(params){
+  <span class="keyword">return</span> <span class="local-variable">this</span>.store.fetch(<span class="string"><span class="delimiter">'</span><span class="content">post</span><span class="delimiter">'</span></span>, params.post_id);
+}
+</pre></td>
+</tr></table>
+</div></div>
+<p>Please give a warm thanks to <a href="https://github.com/thaume">Tom Coquereau</a> for his <a href="https://github.com/emberjs/data/pull/2478">pull
+request</a> implementing this feature!</p>
+<h2 class='anchorable-toc' id='toc_bugfixes'>Bugfixes</h2><h3 class='anchorable-toc' id='toc_relationship-createrecord-returns-the-record-instead-of-a-promise'>relationship.createRecord() returns the record instead of a promise</h3>
+<p>Prior to Ember Data v1.0.0-beta.11, the following code would give you direct
+access to a record:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+</pre></td>
+  <td class="code"><pre><span class="keyword">var</span> post    = store.createRecord(<span class="string"><span class="delimiter">'</span><span class="content">post</span><span class="delimiter">'</span></span>);
+<span class="keyword">var</span> comment = post.get(<span class="string"><span class="delimiter">'</span><span class="content">comments</span><span class="delimiter">'</span></span>).createRecord(<span class="string"><span class="delimiter">'</span><span class="content">comment</span><span class="delimiter">'</span></span>);
+</pre></td>
+</tr></table>
+</div></div>
+<p>In beta.11, it returned a Promise, meaning you couldn&#39;t call things like
+<code>set/get</code> on the resulting record. This regression has been fixed in beta.12
+thanks to <a href="https://github.com/ZenCocoon">Sébastien Grosjean</a>.</p>
+<h2 class='anchorable-toc' id='toc_breaking-changes'>Breaking Changes</h2><h3 class='anchorable-toc' id='toc_internet-explorer-8-requires-ember-1-8'>Internet Explorer 8 Requires Ember 1.8</h3>
+<p>A bug in Ember 1.7&#39;s <code>Ember.create</code> method (which is a polyfill for
+<code>Object.create</code>) combined with a bug in es5-shim&#39;s <code>Object.create</code> prevent us
+from giving Ember Data users a good alternative to use. Internally, Ember Data
+uses <code>Object.create</code> for efficient caches. Ember 1.8 ships a working
+<code>Object.create</code> polyfill on <code>Ember.create</code> so if you are using Internet
+Explorer 8 and Ember Data in production, you should upgrade to Ember 1.8 as
+soon as you can.</p>
+
+<p>If you are using browsers that provide <code>Object.create</code>, you do not need to do
+any additional work here. This includes mobile browsers, evergreen browsers
+(Chrome, Opera, Firefox), Safari, and IE9+.</p>
+<h3 class='anchorable-toc' id='toc_ember-1-7-support-will-be-completely-dropped-in-beta-13'>Ember 1.7 Support Will Be Completely Dropped in Beta.13</h3>
+<p>Ember Data relies heavily on JavaScript language-level shims (such as the
+<code>Object.create</code> issue mentioned above) and other useful internals that Ember
+provides. Rather than creating our own detection algorithms and more polyfills
+for broken code in Ember 1.7, we are deciding to drop 1.7 support in the next
+release of Ember Data. We do so in order to not increase the final size of
+Ember Data&#39;s build. You should upgrade to Ember 1.8 as soon as you can.</p>
+<h3 class='anchorable-toc' id='toc_observing-code-data-code-for-changes-has-been-removed'>Observing <code>data</code> For Changes Has Been Removed</h3>
+<p>Although <code>model.get(&#39;data&#39;)</code> has been private in Ember Data for a long time, we
+have noticed users may subscribe to changes on <code>data</code> for any change to the
+model&#39;s attributes. This means that the following code:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+</pre></td>
+  <td class="code"><pre><span class="keyword">var</span> Post = DS.Model.extend({
+  <span class="function">doSomethingWhenDataChanges</span>: <span class="keyword">function</span>(){
+    <span class="comment">// do the work</span>
+  }.property(<span class="string"><span class="delimiter">'</span><span class="content">data</span><span class="delimiter">'</span></span>)
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p><strong>no longer works</strong>. Instead, you should just watch each attribute like you
+would with any <code>Ember.Object</code>:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td>
+  <td class="code"><pre><span class="keyword">var</span> Post = DS.Model.extend({
+  <span class="key">name</span>: DS.attr(),
+  <span class="key">date</span>: DS.attr(),
+  <span class="function">doSomethingWhenDataChanges</span>: <span class="keyword">function</span>(){
+    <span class="comment">// do the work</span>
+  }.property(<span class="string"><span class="delimiter">'</span><span class="content">name</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">date</span><span class="delimiter">'</span></span>)
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>This change fixed some bugs around observers. Thanks to <a href="https://github.com/wecc">Christoffer
+Persson</a> for helping to clean this up and fix some observer bugs around
+this!</p>
+<h2 class='anchorable-toc' id='toc_special-thanks'>Special Thanks</h2>
+<p>Thanks to <a href="https://github.com/wecc">Christoffer Persson</a> for helping us implement bugfixes and API
+changes, as well as triaging issues.</p>
+
+<!-- Links -->
+
+    </div>
+    <div class="blog-post-footer">
+    </div>
+  </article>
+  <hr>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'emberblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script type="text/javascript" src="/javascripts/blog-a90057c5.js"></script>
+
+      </div>
+    </div>
+
+    <main-footer></main-footer>
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
+    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
+  </body>
+</html>
+

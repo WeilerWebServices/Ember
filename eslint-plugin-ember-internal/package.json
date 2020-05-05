@@ -1,0 +1,35 @@
+{
+  "name": "eslint-plugin-ember-internal",
+  "version": "1.1.1",
+  "description": "Rules used internally by Ember.js",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "Tobias Bieniek",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "dependencies": {
+    "line-column": "^1.0.2",
+    "requireindex": "~1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "~2.6.0",
+    "mocha": "^3.0.2"
+  },
+  "license": "MIT",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Turbo87/eslint-plugin-ember-internal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Turbo87/eslint-plugin-ember-internal/issues"
+  },
+  "homepage": "https://github.com/Turbo87/eslint-plugin-ember-internal#readme"
+}

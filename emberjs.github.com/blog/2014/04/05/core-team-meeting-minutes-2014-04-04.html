@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#E04E39">
+    <title>Ember.js - Core Team Meeting Minutes - 2014/04/04</title>
+    <meta property="st:title" content="Ember.js: Core Team Meeting Minutes - 2014/04/04" />
+    <meta property="og:title" content="Ember.js: Core Team Meeting Minutes - 2014/04/04" />
+    <meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
+    <meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@emberjs" />
+    <meta name="twitter:title" content="Core Team Meeting Minutes - 2014/04/04"/>
+    <meta name="google-site-verification" content="N9yOP2jCLcZBMHUet-JRqU2jnLVPeLDaePpkCqXGQXM" />
+    <meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
+    <link rel="shortcut icon" href="/images/favicon-b8f150dd.png" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
+    <!--[if lte IE 7 ]><link href="/stylesheets/fonts/fontello-ie7-e008d616.css" rel="stylesheet" /><![endif]-->
+    <link href="/stylesheets/site-364c2a35.css" rel="stylesheet" />
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-cf72b59a166beb307683d9d0dae6bb0f.css" />
+    
+  </head>
+
+  <body class="blog blog_2014 blog_2014_04 blog_2014_04_05 blog_2014_04_05_core-team-meeting-minutes-2014-04-04 responsive">
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/common-old-ie-a6691877.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script type="text/javascript" src="/javascripts/common-modern-7c867c7e.js"></script>
+    <!--<![endif]-->
+    <header>
+<nav class="navbar navbar-inverse">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="/"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home" /></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Docs <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="//guides.emberjs.com">Guides</a></li>
+      <li><a href="/api/ember/release">API Reference</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/learn">Learn Ember</a></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Releases <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/builds">Channels</a></li>
+      <li><a href="/builds/release">-- Stable</a></li>
+      <li><a href="/builds/beta">-- Beta</a></li>
+      <li><a href="/builds/canary">-- Canary</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/deprecations">Deprecations</a></li>
+      <li><a href="/statusboard">Status Board</a></li>
+     </ul>
+    </li>
+    <li><a href="/blog">Blog</a></li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/community">The Ember Community</a>
+       <li><a href="/guidelines">Guidelines</a></li>
+       <li><a href="http://github.com/emberjs/">Contribute (Github)</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/community/meetups">Meetups</a></li>
+       <li><a href="http://jobs.emberjs.com/">Job Board</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberconf.com/">Ember Conf</a></li>
+     </ul>
+     </li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="/team">The Team</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/logos">Logos</a></li>
+       <li><a href="/mascots">Mascots</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/ember-users">Who Uses Ember</a></li>
+       <li><a href="/sponsors">Sponsors</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/legal">Legal</a></li>
+       <li><a href="/security">Security</a></li>       
+      </ul>
+     </li>
+   </ul>
+   <form class="navbar-form navbar-right searchbox">
+    <div class="input-group">
+      <label for="search-input" class="control-label sr-only">Search</label>
+        <input type="text" 
+        class="form-control search input ds-input" 
+        placeholder="Search..." 
+        id="search-input" 
+        role="combobox" 
+        aria-expanded="false" 
+        aria-owns="algolia-autocomplete-listbox-0" 
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false" 
+        />
+        <span></span>
+    </div>
+   </form>
+  </div>
+  <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container-fluid -->
+</nav>
+</header>
+
+
+    
+
+    <div id="content-wrapper" class="content-wrapper">
+        <div id="sidebar" class="sidebar" role="complementary">
+          <ol id='toc-list' class="blog-sidebar">
+  <li class='level-1'>
+    <a href="/blog/tags/recent-posts.html">Recent Posts</a>
+    <ol style="display:block">
+      <li class='level-3'><a href="/blog/2018/02/21/2018-ember-community-survey.html">2018 Ember Community Survey</a></li>
+      <li class='level-3'><a href="/blog/2017/10/10/glimmer-progress-report.html">Glimmer.js Progress Report</a></li>
+      <li class='level-3'><a href="/blog/2017/10/03/the-road-to-ember-3-0.html">The Road to Ember 3.0</a></li>
+      <li class='level-3'><a href="/blog/2017/04/05/emberconf-2017-state-of-the-union.html">EmberConf 2017: State of the Union</a></li>
+      <li class='level-3'><a href="/blog/2017/02/28/2017-ember-community-survey.html">2017 Ember Community Survey</a></li>
+    </ol>
+  </li>
+  <li class='level-1'>
+    <a href="/blog/tags/releases.html">Releases</a>
+    <ol style="display:block">
+      <li class='level-3'><a href="/blog/2018/04/13/ember-3-1-released.html">Ember 3.1 and 3.2 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2018/02/16/ember-3-1-beta-released.html">Ember 3.1 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2018/02/14/ember-3-0-released.html">Ember 3.0 Released</a></li>
+      <li class='level-3'><a href="/blog/2018/01/01/ember-2-18-released.html">Ember 2.18 and 3.0 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/11/20/ember-2-17-released.html">Ember 2.16-LTS, Ember 2.17 and 2.18 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/10/11/ember-2-16-released.html">Ember 2.16 and 2.17 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/09/01/ember-2-15-released.html">Ember 2.15 and 2.16 Beta Released</a></li>
+    </ol>
+  </li>
+</ol>
+
+          <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
+        </div>
+      <div id="content" class="main has-sidebar" role="main">
+          
+  <article class="blog-post">
+    <div class="blog-post-header">
+      <h1 class="blog-post-title">Core Team Meeting Minutes - 2014/04/04</h1>
+      <div class="blog-post-meta">
+          <time class="blog-post-date">April 5, 2014</time>
+          <div class="blog-post-author">By Robert Jackson</div>
+      </div>
+    </div>
+    <div class="blog-post-body" id="toc-content">
+      <p>Although most of our collaboration takes place on Github, IRC
+(<code>#emberjs</code> on freenode.net), and our <a href="http://discuss.emberjs.com/">Discourse site</a>
+the <a href="/team">Ember.js Core Team</a> meets privately every
+Friday at 2pm EST/11am PST through Google Hangout for a weekly
+discussion of all things Ember.</p>
+
+<p>If you have a topic you&#39;d like to see covered, contact your favorite
+core team member and let them know!</p>
+<h4 class='anchorable-toc' id='toc_attendees'>Attendees</h4>
+<p><a href="https://twitter.com/ebryn">@ebryn</a>, <a href="https://twitter.com/krisselden">@krisselden</a>, <a href="https://twitter.com/machty">@machty</a>,
+<a href="https://twitter.com/rwjblue">@rwjblue</a>, <a href="https://twitter.com/wagenet">@wagenet</a>, <a href="https://twitter.com/tomdale">@tomdale</a></p>
+<h3 class='anchorable-toc' id='toc_topics'>Topics</h3><h3 class='anchorable-toc' id='toc_pr-s-issues-to-review'>PR&#39;s/Issues To Review</h3>
+<ul>
+<li><a href="https://github.com/emberjs/ember.js/pull/4645">BUGFIX beta Allow setting of <code>undefined</code> value to a <code>content</code> property</a></li>
+</ul>
+
+<p>Fixes setting of <code>undefined</code> value to a content property. </p>
+
+<p>Still, checking <code>obj[keyName] === value</code> in these <a href="https://github.com/selvagsz/ember.js/blob/master/packages_es6/ember-metal/lib/property_set.js#L52-54">lines</a> is bypassed in two cases</p>
+
+<ul>
+<li>If the setter value is <code>undefined</code></li>
+<li>If the setter property lies inside the proxied content</li>
+</ul>
+
+<p>Using <code>get(obj, keyName)</code> might resolve. But was quite nervous to do that as it may involve some additional function calls</p>
+
+<p>+1 by @stefanpenner, but he requests @krisselden to review.</p>
+
+<p><strong>Resolution</strong></p>
+
+<p>Seems good, but @krisselden will review in further detail. Will attempt to have this update in 1.6.0-beta.2.</p>
+
+<ul>
+<li><a href="https://github.com/emberjs/ember.js/pull/4636">BUGFIX beta Ensure context is unchanged when using keywords with itemController.</a></li>
+</ul>
+
+<p>Prior to this change the following code would bind <code>this</code> in the template block to the itemController&#39;s content (even
+  though the keyword form of <code>{{each}}</code> is used).</p>
+
+<p>This change sets the child view&#39;s <code>_context</code> property to the current context when using the keyword form of <code>{{each}}</code>,
+  and a couple of confirming tests to demonstrate using <code>itemController</code> specified in either the <code>ArrayController</code> or the
+  template directly.</p>
+
+<p><a href="http://emberjs.jsbin.com/zokali/1/edit">Failing JSBin</a> | <a href="http://emberjs.jsbin.com/kecen/1/edit">Passing JSBin</a></p>
+
+<p>Fixes #4634.</p>
+
+<p><strong>Resolution</strong></p>
+
+<p>The intent of the <code>each foo in bar</code> syntax is specifically to preserve the current context. However, using <code>each foo in bar</code> syntax along
+  with an <code>itemController</code> has always changed the inner templates context. This change seems good, but all context related changes
+  require a bit of additional review. @krisselden to review further and +1/-1.</p>
+
+<ul>
+<li><a href="https://github.com/emberjs/ember.js/pull/4598">BUGFIX beta {{view}} helper no longer uses Ember.View global, instead uses container view:default</a></li>
+</ul>
+
+<p>During the ES6-ify process @rwjblue left a comment mentioning that the {{view}} helper needs to not look up
+  Ember.View globally. This PR fixes this by looking up view:default from the container (which Ember.View is
+  registered at, by default).</p>
+
+<p><strong>Resolution</strong></p>
+
+<p>Looking up <code>view:default</code> in the container is definitely more appropriate than hard-coding to <code>Ember.View</code>.</p>
+
+<p>Merged.</p>
+
+<ul>
+<li><a href="https://github.com/emberjs/ember.js/pull/4655">BUGFIX beta Add better debugging for DefaultResolver.</a></li>
+</ul>
+
+<p>Adds nice log entries if your application was created with <code>LOG_RESOLVER</code> set.</p>
+
+<p>Example log entries:</p>
+<div class="highlight text "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+</pre></td>
+  <td class="code"><pre>  [ ] route:application ..........................................  App.ApplicationRoute
+  [✓] route:index ................................................  App.IndexRoute
+  [ ] controller:application .....................................  App.ApplicationController
+</pre></td>
+</tr></table>
+</div></div>
+<p>Fixes #4654.</p>
+
+<p>Example <a href="http://emberjs.jsbin.com/maxum/1">JSBin</a> (look at console)</p>
+
+<p><strong>Resolution</strong></p>
+
+<p>This adds good insight into exactly what the resolver is doing and what you need to implement to add
+  custom behavior. In the future, a better API needs to be created to enable these logging options (hanging
+  a bunch of properties off of the application instance is sub-optimal).</p>
+
+<p>Merged (will be in 1.6.0-beta.2).</p>
+
+<ul>
+<li><a href="https://github.com/emberjs/ember.js/pull/4352">FEATURE ember-handlebars-radio-buttons Implement radio buttons</a></li>
+</ul>
+
+<p>This updates <a href="https://github.com/emberjs/ember.js/pull/1235">#1235</a> to extend component, adds handlebar helpers,
+  updates tests and documentation. I think a lot of people would be pleased to see radio buttons in the core and I 
+  see a lot of developers at my company have a hard time with radio buttons when they first get started with Ember,
+  so I think this would be a great addition to the core.</p>
+
+<p><strong>Resolution</strong></p>
+
+<p>We would prefer for this to live as an addon for a while to allow the community to test (and influence) the API.</p>
+
+<ul>
+<li><a href="https://github.com/emberjs/ember.js/issues/4613">Transitioning to a globbing route does not work</a></li>
+</ul>
+
+<p>I think it&#39;s a corner case, so I don&#39;t know if this should work, or if you would fix that.
+  Anyway, in my application, I&#39;m defining a notFound route, hit when the user plays with the url and gives something wrong.
+  I also want redirect to this route when the user try to access an unexisting record (ie the backend answer a 404). So I basically tried to define an error handler in the ApplicationRoute, and transitionTo(&#39;notFound&#39;). Unfortunately it does not work. Though if I remove the globbing path, then it works for the redirection, but obviously not when entering unknown url.</p>
+
+<p>I made a jsbin reproducing it: <a href="http://emberjs.jsbin.com/ucanam/4401/edit">here</a></p>
+
+<p><strong>Resolution</strong></p>
+
+<p>It is possible to transition to a globbing route, but like any target route with a dynamic segment, you need to
+   provide a object / param, which in this case can just be a string of the path you want to use for that globbed segment:</p>
+
+<p><code>this.transitionTo(&#39;yargle&#39;, &quot;MY/COOL/URL&quot;);</code></p>
+
+<p><a href="http://emberjs.jsbin.com/ucanam/4522/edit">JSBin</a></p>
+
+    </div>
+    <div class="blog-post-footer">
+    </div>
+  </article>
+  <hr>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'emberblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script type="text/javascript" src="/javascripts/blog-a90057c5.js"></script>
+
+      </div>
+    </div>
+
+    <main-footer></main-footer>
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
+    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
+  </body>
+</html>
+

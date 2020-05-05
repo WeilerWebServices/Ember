@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#E04E39">
+    <title>Ember.js - Core Team Meeting Minutes - 2014/03/07</title>
+    <meta property="st:title" content="Ember.js: Core Team Meeting Minutes - 2014/03/07" />
+    <meta property="og:title" content="Ember.js: Core Team Meeting Minutes - 2014/03/07" />
+    <meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
+    <meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@emberjs" />
+    <meta name="twitter:title" content="Core Team Meeting Minutes - 2014/03/07"/>
+    <meta name="google-site-verification" content="N9yOP2jCLcZBMHUet-JRqU2jnLVPeLDaePpkCqXGQXM" />
+    <meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
+    <link rel="shortcut icon" href="/images/favicon-b8f150dd.png" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
+    <!--[if lte IE 7 ]><link href="/stylesheets/fonts/fontello-ie7-e008d616.css" rel="stylesheet" /><![endif]-->
+    <link href="/stylesheets/site-364c2a35.css" rel="stylesheet" />
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-cf72b59a166beb307683d9d0dae6bb0f.css" />
+    
+  </head>
+
+  <body class="blog blog_2014 blog_2014_03 blog_2014_03_22 blog_2014_03_22_core-team-meeting-minutes-2014-03-07 responsive">
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/common-old-ie-a6691877.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script type="text/javascript" src="/javascripts/common-modern-7c867c7e.js"></script>
+    <!--<![endif]-->
+    <header>
+<nav class="navbar navbar-inverse">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="/"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home" /></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Docs <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="//guides.emberjs.com">Guides</a></li>
+      <li><a href="/api/ember/release">API Reference</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/learn">Learn Ember</a></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Releases <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/builds">Channels</a></li>
+      <li><a href="/builds/release">-- Stable</a></li>
+      <li><a href="/builds/beta">-- Beta</a></li>
+      <li><a href="/builds/canary">-- Canary</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/deprecations">Deprecations</a></li>
+      <li><a href="/statusboard">Status Board</a></li>
+     </ul>
+    </li>
+    <li><a href="/blog">Blog</a></li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/community">The Ember Community</a>
+       <li><a href="/guidelines">Guidelines</a></li>
+       <li><a href="http://github.com/emberjs/">Contribute (Github)</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/community/meetups">Meetups</a></li>
+       <li><a href="http://jobs.emberjs.com/">Job Board</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberconf.com/">Ember Conf</a></li>
+     </ul>
+     </li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="/team">The Team</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/logos">Logos</a></li>
+       <li><a href="/mascots">Mascots</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/ember-users">Who Uses Ember</a></li>
+       <li><a href="/sponsors">Sponsors</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/legal">Legal</a></li>
+       <li><a href="/security">Security</a></li>       
+      </ul>
+     </li>
+   </ul>
+   <form class="navbar-form navbar-right searchbox">
+    <div class="input-group">
+      <label for="search-input" class="control-label sr-only">Search</label>
+        <input type="text" 
+        class="form-control search input ds-input" 
+        placeholder="Search..." 
+        id="search-input" 
+        role="combobox" 
+        aria-expanded="false" 
+        aria-owns="algolia-autocomplete-listbox-0" 
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false" 
+        />
+        <span></span>
+    </div>
+   </form>
+  </div>
+  <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container-fluid -->
+</nav>
+</header>
+
+
+    
+
+    <div id="content-wrapper" class="content-wrapper">
+        <div id="sidebar" class="sidebar" role="complementary">
+          <ol id='toc-list' class="blog-sidebar">
+  <li class='level-1'>
+    <a href="/blog/tags/recent-posts.html">Recent Posts</a>
+    <ol style="display:block">
+      <li class='level-3'><a href="/blog/2018/02/21/2018-ember-community-survey.html">2018 Ember Community Survey</a></li>
+      <li class='level-3'><a href="/blog/2017/10/10/glimmer-progress-report.html">Glimmer.js Progress Report</a></li>
+      <li class='level-3'><a href="/blog/2017/10/03/the-road-to-ember-3-0.html">The Road to Ember 3.0</a></li>
+      <li class='level-3'><a href="/blog/2017/04/05/emberconf-2017-state-of-the-union.html">EmberConf 2017: State of the Union</a></li>
+      <li class='level-3'><a href="/blog/2017/02/28/2017-ember-community-survey.html">2017 Ember Community Survey</a></li>
+    </ol>
+  </li>
+  <li class='level-1'>
+    <a href="/blog/tags/releases.html">Releases</a>
+    <ol style="display:block">
+      <li class='level-3'><a href="/blog/2018/04/13/ember-3-1-released.html">Ember 3.1 and 3.2 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2018/02/16/ember-3-1-beta-released.html">Ember 3.1 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2018/02/14/ember-3-0-released.html">Ember 3.0 Released</a></li>
+      <li class='level-3'><a href="/blog/2018/01/01/ember-2-18-released.html">Ember 2.18 and 3.0 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/11/20/ember-2-17-released.html">Ember 2.16-LTS, Ember 2.17 and 2.18 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/10/11/ember-2-16-released.html">Ember 2.16 and 2.17 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/09/01/ember-2-15-released.html">Ember 2.15 and 2.16 Beta Released</a></li>
+    </ol>
+  </li>
+</ol>
+
+          <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
+        </div>
+      <div id="content" class="main has-sidebar" role="main">
+          
+  <article class="blog-post">
+    <div class="blog-post-header">
+      <h1 class="blog-post-title">Core Team Meeting Minutes - 2014/03/07</h1>
+      <div class="blog-post-meta">
+          <time class="blog-post-date">March 22, 2014</time>
+          <div class="blog-post-author">By Trek Glowacki</div>
+      </div>
+    </div>
+    <div class="blog-post-body" id="toc-content">
+      <p>Although most of our collaboration takes place on Github, IRC
+(<code>#emberjs</code> on freenode.net), and our <a href="http://discuss.emberjs.com/">Discourse site</a>
+the <a href="/team">Ember.js Core Team</a> meets privately every
+Friday at 2pm EST/11am PST through Google Hangout for a weekly
+discussion of all things Ember.</p>
+
+<p>If you have a topic you&#39;d like to see covered, contact your favorite
+core team member and let them know!</p>
+<h4 class='anchorable-toc' id='toc_attendees'>Attendees</h4>
+<p>@ebryn, @krisselden, @machty, @rwjblue, @stefanpenner, @tomdale, @trek, @wycats</p>
+<h3 class='anchorable-toc' id='toc_topics'>Topics</h3><h4 class='anchorable-toc' id='toc_features-pending-go-decision-a-href-https-github-com-emberjs-ember-js-issues-4052-tracking-issue-a'>Features pending &#39;Go&#39; decision. <a href="https://github.com/emberjs/ember.js/issues/4052">Tracking Issue</a></h4>
+<ul>
+<li> <code>ember-routing-add-model-option</code> <a href="https://github.com/emberjs/ember.js/pull/4293">#4293</a>
+Resolution: Go</li>
+</ul>
+<h3 class='anchorable-toc' id='toc_pr-s-issues-to-review'>PR&#39;s/Issues To Review</h3>
+<ul>
+<li><p>Query Params New - Sticky Params?</p>
+
+<p>Should query paramters remain on route change? When do we want it? All the time?
+How do we disable it? Proposals thus far:</p>
+<div class="highlight text "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+</pre></td>
+  <td class="code"><pre>/r?sort=asc ← keep
+/r/ios?sort=hot ← keep? “model specific state”
+/r/gonewild ← keep? “model specific state”
+/r/foo?name=’something related to foo’
+</pre></td>
+</tr></table>
+</div></div>
+<p>or
+<code>
+/blog/somepost?comments=true
+then navigate to
+/blog/someOtherPost?comments=true ← keep?
+/blog/someOtherPostthen ← don’t keep?
+// then navigate to
+/blog/somepost?comments=true ← kept from before? kept from last route? gone from last route?
+</code></p>
+
+<p>Possible opt-out via helper?
+<code>
+{{link-to ‘Home’ ‘home’ (query-params sort=null)}}
+</code></p>
+
+<p>some options:</p>
+
+<ul>
+<li>Preserve stickiness as the default, but add a (query-params-reset) subexpression helper
+(in addition to query-params) that can take 0 or more args and will reset any query params
+not explicitly specified in the helper invocation. The puts the stickiness in the control
+of the caller (the link-to helper).</li>
+<li>Add a sticky option to the route query params config hash, which defaults to true. If set to
+false, any links into that route will reset (unless QP values are explicitly provided in the
+link-to helper), but any links to that route from within that route hierarchy will be sticky,
+which effectively makes it so that if you leave a route and come back into it via a link-to,
+the QPs specified as sticky:false will be reset. Keep in mind though that leaving a route and
+pressing the back button will be &quot;sticky&quot; since the previous values on the controller will be
+restored based on the previous URL.</li>
+</ul>
+
+<p>Example JSBin: http://emberjs.jsbin.com/ucanam/4102</p>
+
+<p>Resolution: Sticky by default, with appropriate escape valves to opt out per route change</p></li>
+<li><p><a href="https://github.com/emberjs/ember.js/pull/4374">ES6 ember-metal, ember-runtime, ember-debug</a></p>
+
+<p>Work is currently being done (by @thomasaboyt amongst others) on the es6-module-transpiler
+to remove the need for intermediate variables. This will both reduce filesize (less total
+output), and enable cycles support (since it is evaluated lazily).</p>
+
+<p>We believe there is more file size savings to be had in the way the view layer, and would like
+to be able to progress in the ES6 effort. Currently rebasing upon any change to ember-metal,
+ember-runtime, and ember-debug (rare) is difficult. I believe that we cannot maintain the long
+running pull-request branch for much longer and would like time to process/deal-with any issues
+that crop up from the swap (missing global exports for example) before branching the next beta
+series (2 weeks).</p>
+
+<p>RESOLUTION: Merge (pending specific issues that have already been noted), but before shipping another globals build we should deal with the file size issue. We have ~7 weeks until the 1.6 release.</p></li>
+<li><p><a href="https://github.com/emberjs/ember.js/pull/4404">The <code>each</code> helper checks that the metamorph tags have the same parent.</a></p>
+
+<p>This was generally approved in the 2014-02-28 meeting once some verbiage tweaks were made. @trek&#39;s suggested
+changes have been made, this is ready to go.</p>
+
+<p>Resolution: merge.</p></li>
+<li><p><a href="https://github.com/emberjs/ember.js/pull/4291">FEATURE Ember.computed.instance</a></p>
+
+<blockquote>
+<p>A computed property that creates a new instance of source. <code>source</code> can be any
+Class constructor, object, array, or a path to a local property.  Optionally you can
+specify the initial value(s), if only <code>initialValue</code> is given and if it is a string, it
+is treated as a local path.</p>
+</blockquote></li>
+</ul>
+
+<p>Resolution: make it an add on that’s not core. CPM.</p>
+
+<ul>
+<li><p><a href="https://github.com/emberjs/ember.js/pull/4124">Deprecate edge-case get and normalizeTuple behavior before fixes</a></p>
+
+<p>PR <a href="https://github.com/emberjs/ember.js/pull/3852">#3852</a> changes some edge case behavior for get and normalizeTuple. Ahead of those changes, this commit introduces deprecation notices.</p>
+
+<ul>
+<li>Deprecate get for local paths on global contexts, only if they
+return data.</li>
+<li>Deprecate normalizeTuple calls that return a non-global contenxt
+and a simple global path.</li>
+</ul></li>
+<li><p><a href="https://github.com/emberjs/ember.js/pull/4459">Deprecate global access from templates</a></p>
+
+<p>PR by @mixonic:</p>
+
+<blockquote>
+<p>Replaces #4358. These deprecations are narrow in scope, and only impact {{Global}} and
+{{#each Global}}. They do not deprecate any other global access in templates. Deprecating
+all global access from templates would a) need to be done helper-by-helper or b) would impact
+the get and binding code at a lower level.</p>
+
+<p>@xtian I&#39;m rewritten your first commit but preserved it here.</p>
+
+<p>@ebryn yo.</p>
+</blockquote></li>
+<li><p><a href="https://github.com/emberjs/ember.js/pull/4328">Container throws if injection registered for already instantiated type</a></p>
+
+<blockquote>
+<p>Prior to this commit, the container would happily allow you to register an injection for a
+type that had already been instantiated. This led to confusing-to-debug situations where an
+injection is registered but a container-created instance doesn&#39;t have the injection applied.</p>
+</blockquote>
+
+<p>Comment from @stefanpenner</p>
+
+<blockquote>
+<p>As you know I&#39;m all for this change, but it may cause people some inconvenience. I personally
+consider it a bugfix, but i would like @tomdale or @wycats&#39;s +1/-1.</p>
+</blockquote>
+
+<p>Resolution: @stefanpenner &amp; @wycats will chat.</p></li>
+<li><p><a href="https://github.com/emberjs/ember.js/pull/4097">Expose asObject to Ember.Handlebars.precompile</a></p>
+
+<p>Comment from @rwjblue:</p>
+
+<blockquote>
+<p>This was mentioned in the core team meeting on 2014-02-28. It was mentioned that this should be
+changed upstream (in Handlebars itself), but as I reviewed (to let you know where that change
+would be needed) I realized that this PR is simply exposing the functionality that already
+exists within Handlebars, but is not exposed to <code>Ember.Handlebars.precompile</code>.</p>
+
+<p>As such, I think that we should likely re-evaluate the prior decision.</p>
+</blockquote>
+
+<p>Resolution. Ship it. This just passes from Handlebars to Ember.Handlebars</p></li>
+</ul>
+
+    </div>
+    <div class="blog-post-footer">
+    </div>
+  </article>
+  <hr>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'emberblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script type="text/javascript" src="/javascripts/blog-a90057c5.js"></script>
+
+      </div>
+    </div>
+
+    <main-footer></main-footer>
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
+    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
+  </body>
+</html>
+

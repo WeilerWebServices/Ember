@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#E04E39">
+    <title>Ember.js - Ember Guides Status Update</title>
+    <meta property="st:title" content="Ember.js: Ember Guides Status Update" />
+    <meta property="og:title" content="Ember.js: Ember Guides Status Update" />
+    <meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
+    <meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@emberjs" />
+    <meta name="twitter:title" content="Ember Guides Status Update"/>
+    <meta name="google-site-verification" content="N9yOP2jCLcZBMHUet-JRqU2jnLVPeLDaePpkCqXGQXM" />
+    <meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
+    <link rel="shortcut icon" href="/images/favicon-b8f150dd.png" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
+    <!--[if lte IE 7 ]><link href="/stylesheets/fonts/fontello-ie7-e008d616.css" rel="stylesheet" /><![endif]-->
+    <link href="/stylesheets/site-364c2a35.css" rel="stylesheet" />
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-cf72b59a166beb307683d9d0dae6bb0f.css" />
+    
+  </head>
+
+  <body class="blog blog_2015 blog_2015_09 blog_2015_09_02 blog_2015_09_02_ember-guides-status-update responsive">
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/common-old-ie-a6691877.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script type="text/javascript" src="/javascripts/common-modern-7c867c7e.js"></script>
+    <!--<![endif]-->
+    <header>
+<nav class="navbar navbar-inverse">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="/"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home" /></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Docs <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="//guides.emberjs.com">Guides</a></li>
+      <li><a href="/api/ember/release">API Reference</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/learn">Learn Ember</a></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Releases <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/builds">Channels</a></li>
+      <li><a href="/builds/release">-- Stable</a></li>
+      <li><a href="/builds/beta">-- Beta</a></li>
+      <li><a href="/builds/canary">-- Canary</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/deprecations">Deprecations</a></li>
+      <li><a href="/statusboard">Status Board</a></li>
+     </ul>
+    </li>
+    <li><a href="/blog">Blog</a></li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/community">The Ember Community</a>
+       <li><a href="/guidelines">Guidelines</a></li>
+       <li><a href="http://github.com/emberjs/">Contribute (Github)</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/community/meetups">Meetups</a></li>
+       <li><a href="http://jobs.emberjs.com/">Job Board</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberconf.com/">Ember Conf</a></li>
+     </ul>
+     </li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="/team">The Team</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/logos">Logos</a></li>
+       <li><a href="/mascots">Mascots</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/ember-users">Who Uses Ember</a></li>
+       <li><a href="/sponsors">Sponsors</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/legal">Legal</a></li>
+       <li><a href="/security">Security</a></li>       
+      </ul>
+     </li>
+   </ul>
+   <form class="navbar-form navbar-right searchbox">
+    <div class="input-group">
+      <label for="search-input" class="control-label sr-only">Search</label>
+        <input type="text" 
+        class="form-control search input ds-input" 
+        placeholder="Search..." 
+        id="search-input" 
+        role="combobox" 
+        aria-expanded="false" 
+        aria-owns="algolia-autocomplete-listbox-0" 
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false" 
+        />
+        <span></span>
+    </div>
+   </form>
+  </div>
+  <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container-fluid -->
+</nav>
+</header>
+
+
+    
+
+    <div id="content-wrapper" class="content-wrapper">
+        <div id="sidebar" class="sidebar" role="complementary">
+          <ol id='toc-list' class="blog-sidebar">
+  <li class='level-1'>
+    <a href="/blog/tags/recent-posts.html">Recent Posts</a>
+    <ol style="display:block">
+      <li class='level-3'><a href="/blog/2018/02/21/2018-ember-community-survey.html">2018 Ember Community Survey</a></li>
+      <li class='level-3'><a href="/blog/2017/10/10/glimmer-progress-report.html">Glimmer.js Progress Report</a></li>
+      <li class='level-3'><a href="/blog/2017/10/03/the-road-to-ember-3-0.html">The Road to Ember 3.0</a></li>
+      <li class='level-3'><a href="/blog/2017/04/05/emberconf-2017-state-of-the-union.html">EmberConf 2017: State of the Union</a></li>
+      <li class='level-3'><a href="/blog/2017/02/28/2017-ember-community-survey.html">2017 Ember Community Survey</a></li>
+    </ol>
+  </li>
+  <li class='level-1'>
+    <a href="/blog/tags/releases.html">Releases</a>
+    <ol style="display:block">
+      <li class='level-3'><a href="/blog/2018/04/13/ember-3-1-released.html">Ember 3.1 and 3.2 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2018/02/16/ember-3-1-beta-released.html">Ember 3.1 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2018/02/14/ember-3-0-released.html">Ember 3.0 Released</a></li>
+      <li class='level-3'><a href="/blog/2018/01/01/ember-2-18-released.html">Ember 2.18 and 3.0 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/11/20/ember-2-17-released.html">Ember 2.16-LTS, Ember 2.17 and 2.18 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/10/11/ember-2-16-released.html">Ember 2.16 and 2.17 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/09/01/ember-2-15-released.html">Ember 2.15 and 2.16 Beta Released</a></li>
+    </ol>
+  </li>
+</ol>
+
+          <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
+        </div>
+      <div id="content" class="main has-sidebar" role="main">
+          
+  <article class="blog-post">
+    <div class="blog-post-header">
+      <h1 class="blog-post-title">Ember Guides Status Update</h1>
+      <div class="blog-post-meta">
+          <time class="blog-post-date">September 2, 2015</time>
+          <div class="blog-post-author">By Michael Kaiser-Nyman and Ricardo Mendes</div>
+      </div>
+    </div>
+    <div class="blog-post-body" id="toc-content">
+      <p>The road to Ember 2.0 has been long and rewarding: the community and team have invested in huge efforts to move Ember to a component-based architecture; we released a stable Ember Data; and we unified our development process with Ember CLI. All in all, we&#39;ve made huge progress.</p>
+
+<p>Unfortunately, our docs efforts haven’t kept up with all of those improvements. We know that many Ember users have been frustrated that they can&#39;t find the resources they need to take advantage of new features.</p>
+
+<p><strong>Over the next few releases, we&#39;ll be focusing on major improvements to the content of the Ember Guides and the process of landing new features so we don&#39;t fall behind again.</strong></p>
+<h2 class='anchorable-toc' id='toc_upcoming-releases'>Upcoming releases</h2>
+<p>Here&#39;s what you can expect in the coming weeks and months:</p>
+
+<p><strong><em>Ember Data</em></strong>: Several of us are working hard to update the Models section of the Guides to properly document Ember Data in its stable form. This should be released imminently.</p>
+
+<p><strong><em>Ember 2.1</em></strong>: Several people are working on reviewing the Guides from beginning to end to improve the quality of the writing and make sure that all of the information is up to date. We aim to have this completed for the 2.1 release of the Guides.</p>
+
+<p><strong><em>Ember 2.2</em></strong>: A few contributors are writing an updated version of the tutorial that used to be at the beginning of the Guides. We aim to have the first version in the 2.2 release.</p>
+<h2 class='anchorable-toc' id='toc_better-process'>Better process</h2>
+<p>Until recently, the Ember Guides and API documentation were maintained by the same developers who wrote the code for Ember.js itself. As the burden has grown, the developers bringing you Ember have stopped being able to tackle both writing the code and documenting it. We&#39;ve realized that we need a more pragmatic and structured approach to keeping the documentation up-to-date.</p>
+
+<p>We’ve created a new Docs subteam to help drive the direction of the documentation and help make sure that new features always include documentation. It includes existing Ember core team members, along with fresh faces @locks and @michaelrkn. With extra bandwidth from members who are focused exclusively on documentation, we&#39;ve already made great strides in improving the documentation and filling in missing pieces.</p>
+
+<p>Additionally, the team has agreed that <strong>no new feature will land in a stable release of Ember without documentation and updates to relevant guides</strong>. We don’t want documentation to languish again.</p>
+<h2 class='anchorable-toc' id='toc_getting-involved'>Getting involved</h2>
+<p>Whether you&#39;re a new Ember dev or an old hand, there is lots of work that you can help out with:</p>
+
+<ul>
+<li>Check out issues labeled <a href="https://github.com/emberjs/guides/labels/help%20wanted">help wanted</a> on the Guides repo.</li>
+<li>Read through the <a href="https://github.com/emberjs/guides/blob/master/CONTRIBUTING.md">guidelines for contributing</a> to the Guides.</li>
+<li>If you&#39;d like to help out but get stuck along the way at any point, join us in the <a href="https://embercommunity.slack.com/messages/documentation/">documentation Slack channel</a>.</li>
+<li>Contact @locks or @michaelrkn on Slack if you&#39;re interested in joining the Docs subteam.</li>
+</ul>
+
+<p>To help other contributors stay productive, please keep your contributions and questions limited to issues that are not being worked on by other contributors, and avoid asking for status updates. If you&#39;re curious about the progress of the Guides, you can follow along on commits to the <a href="https://github.com/emberjs/guides">Guides repo</a> and read the <a href="https://github.com/emberjs/core-notes/tree/master/docs-team">Docs team weekly meeting minutes</a>.</p>
+
+<p>Like all of Ember.js and its sister projects, the Guides are maintained by an all-volunteer team. Please take a moment to thank them online, buy them a beer at your local meetup, and best yet, chip in and help out yourself!</p>
+
+<p><em>Thanks to Yehuda Katz and Leah Silber for reviewing the draft of this post.</em></p>
+
+    </div>
+    <div class="blog-post-footer">
+    </div>
+  </article>
+  <hr>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'emberblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script type="text/javascript" src="/javascripts/blog-a90057c5.js"></script>
+
+      </div>
+    </div>
+
+    <main-footer></main-footer>
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
+    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
+  </body>
+</html>
+

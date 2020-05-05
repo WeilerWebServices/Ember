@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#E04E39">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ember.js - Ember.js 2.7 and 2.8 Beta Released</title>
+    <meta property="st:title" content="Ember.js: Ember.js 2.7 and 2.8 Beta Released" />
+    <meta property="og:title" content="Ember.js: Ember.js 2.7 and 2.8 Beta Released" />
+    <meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
+    <meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@emberjs" />
+    <meta name="twitter:title" content="Ember.js 2.7 and 2.8 Beta Released"/>
+    <meta name="google-site-verification" content="N9yOP2jCLcZBMHUet-JRqU2jnLVPeLDaePpkCqXGQXM" />
+    <meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
+    <link rel="shortcut icon" href="/images/favicon-b8f150dd.png" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
+    <!--[if lte IE 7 ]><link href="/stylesheets/fonts/fontello-ie7-e008d616.css" rel="stylesheet" /><![endif]-->
+    <link href="/stylesheets/site-364c2a35.css" rel="stylesheet" />
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-cf72b59a166beb307683d9d0dae6bb0f.css" />
+    
+  </head>
+
+  <body class="blog blog_2016 blog_2016_07 blog_2016_07_25 blog_2016_07_25_ember-2-7-and-2-8-beta-released responsive">
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/common-old-ie-a6691877.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script type="text/javascript" src="/javascripts/common-modern-7c867c7e.js"></script>
+    <!--<![endif]-->
+    <header>
+<nav class="navbar navbar-inverse">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="/"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home" /></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Docs <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="//guides.emberjs.com">Guides</a></li>
+      <li><a href="/api/ember/release">API Reference</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/learn">Learn Ember</a></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Releases <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/builds">Channels</a></li>
+      <li><a href="/builds/release">-- Stable</a></li>
+      <li><a href="/builds/beta">-- Beta</a></li>
+      <li><a href="/builds/canary">-- Canary</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/deprecations">Deprecations</a></li>
+      <li><a href="/statusboard">Status Board</a></li>
+     </ul>
+    </li>
+    <li><a href="/blog">Blog</a></li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/community">The Ember Community</a>
+       <li><a href="/guidelines">Guidelines</a></li>
+       <li><a href="http://github.com/emberjs/">Contribute (Github)</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/community/meetups">Meetups</a></li>
+       <li><a href="http://jobs.emberjs.com/">Job Board</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberconf.com/">Ember Conf</a></li>
+     </ul>
+     </li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="/team">The Team</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/logos">Logos</a></li>
+       <li><a href="/mascots">Mascots</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/ember-users">Who Uses Ember</a></li>
+       <li><a href="/sponsors">Sponsors</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/legal">Legal</a></li>
+       <li><a href="/security">Security</a></li>       
+      </ul>
+     </li>
+   </ul>
+   <form class="navbar-form navbar-right searchbox">
+    <div class="input-group">
+      <label for="search-input" class="control-label sr-only">Search</label>
+        <input type="text" 
+        class="form-control search input ds-input" 
+        placeholder="Search..." 
+        id="search-input" 
+        role="combobox" 
+        aria-expanded="false" 
+        aria-owns="algolia-autocomplete-listbox-0" 
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false" 
+        />
+        <span></span>
+    </div>
+   </form>
+  </div>
+  <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container-fluid -->
+</nav>
+</header>
+
+
+    
+
+    <div id="content-wrapper" class="content-wrapper">
+        <div id="sidebar" class="sidebar" role="complementary">
+          <ol id='toc-list' class="blog-sidebar">
+  <li class='level-1'>
+    <a href="/blog/tags/recent-posts.html">Recent Posts</a>
+    <ol style="display:block">
+      <li class='level-3'><a href="/blog/2018/02/21/2018-ember-community-survey.html">2018 Ember Community Survey</a></li>
+      <li class='level-3'><a href="/blog/2017/10/10/glimmer-progress-report.html">Glimmer.js Progress Report</a></li>
+      <li class='level-3'><a href="/blog/2017/10/03/the-road-to-ember-3-0.html">The Road to Ember 3.0</a></li>
+      <li class='level-3'><a href="/blog/2017/04/05/emberconf-2017-state-of-the-union.html">EmberConf 2017: State of the Union</a></li>
+      <li class='level-3'><a href="/blog/2017/02/28/2017-ember-community-survey.html">2017 Ember Community Survey</a></li>
+    </ol>
+  </li>
+  <li class='level-1'>
+    <a href="/blog/tags/releases.html">Releases</a>
+    <ol style="display:block">
+      <li class='level-3'><a href="/blog/2018/04/13/ember-3-1-released.html">Ember 3.1 and 3.2 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2018/02/16/ember-3-1-beta-released.html">Ember 3.1 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2018/02/14/ember-3-0-released.html">Ember 3.0 Released</a></li>
+      <li class='level-3'><a href="/blog/2018/01/01/ember-2-18-released.html">Ember 2.18 and 3.0 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/11/20/ember-2-17-released.html">Ember 2.16-LTS, Ember 2.17 and 2.18 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/10/11/ember-2-16-released.html">Ember 2.16 and 2.17 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/09/01/ember-2-15-released.html">Ember 2.15 and 2.16 Beta Released</a></li>
+    </ol>
+  </li>
+</ol>
+
+          <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
+        </div>
+      <div id="content" class="main has-sidebar" role="main">
+          
+  <article class="blog-post">
+    <div class="blog-post-header">
+      <h1 class="blog-post-title">Ember.js 2.7 and 2.8 Beta Released</h1>
+      <div class="blog-post-meta">
+          <time class="blog-post-date">July 25, 2016</time>
+          <div class="blog-post-author">By Dan Gebhardt</div>
+      </div>
+    </div>
+    <div class="blog-post-body" id="toc-content">
+      <p>Ember.js 2.7, a minor version release of Ember with backwards compatible
+changes, is released today.</p>
+
+<p>Ember.js 2.8 beta is also being released today. This branch will be released as
+stable in roughly six weeks and will then go on to be the next <a href="/blog/2016/02/25/announcing-embers-first-lts.html">LTS release</a>
+roughly six weeks after that.</p>
+<h3 class='anchorable-toc' id='toc_changes-in-ember-js-2-7'>Changes in Ember.js 2.7</h3>
+<p>Ember 2.7 introduces one new backward compatible API:</p>
+<h4 class='anchorable-toc' id='toc_code-ember-computed-uniqby-code'><code>Ember.computed.uniqBy</code></h4>
+<p>In general, the core team is hesitant about adding any new computed macros
+or array prototype extensions to the framework. Instead, we encourage developers
+to adopt an addon such as <a href="https://github.com/cibernox/ember-cpm">ember-cpm</a>
+if they desire an expanded list of macros.</p>
+
+<p>However contributor <a href="https://github.com/seanjohnson08">@seanjohnson08</a> correctly
+pointed out there is a logical gap in the APIs Ember provides today. Although
+each of <code>find</code>, <code>map</code>, <code>filter</code>, and <code>reject</code> have a comparable <code>xxxBy</code> method
+(for example <code>findBy</code>) no comparable method exists for <code>uniq</code>.</p>
+
+<p>Ember 2.7 adds <code>uniqBy</code> as an computed property macro. For example:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> Ember from <span class="string"><span class="delimiter">'</span><span class="content">ember</span><span class="delimiter">'</span></span>;
+
+<span class="reserved">export</span> <span class="keyword">default</span> Ember.Component.extend({
+  <span class="key">accidents</span>: Ember.computed(<span class="keyword">function</span>() {
+    <span class="keyword">return</span> [{
+      <span class="key">description</span>: <span class="string"><span class="delimiter">'</span><span class="content">Flipped over</span><span class="delimiter">'</span></span>,
+      <span class="key">car</span>: { <span class="key">id</span>: <span class="integer">1</span>, <span class="key">make</span>: <span class="string"><span class="delimiter">'</span><span class="content">Saturn</span><span class="delimiter">'</span></span> }
+    },{
+      <span class="key">description</span>: <span class="string"><span class="delimiter">'</span><span class="content">Aliens</span><span class="delimiter">'</span></span>,
+      <span class="key">car</span>: { <span class="key">id</span>: <span class="integer">2</span>, <span class="key">make</span>: <span class="string"><span class="delimiter">'</span><span class="content">Toyota</span><span class="delimiter">'</span></span> }
+    },{
+      <span class="key">description</span>: <span class="string"><span class="delimiter">'</span><span class="content">Road rage</span><span class="delimiter">'</span></span>,
+      <span class="key">car</span>: { <span class="key">id</span>: <span class="integer">1</span>, <span class="key">make</span>: <span class="string"><span class="delimiter">'</span><span class="content">Saturn</span><span class="delimiter">'</span></span> }
+    }];
+  }),
+  <span class="key">carsInAccidents</span>: Ember.computed.mapBy(<span class="string"><span class="delimiter">'</span><span class="content">accidents</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">car</span><span class="delimiter">'</span></span>),
+  <span class="key">uniqueCarsInAccidents</span>: Ember.computed.uniqBy(<span class="string"><span class="delimiter">'</span><span class="content">carsInAccidents</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">id</span><span class="delimiter">'</span></span>)
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p><code>uniqBy</code> is also added as an array method. For example:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> Ember from <span class="string"><span class="delimiter">'</span><span class="content">ember</span><span class="delimiter">'</span></span>;
+
+<span class="reserved">export</span> <span class="keyword">default</span> Ember.Component.extend({
+  <span class="key">accidents</span>: Ember.computed(<span class="keyword">function</span>() {
+    <span class="keyword">return</span> [{
+      <span class="key">description</span>: <span class="string"><span class="delimiter">'</span><span class="content">Flipped over</span><span class="delimiter">'</span></span>,
+      <span class="key">car</span>: { <span class="key">id</span>: <span class="integer">1</span>, <span class="key">make</span>: <span class="string"><span class="delimiter">'</span><span class="content">Saturn</span><span class="delimiter">'</span></span> }
+    },{
+      <span class="key">description</span>: <span class="string"><span class="delimiter">'</span><span class="content">Aliens</span><span class="delimiter">'</span></span>,
+      <span class="key">car</span>: { <span class="key">id</span>: <span class="integer">2</span>, <span class="key">make</span>: <span class="string"><span class="delimiter">'</span><span class="content">Toyota</span><span class="delimiter">'</span></span> }
+    },{
+      <span class="key">description</span>: <span class="string"><span class="delimiter">'</span><span class="content">Road rage</span><span class="delimiter">'</span></span>,
+      <span class="key">car</span>: { <span class="key">id</span>: <span class="integer">1</span>, <span class="key">make</span>: <span class="string"><span class="delimiter">'</span><span class="content">Saturn</span><span class="delimiter">'</span></span> }
+    }];
+  }),
+  <span class="key">uniqueCarsInAccidents</span>: Ember.computed(<span class="string"><span class="delimiter">'</span><span class="content">accidents.@each.car</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
+    <span class="keyword">return</span> <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">accidents</span><span class="delimiter">'</span></span>).mapBy(<span class="string"><span class="delimiter">'</span><span class="content">car</span><span class="delimiter">'</span></span>).uniqBy(<span class="string"><span class="delimiter">'</span><span class="content">id</span><span class="delimiter">'</span></span>);
+  })
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>For more information on these methods, see the <a href="http://emberjs.com/api/classes/Ember.computed.html#method_uniqBy">API docs for the computed
+macro</a>, <a href="http://emberjs.com/api/classes/Ember.Array.html#method_uniqBy">API
+docs for the array
+method</a>, and
+<a href="https://github.com/emberjs/ember.js/pull/12875">PR #12875</a> introducing these
+changes.</p>
+<h4 class='anchorable-toc' id='toc_notable-deprecations'>Notable Deprecations</h4>
+<p>The following deprecations are scheduled for release with Ember 2.7:</p>
+
+<ul>
+<li><p><code>Ember.Backburner</code> was private throughout the Ember 2.x series and will be
+removed after Ember 2.8, as mentioned in the
+<a href="http://emberjs.com/deprecations/v2.x/#toc_ember-backburner">deprecation guide</a>.</p></li>
+<li><p><code>Ember.Binding</code> has not been needed for some time and is deprecated in favor
+of computed properties and services (depending on what you were binding to).
+It will be removed in Ember 3.0. See the
+<a href="http://emberjs.com/deprecations/v2.x/#toc_ember-binding">deprecation guide</a>
+for more details.</p></li>
+</ul>
+
+<p>For more details on changes landing in 2.7, review the
+<a href="https://github.com/emberjs/ember.js/blob/v2.7.0/CHANGELOG.md">Ember.js 2.7.0 CHANGELOG</a>.</p>
+<h3 class='anchorable-toc' id='toc_ember-js-2-8-beta'>Ember.js 2.8 Beta</h3>
+<p>Ember 2.8 beta introduces the following new backward compatible APIs:</p>
+<h4 class='anchorable-toc' id='toc_engines'>Engines</h4>
+<p>As described in the <a href="https://github.com/emberjs/rfcs/pull/10">RFC</a>, &quot;engines
+allow multiple logical applications to be composed together into a single
+application from the user&#39;s perspective.&quot;</p>
+
+<p>The best way to use this feature in your apps is through the <a href="http://github.com/dgeb/ember-engines">ember-engines addon</a>.
+To get started, check out the excellent <a href="https://github.com/dgeb/ember-engines/blob/master/guides/01-introduction.md">guides</a>
+written by <a href="https://github.com/trentmwillis">@trentmwillis</a>.</p>
+
+<p>This release will introduce a set of low-level APIs for the core functionailty
+along with the ususal semver guarentee. While the ember-engines addon itself
+remains experimental, the introduction of these public APIs means that <strong>ember-engines
+is now usable with Ember.js 2.8 beta</strong>.</p>
+
+<p>Work on engines has proceeded over the past year in both Ember core as well as
+the addon. Ember&#39;s architecture has been enhanced to provide the base classes
+and hooks needed to support engines. The addon then makes use of these interfaces
+to provide a smooth experience building and consuming engines.</p>
+
+<p>Until now, none of the engine-related classes and hooks in Ember have been
+exposed publicly. However, starting with Ember 2.8, the following APIs will be
+made public:</p>
+
+<ul>
+<li><p><code>Ember.Engine</code> class - The base class for <code>Ember.Application</code>. Its only public
+interface is related to initializers and instance initializers, which is
+then inherited by applications.</p></li>
+<li><p><code>Ember.EngineInstance</code> class - The base class for <code>Ember.ApplicationInstance</code>.</p></li>
+<li><p><code>mount</code> keyword - Allows for the mounting of routeless engines in templates.
+This keyword currently only takes one argument, the name of the engine.</p></li>
+<li><p><code>mount</code> router DSL - Allows routable engines to be mounted at a location in
+a route map.</p></li>
+</ul>
+
+<p>By making these APIs public, ember-engines and other addons will be able to
+access them without a feature-flag in a (soon-to-be) stable release of Ember. By
+accessing only public interfaces in Ember, an addon won&#39;t need to rely on
+private overrides and can provide as stable an experience as possible.</p>
+
+<p>We predict that engines will grow in popularity once work on lazy loading is
+complete. By delaying the loading of engines until they&#39;re accessed, we can
+decrease the initial payload size and startup time for applications. If you&#39;re
+interested in helping to implement or test lazy loading of engines, please check
+out the thorough <a href="https://github.com/dgeb/ember-engines/issues/154">attack plan</a>
+written up by <a href="https://github.com/nathanhammond">@nathanhammond</a>.</p>
+<h4 class='anchorable-toc' id='toc_code-enumerable-includes-code-and-code-array-includes-code'><code>Enumerable#includes</code> and <code>Array#includes</code></h4>
+<p>In an effort to remain inline with ES standards, the methods
+<code>Enumerable#contains</code> and <code>Array#contains</code> have been deprecated in favor of the
+new methods <code>Enumerable#includes</code> and <code>Array#includes</code>.</p>
+
+<p>Thanks to <a href="https://github.com/alexspeller">@alexspeller</a> for the <a href="https://github.com/emberjs/rfcs/blob/master/text/0136-contains-to-includes.md">RFC</a>
+that proposed this change.</p>
+
+<p>Thanks as well to <a href="https://github.com/bmeurant">@bmeurant</a> for the
+<a href="https://github.com/emberjs/ember.js/pull/13553">PR</a> that implemented the change.</p>
+<h4 class='anchorable-toc' id='toc_code-ember-string-ishtmlsafe-code'><code>Ember.String.isHTMLSafe</code></h4>
+<p>The new method <code>Ember.String.isHTMLSafe</code> detects if a string was decorated using
+<code>Ember.String.htmlSafe</code>.</p>
+
+<p>For example:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+</pre></td>
+  <td class="code"><pre><span class="keyword">var</span> plainString = <span class="string"><span class="delimiter">'</span><span class="content">plain string</span><span class="delimiter">'</span></span>,
+    safeString = Ember.String.htmlSafe(<span class="string"><span class="delimiter">'</span><span class="content">&lt;div&gt;someValue&lt;/div&gt;</span><span class="delimiter">'</span></span>);
+
+Ember.String.isHTMLSafe(plainString); <span class="comment">// false</span>
+Ember.String.isHTMLSafe(safeString);  <span class="comment">// true</span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>Thanks to <a href="https://github.com/workmanw">@workmanw</a> for the
+<a href="https://github.com/emberjs/rfcs/pull/139">RFC</a> that proposed this new API, as
+well as the <a href="https://github.com/emberjs/ember.js/pull/13666">PR</a> that
+implemented it.</p>
+
+<p>On a related note, please create safe strings with <code>Ember.String.htmlSafe</code>
+instead of the deprecated <code>Ember.Handlebars.SafeString</code>. See the <a href="http://emberjs.com/deprecations/v2.x/#toc_use-ember-string-htmlsafe-over-ember-handlebars-safestring">deprecation
+guide</a>
+for details.</p>
+<h4 class='anchorable-toc' id='toc_code-ember-test-checkwaiters-code'><code>Ember.Test.checkWaiters</code></h4>
+<p>The new method <code>Ember.Test.checkWaiters</code> provides a simple mechanism for test
+tooling to determine whether all async test waiters have settled. This replaces
+the intimate API <code>Ember.Test.waiters</code>, which has been deprecated and will be
+removed in Ember 2.8 final.</p>
+
+<p>Thanks to <a href="https://github.com/rwjblue">@rwjblue</a> and
+<a href="https://github.com/krisselden">@krisselden</a> for implementing this method.</p>
+
+<hr>
+
+<p>For more details on changes landing in 2.8 beta, review the
+<a href="https://github.com/emberjs/ember.js/blob/v2.8.0-beta.1/CHANGELOG.md">Ember.js 2.8.0-beta.1 CHANGELOG</a>.</p>
+
+    </div>
+    <div class="blog-post-footer">
+    </div>
+  </article>
+  <hr>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'emberblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script type="text/javascript" src="/javascripts/blog-a90057c5.js"></script>
+
+      </div>
+    </div>
+
+    <main-footer></main-footer>
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
+    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
+  </body>
+</html>
+

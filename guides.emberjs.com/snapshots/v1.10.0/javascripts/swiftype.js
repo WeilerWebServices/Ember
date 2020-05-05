@@ -1,0 +1,1 @@
+$(function(){var e=function(e,i){window.location="/v1.10.0"+e.url};$("#st-search-input").swiftype({engineKey:"",searchFields:{"guides-v1-10-0":["body","title","url"]},fetchFields:{"guides-v1-10-0":["title","body","url"]},documentTypes:["guides-v1-10-0"],onComplete:e})});

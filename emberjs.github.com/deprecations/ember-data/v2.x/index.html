@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#E04E39">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ember.js - Deprecations for Ember Data v2.x</title>
+    <meta property="st:title" content="Ember.js: Deprecations for Ember Data v2.x" />
+    <meta property="og:title" content="Ember.js: Deprecations for Ember Data v2.x" />
+    <meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
+    <meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@emberjs" />
+    <meta name="twitter:title" content="Deprecations for Ember Data v2.x"/>
+    <meta name="google-site-verification" content="N9yOP2jCLcZBMHUet-JRqU2jnLVPeLDaePpkCqXGQXM" />
+    <meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
+    <link rel="shortcut icon" href="/images/favicon-b8f150dd.png" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
+    <!--[if lte IE 7 ]><link href="/stylesheets/fonts/fontello-ie7-e008d616.css" rel="stylesheet" /><![endif]-->
+    <link href="/stylesheets/site-1654b74d.css" rel="stylesheet" />
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-cf72b59a166beb307683d9d0dae6bb0f.css" />
+    
+  </head>
+
+  <body class="deprecations deprecations_ember-data deprecations_ember-data_v2 responsive">
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/common-old-ie-a6691877.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script type="text/javascript" src="/javascripts/common-modern-7c867c7e.js"></script>
+    <!--<![endif]-->
+    <header>
+<nav class="navbar navbar-inverse">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="/"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home" /></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Docs <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="//guides.emberjs.com">Guides</a></li>
+      <li><a href="/api">API Reference</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/learn">Learn Ember</a></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Releases <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/builds">Channels</a></li>
+      <li><a href="/builds/release">-- Stable</a></li>
+      <li><a href="/builds/beta">-- Beta</a></li>
+      <li><a href="/builds/canary">-- Canary</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/deprecations">Deprecations</a></li>
+      <li><a href="/statusboard">Status Board</a></li>
+     </ul>
+    </li>
+    <li><a href="/blog">Blog</a></li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/community">The Ember Community</a>
+       <li><a href="/guidelines">Guidelines</a></li>
+       <li><a href="http://github.com/emberjs/">Contribute (Github)</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/community/meetups">Meetups</a></li>
+       <li><a href="http://jobs.emberjs.com/">Job Board</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberconf.com/">Ember Conf</a></li>
+     </ul>
+     </li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="/team">The Team</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/logos">Logos</a></li>
+       <li><a href="/mascots">Mascots</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/ember-users">Who Uses Ember</a></li>
+       <li><a href="/sponsors">Sponsors</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/legal">Legal</a></li>
+       <li><a href="/security">Security</a></li>       
+      </ul>
+     </li>
+   </ul>
+   <form class="navbar-form navbar-right searchbox">
+    <div class="input-group">
+      <label for="search-input" class="control-label sr-only">Search</label>
+        <input type="text" 
+        class="form-control search input ds-input" 
+        placeholder="Search..." 
+        id="search-input" 
+        role="combobox" 
+        aria-expanded="false" 
+        aria-owns="algolia-autocomplete-listbox-0" 
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false" 
+        />
+        <span></span>
+    </div>
+   </form>
+  </div>
+  <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container-fluid -->
+</nav>
+</header>
+
+
+    
+
+    <div id="content-wrapper" class="content-wrapper">
+        <div id="sidebar" class="sidebar" role="complementary">
+              <ol id='toc-list'>
+    </ol>
+
+          <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
+        </div>
+      <div id="content" class="main has-sidebar" role="main">
+        
+  <h2 class='anchorable-toc' id='toc_deprecations-added-in-ember-data-2-x'>Deprecations Added in Ember Data 2.x</h2><h3 class='anchorable-toc' id='toc_deprecations-added-in-ember-data-2-3'>Deprecations Added in Ember Data 2.3</h3><h4 class='anchorable-toc' id='toc_non-primitive-defaultvalue-for-model-attributes'>Non-primitive defaultValue for Model Attributes</h4><h6 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h6><h6 class='anchorable-toc' id='toc_id-ds-defaultvalue-complex-object'>id: ds.defaultValue.complex-object</h6>
+<p>Providing a non-primitive value as a <code>defaultValue</code> has been deprecated because
+the provided value is shared between all instances of the model. Using a
+non-primitive value, such as <code>defaultValue: []</code>, can lead to unexpected bugs when
+that value is mutated.</p>
+
+<p>If you wish to continue using a non-primitive value as the <code>defaultValue</code> for an
+attribute, you should provide a function that returns the value:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> DS from <span class="string"><span class="delimiter">'</span><span class="content">ember-data</span><span class="delimiter">'</span></span>;
+
+<span class="reserved">export</span> <span class="keyword">default</span> DS.Model.extend({
+  <span class="key">username</span>: DS.attr(<span class="string"><span class="delimiter">'</span><span class="content">string</span><span class="delimiter">'</span></span>),
+  <span class="key">createdAt</span>: DS.attr(<span class="string"><span class="delimiter">'</span><span class="content">date</span><span class="delimiter">'</span></span>, {
+    defaultValue() {
+      <span class="keyword">return</span> <span class="keyword">new</span> Date();
+    }
+  })
+});
+</pre></td>
+</tr></table>
+</div></div><h4 class='anchorable-toc' id='toc_restserializer-keyforpolymorphictype'>RESTSerializer.keyForPolymorphicType</h4><h6 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h6><h6 class='anchorable-toc' id='toc_id-ds-rest-serializer-deprecated-key-for-polymorphic-type'>id: ds.rest-serializer.deprecated-key-for-polymorphic-type</h6>
+<p>Previous versions of the
+<a href="http://emberjs.com/api/data/classes/DS.RESTSerializer.html"><code>RESTSerializer</code></a>
+relied on
+<a href="http://emberjs.com/api/data/classes/DS.RESTSerializer.html#method_keyForAttribute"><code>keyForAttribute</code></a>
+to determine the type key used for serializing polymorphic relationships. This
+behavior has been deprecated in favor of using
+<a href="http://emberjs.com/api/data/classes/DS.RESTSerializer.html#method_keyForPolymorphicType"><code>keyForPolymorphicType</code></a>.
+The benefit of having this additional hook is that you can customize the type
+key separately from the key used for the relationship.</p>
+
+<p>For example, given the following model:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/models/comment.js</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> DS from <span class="string"><span class="delimiter">'</span><span class="content">ember-data</span><span class="delimiter">'</span></span>;
+
+<span class="reserved">export</span> <span class="keyword">default</span> DS.Model.extend({
+  <span class="key">commentable</span>: belongsTo(<span class="string"><span class="delimiter">'</span><span class="content">commentable</span><span class="delimiter">'</span></span>, { <span class="key">polymorphic</span>: <span class="predefined-constant">true</span> }),
+  <span class="key">body</span>: DS.attr(<span class="string"><span class="delimiter">'</span><span class="content">string</span><span class="delimiter">'</span></span>)
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>When using the <code>RESTSerializer</code>, Ember Data expects a payload that looks similar
+the following:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+11
+12
+</pre></td>
+  <td class="code"><pre>{
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">comment</span><span class="delimiter">&quot;</span></span>: {
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">id</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">1</span><span class="delimiter">&quot;</span></span>,
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">commentable</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">123</span><span class="delimiter">&quot;</span></span>,
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">commentableType</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">movie</span><span class="delimiter">&quot;</span></span>, <span class="comment">// ${keyForAttribute}Type</span>
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">body</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">I'll be back</span><span class="delimiter">&quot;</span></span>
+  },
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">movie</span><span class="delimiter">&quot;</span></span>: {
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">id</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">123</span><span class="delimiter">&quot;</span></span>,
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">title</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">The Terminator</span><span class="delimiter">&quot;</span></span>
+  }
+}
+</pre></td>
+</tr></table>
+</div></div>
+<p>If your API instead responds with a key that doesn&#39;t follow the pattern of
+<code>${keyForAttribute}Type</code>:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+11
+12
+</pre></td>
+  <td class="code"><pre>{
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">comment</span><span class="delimiter">&quot;</span></span>: {
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">id</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">1</span><span class="delimiter">&quot;</span></span>,
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">commentable</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">123</span><span class="delimiter">&quot;</span></span>,
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">commentKind</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">movie</span><span class="delimiter">&quot;</span></span>, <span class="comment">// custom keyForPolymorphicType needed</span>
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">body</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">I'll be back</span><span class="delimiter">&quot;</span></span>
+  },
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">movie</span><span class="delimiter">&quot;</span></span>: {
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">id</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">123</span><span class="delimiter">&quot;</span></span>,
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">title</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">The Terminator</span><span class="delimiter">&quot;</span></span>
+  }
+}
+</pre></td>
+</tr></table>
+</div></div>
+<p>You can now override the <code>keyForPolymorphicType</code> hook in your serializer to
+accommodate:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> DS from <span class="string"><span class="delimiter">'</span><span class="content">ember-data</span><span class="delimiter">'</span></span>;
+
+<span class="reserved">export</span> <span class="keyword">default</span> DS.RESTSerializer.extend({
+  <span class="function">keyForPolymorphicType</span>: <span class="keyword">function</span>() {
+    <span class="keyword">return</span> <span class="string"><span class="delimiter">'</span><span class="content">commentKind</span><span class="delimiter">'</span></span>;
+  }
+});
+</pre></td>
+</tr></table>
+</div></div><h3 class='anchorable-toc' id='toc_deprecations-added-in-ember-data-2-6'>Deprecations Added in Ember Data 2.6</h3><h4 class='anchorable-toc' id='toc_restserializer-normalizehash'>RESTSerializer.normalizeHash</h4><h6 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h6><h6 class='anchorable-toc' id='toc_id-ds-serializer-normalize-hash-deprecated'>id: ds.serializer.normalize-hash-deprecated</h6>
+<p><code>RESTSerializer.normalizeHash</code> has been deprecated in favor of using <code>normalize</code>.</p>
+
+<p>If you had this:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+11
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> DS from <span class="string"><span class="delimiter">'</span><span class="content">ember-data</span><span class="delimiter">'</span></span>;
+
+<span class="reserved">export</span> <span class="keyword">default</span> DS.RESTSerializer.extend({
+  <span class="key">normalizeHash</span>: {
+    <span class="function">_id</span>: <span class="keyword">function</span>(hash) {
+      hash.id = hash._id;
+      <span class="keyword">delete</span> hash._id;
+      <span class="keyword">return</span> hash;
+    }
+  }
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>You could change it to this:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+11
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> DS from <span class="string"><span class="delimiter">'</span><span class="content">ember-data</span><span class="delimiter">'</span></span>;
+
+<span class="reserved">export</span> <span class="keyword">default</span> DS.RESTSerializer.extend({
+  normalize(model, hash, prop) {
+    <span class="keyword">if</span> (prop === <span class="string"><span class="delimiter">'</span><span class="content">comments</span><span class="delimiter">'</span></span>) {
+      hash.id = hash._id;
+      <span class="keyword">delete</span> hash._id;
+    }
+    <span class="keyword">return</span> <span class="local-variable">this</span>._super(...<span class="local-variable">arguments</span>);
+  }
+});
+</pre></td>
+</tr></table>
+</div></div><h3 class='anchorable-toc' id='toc_deprecations-added-in-ember-data-2-7'>Deprecations Added in Ember Data 2.7</h3><h4 class='anchorable-toc' id='toc_global-version-of-ds'>Global version of DS</h4><h6 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h6><h6 class='anchorable-toc' id='toc_id-ember-data-global-ds'>id: ember-data.global-ds</h6>
+<p>Using the global version of DS is deprecated. Import <code>DS</code> or specific modules from <code>ember-data</code> where needed.</p>
+
+<p>For example, if you had:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre><span class="comment">/* globals DS */</span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>It would be refactored to:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> DS from <span class="string"><span class="delimiter">'</span><span class="content">ember-data</span><span class="delimiter">'</span></span>;
+</pre></td>
+</tr></table>
+</div></div><h4 class='anchorable-toc' id='toc_ember-date-parse'>Ember.Date.parse</h4><h6 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h6><h6 class='anchorable-toc' id='toc_id-ds-ember-date-parse-deprecate'>id: ds.ember.date.parse-deprecate</h6>
+<p><code>Ember.Date.parse</code> was created as a <a href="https://github.com/csnover/js-iso8601">progressive enhancement for ISO
+8601</a> support in browsers that do not
+support it (Safari 5-, IE 8-, Firefox 3.6-). These browsers versions are no
+longer supported by Ember or Ember Data so <code>Ember.Date.parse</code> has been
+deprecated.</p>
+
+<p>To clear this deprecation you should refactor your application&#39;s code to use
+<code>Date.parse</code> instead of <code>Ember.Date.parse</code>.</p>
+<h4 class='anchorable-toc' id='toc_date-prototype-extension'>Date Prototype Extension</h4><h6 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h6><h6 class='anchorable-toc' id='toc_id-ds-date-parse-deprecate'>id: ds.date.parse-deprecate</h6>
+<p>In previous versions of Ember Data, the native <code>Date.parse</code> function was
+replaced with <code>Ember.Date.parse</code>, a <a href="https://github.com/csnover/js-iso8601">progressive enhancement for ISO
+8601</a> support in browsers that do not
+support it (Safari 5-, IE 8-, Firefox 3.6-). Since these browser versions are no
+longer supported by Ember or Ember data, this behavior has been deprecated.</p>
+
+<p>To clear this deprecation, you should disable Ember Data&#39;s <code>Date</code> prototype
+extension.</p>
+
+<p>With Ember &gt;= v2.7.0, disable the prototype extension for <code>Date</code>:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">config/environment.js</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td>
+  <td class="code"><pre>ENV = {
+  <span class="key">EmberENV</span>: {
+    <span class="key">EXTEND_PROTOTYPES</span>: {
+      <span class="key">Date</span>: <span class="predefined-constant">false</span>
+    }
+  }
+}
+</pre></td>
+</tr></table>
+</div></div>
+<p>With Ember &lt; v2.7.0, values must be provided for all prototype extensions:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">config/environment.js</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+</pre></td>
+  <td class="code"><pre><span class="keyword">var</span> ENV = {
+  <span class="key">EmberENV</span>: {
+    <span class="key">EXTEND_PROTOTYPES</span>: {
+      <span class="key">Array</span>: <span class="predefined-constant">true</span>,
+      <span class="key">Date</span>: <span class="predefined-constant">false</span>,
+      <span class="key">Function</span>: <span class="predefined-constant">true</span>,
+      <span class="key">String</span>: <span class="predefined-constant">true</span>
+    }
+  }
+};
+</pre></td>
+</tr></table>
+</div></div>
+<p>If you&#39;re not sure which prototype extensions your app already has enabled, you
+can check <code>EmberENV.EXTEND_PROTOTYPES</code> in your browser&#39;s JavaScript console
+while your app is running.</p>
+
+<p>See <a href="https://guides.emberjs.com/v2.10.0/configuring-ember/disabling-prototype-extensions/#toc_strings">Disabling Prototype
+Extensions</a>
+for more information about how Ember uses prototype extensions.</p>
+<h4 class='anchorable-toc' id='toc_store-queryrecord-array-response-with-restserializer'>Store.queryRecord Array Response with RESTSerializer</h4><h6 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h6><h6 class='anchorable-toc' id='toc_id-ds-serializer-rest-queryrecord-array-response'>id: ds.serializer.rest.queryRecord-array-response</h6>
+<p>When using
+<a href="http://emberjs.com/api/data/classes/DS.RESTSerializer.html"><code>DS.RESTSerializer</code></a>
+with previous versions of Ember Data,
+<a href="http://emberjs.com/api/data/classes/DS.Store.html#method_queryRecord"><code>store.queryRecord</code></a>
+provided support for normalizing payloads containing an array of primary data.
+This behavior has been deprecated because it is basically the same as using
+<a href="http://emberjs.com/api/data/classes/DS.Store.html#method_query"><code>store.query</code></a>
+and returning the first model.</p>
+
+<p>Deprecated payload example with an array as the primary data:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+  <td class="code"><pre><span class="comment">// GET /users?username=&quot;GummyBear&quot;</span>
+
+{
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">users</span><span class="delimiter">&quot;</span></span>: [{
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">id</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">1</span><span class="delimiter">&quot;</span></span>,
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">username</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">GummyBear</span><span class="delimiter">&quot;</span></span>
+  }]
+}
+</pre></td>
+</tr></table>
+</div></div>
+<p>Expected payload example with a single object as the primary data:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+  <td class="code"><pre><span class="comment">// GET /users?username=&quot;GummyBear&quot;</span>
+
+{
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">user</span><span class="delimiter">&quot;</span></span>: {
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">id</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">1</span><span class="delimiter">&quot;</span></span>,
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">username</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">GummyBear</span><span class="delimiter">&quot;</span></span>,
+  }
+}
+</pre></td>
+</tr></table>
+</div></div>
+<p>If you need to support an API that responds with an array as the primary data,
+you have a few options. The simplest option is to use
+<a href="http://emberjs.com/api/data/classes/DS.Store.html#method_query"><code>store.query</code></a>
+instead of
+<a href="http://emberjs.com/api/data/classes/DS.Store.html#method_queryRecord"><code>store.queryRecord</code></a>:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+</pre></td>
+  <td class="code"><pre><span class="local-variable">this</span>.store.query(<span class="string"><span class="delimiter">'</span><span class="content">user</span><span class="delimiter">'</span></span>, { <span class="key">username</span>: <span class="string"><span class="delimiter">'</span><span class="content">GummyBear</span><span class="delimiter">'</span></span> }).then((users) =&gt; {
+  <span class="keyword">return</span> users.objectAt(<span class="integer">0</span>);
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>Another option is to override
+<a href="http://emberjs.com/api/data/classes/DS.RESTSerializer.html#method_normalizeQueryRecordResponse"><code>normalizeQueryRecordResponse</code></a>
+in your serializer, manipulating the payload so it matches the expected format:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/serializers/user.js</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+11
+12
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> DS from <span class="string"><span class="delimiter">'</span><span class="content">ember-data</span><span class="delimiter">'</span></span>;
+
+<span class="reserved">export</span> <span class="keyword">default</span> DS.RESTSerializer.extend({
+  normalizeQueryRecordResponse(store, primaryModelClass, payload) {
+    <span class="keyword">if</span> (payload.users) {
+      payload.user = payload.users[<span class="integer">0</span>];
+      <span class="keyword">delete</span> payload.users;
+    }
+
+    <span class="keyword">return</span> <span class="local-variable">this</span>._super(...<span class="local-variable">arguments</span>);
+  }
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>Another option is to customize the URL of the request made by
+<a href="http://emberjs.com/api/data/classes/DS.Store.html#method_queryRecord"><code>store.queryRecord</code></a>
+so that it makes a request that returns the expected payload with a single
+object as its primary data. This can be done by overriding
+<a href="http://emberjs.com/api/data/classes/DS.RESTAdapter.html#method_urlForQueryRecord"><code>urlForQueryRecord</code></a>
+in your adapter:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/adapters/user.js</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> DS from <span class="string"><span class="delimiter">'</span><span class="content">ember-data</span><span class="delimiter">'</span></span>;
+
+<span class="reserved">export</span> <span class="keyword">default</span> DS.RESTAdapter.extend({
+  urlForQueryRecord() {
+    let baseURL = <span class="local-variable">this</span>.buildURL();
+    <span class="keyword">return</span> <span class="error">`</span><span class="predefined">$</span>{baseURL}/user-query<span class="error">`</span>;
+  }
+});
+</pre></td>
+</tr></table>
+</div></div><h3 class='anchorable-toc' id='toc_deprecations-added-in-ember-data-2-11'>Deprecations Added in Ember Data 2.11</h3><h4 class='anchorable-toc' id='toc_recordisloaded'>recordIsLoaded</h4><h6 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h6><h6 class='anchorable-toc' id='toc_id-ds-store-recordisloaded'>id: ds.store.recordIsLoaded</h6>
+<p><code>recordIsLoaded</code> has been deprecated and is an alias for <code>hasRecordForId</code>, which should be used instead.</p>
+
+<p>If you have this:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+</pre></td>
+  <td class="code"><pre>store.recordIsLoaded(<span class="string"><span class="delimiter">'</span><span class="content">post</span><span class="delimiter">'</span></span>, <span class="integer">1</span>); <span class="comment">// false</span>
+store.findRecord(<span class="string"><span class="delimiter">'</span><span class="content">post</span><span class="delimiter">'</span></span>, <span class="integer">1</span>).then(<span class="keyword">function</span>() {
+  store.recordIsLoaded(<span class="string"><span class="delimiter">'</span><span class="content">post</span><span class="delimiter">'</span></span>, <span class="integer">1</span>); <span class="comment">// true</span>
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>You can change it to this:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+</pre></td>
+  <td class="code"><pre>store.hasRecordForId(<span class="string"><span class="delimiter">'</span><span class="content">post</span><span class="delimiter">'</span></span>, <span class="integer">1</span>); <span class="comment">// false</span>
+store.findRecord(<span class="string"><span class="delimiter">'</span><span class="content">post</span><span class="delimiter">'</span></span>, <span class="integer">1</span>).then(<span class="keyword">function</span>() {
+  store.hasRecordForId(<span class="string"><span class="delimiter">'</span><span class="content">post</span><span class="delimiter">'</span></span>, <span class="integer">1</span>); <span class="comment">// true</span>
+});
+</pre></td>
+</tr></table>
+</div></div><h4 class='anchorable-toc' id='toc_lookupadapter'>lookupAdapter</h4><h6 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h6><h6 class='anchorable-toc' id='toc_id-ds-store-lookupadapter'>id: ds.store.lookupAdapter</h6>
+<p><code>lookupAdapter</code> has been deprecated in favor of using <code>adapterFor</code>.</p>
+<h4 class='anchorable-toc' id='toc_lookupserializer'>lookupSerializer</h4><h6 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h6><h6 class='anchorable-toc' id='toc_id-ds-store-lookupserializer'>id: ds.store.lookupSerializer</h6>
+<p><code>lookupSerializer</code> has been deprecated in favor of using <code>serializerFor</code>.</p>
+<h4 class='anchorable-toc' id='toc_store-serialize'>Store.serialize</h4><h6 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h6><h6 class='anchorable-toc' id='toc_id-ds-store-serialize'>id: ds.store.serialize</h6>
+<p><code>Store.serialize</code> has been deprecated in favor of
+<a href="http://emberjs.com/api/data/classes/DS.Model.html#method_serialize"><code>Model.serialize</code></a>
+as part of an effort to reduce duplication and API surface area.</p>
+
+<p>Before:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+</pre></td>
+  <td class="code"><pre>let post = <span class="local-variable">this</span>.store.peekRecord(<span class="string"><span class="delimiter">'</span><span class="content">post</span><span class="delimiter">'</span></span>, <span class="integer">123</span>);
+<span class="local-variable">this</span>.store.serialize(post);
+</pre></td>
+</tr></table>
+</div></div>
+<p>After:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+</pre></td>
+  <td class="code"><pre>let post = <span class="local-variable">this</span>.store.peekRecord(<span class="string"><span class="delimiter">'</span><span class="content">post</span><span class="delimiter">'</span></span>, <span class="integer">123</span>);
+
+post.serialize();
+</pre></td>
+</tr></table>
+</div></div><h3 class='anchorable-toc' id='toc_deprecations-added-in-ember-data-2-12'>Deprecations Added in Ember Data 2.12</h3><h4 class='anchorable-toc' id='toc_jsonserializer-shouldserializehasmany'>JSONSerializer.shouldSerializeHasMany</h4><h6 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h6><h6 class='anchorable-toc' id='toc_id-ds-serializer-private-should-serialize-has-many'>id: ds.serializer.private-should-serialize-has-many</h6>
+<p>The private method <code>_shouldSerializeHasMany</code> has been promoted to the public
+API. To remove this deprecation, please remove the underscore to use the public
+<a href="http://emberjs.com/api/data/classes/DS.JSONSerializer.html#method_shouldSerializeHasMany"><code>shouldSerializeHasMany</code></a>
+method.</p>
+<h3 class='anchorable-toc' id='toc_deprecations-added-in-ember-data-2-13'>Deprecations Added in Ember Data 2.13</h3><h4 class='anchorable-toc' id='toc_unused-initializers'>Unused Initializers</h4><h6 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h6><h6 class='anchorable-toc' id='toc_id-ds-deprecated-initializers'>id: ds.deprecated-initializers</h6>
+<p>The Ember Data initializers <code>data-adapter</code>, <code>injectStore</code>, <code>transforms</code>, and <code>store</code> are no longer used, so they are being removed.
+Applications that depend on these for the ordering of their own custom initializers can substitute <code>ember-data</code> instead, without any change in functionality.</p>
+
+<p>Before:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">function</span> <span class="function">initialize</span>(application) {
+  <span class="comment">// ... your code ...</span>
+};
+
+<span class="reserved">export</span> <span class="keyword">default</span> {
+  <span class="key">name</span>: <span class="string"><span class="delimiter">'</span><span class="content">websocketInit</span><span class="delimiter">'</span></span>,
+  <span class="key">after</span>: <span class="string"><span class="delimiter">'</span><span class="content">store</span><span class="delimiter">'</span></span>,
+  <span class="key">initialize</span>: initialize
+};
+</pre></td>
+</tr></table>
+</div></div>
+<p>After:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">function</span> <span class="function">initialize</span>(application) {
+  <span class="comment">// ... your code ...</span>
+};
+
+<span class="reserved">export</span> <span class="keyword">default</span> {
+  <span class="key">name</span>: <span class="string"><span class="delimiter">'</span><span class="content">websocketInit</span><span class="delimiter">'</span></span>,
+  <span class="key">after</span>: <span class="string"><span class="delimiter">'</span><span class="content">ember-data</span><span class="delimiter">'</span></span>,
+  <span class="key">initialize</span>: initialize
+};
+</pre></td>
+</tr></table>
+</div></div><h3 class='anchorable-toc' id='toc_deprecations-added-in-pending-features'>Deprecations Added in Pending Features</h3><h4 class='anchorable-toc' id='toc_hasmanyreference-push-array'>HasManyReference.push(array)</h4><h6 class='anchorable-toc' id='toc_until-4-0-0'>until: 4.0.0</h6><h6 class='anchorable-toc' id='toc_id-ds-references-has-many-push-array'>id: ds.references.has-many.push-array</h6><h6 class='anchorable-toc' id='toc_feature-ds-overhaul-references'>feature: ds-overhaul-references</h6>
+<p>Passing an array to a <code>HasManyReference#push</code> has been deprecated. You should
+refactor your code to instead pass a <a href="http://jsonapi.org/format/#document-resource-object-relationships">JSON API Relationship
+Object</a>.</p>
+
+<p>For example, if you previously had something like:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+  <td class="code"><pre>let commentsData = [
+  { <span class="key">data</span>: { <span class="key">type</span>: <span class="string"><span class="delimiter">'</span><span class="content">comment</span><span class="delimiter">'</span></span>, <span class="key">id</span>: <span class="integer">1</span> } },
+  { <span class="key">data</span>: { <span class="key">type</span>: <span class="string"><span class="delimiter">'</span><span class="content">comment</span><span class="delimiter">'</span></span>, <span class="key">id</span>: <span class="integer">2</span> } }
+];
+
+let post = <span class="local-variable">this</span>.store.peekRecord(<span class="string"><span class="delimiter">'</span><span class="content">post</span><span class="delimiter">'</span></span>, <span class="integer">123</span>);
+
+post.hasMany(<span class="string"><span class="delimiter">'</span><span class="content">comments</span><span class="delimiter">'</span></span>).push(commentsData);
+</pre></td>
+</tr></table>
+</div></div>
+<p>You could remove this deprecation by refactoring your code to:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+</pre></td>
+  <td class="code"><pre>let commentsData = {
+  <span class="key">data</span>: [
+    { <span class="key">type</span>: <span class="string"><span class="delimiter">'</span><span class="content">comment</span><span class="delimiter">'</span></span>, <span class="key">id</span>: <span class="integer">1</span> },
+    { <span class="key">type</span>: <span class="string"><span class="delimiter">'</span><span class="content">comment</span><span class="delimiter">'</span></span>, <span class="key">id</span>: <span class="integer">2</span> }
+  ]
+};
+
+let post = <span class="local-variable">this</span>.store.peekRecord(<span class="string"><span class="delimiter">'</span><span class="content">post</span><span class="delimiter">'</span></span>, <span class="integer">123</span>);
+
+post.hasMany(<span class="string"><span class="delimiter">'</span><span class="content">comments</span><span class="delimiter">'</span></span>).push(commentsData);
+</pre></td>
+</tr></table>
+</div></div><h4 class='anchorable-toc' id='toc_hasmanyreference-push-invalid-data'>HasManyReference.push Invalid Data</h4><h6 class='anchorable-toc' id='toc_until-4-0-0'>until: 4.0.0</h6><h6 class='anchorable-toc' id='toc_id-ds-references-has-many-push-invalid-json-api'>id: ds.references.has-many.push-invalid-json-api</h6><h6 class='anchorable-toc' id='toc_feature-ds-overhaul-references'>feature: ds-overhaul-references</h6>
+<p>In previous versions of Ember Data, <code>HasManyReference#push</code> supported pushing
+data that was almost formatted as a <a href="http://jsonapi.org/format/#document-resource-object-relationships">JSON API Relationship
+Object</a>, but
+wasn&#39;t quite correct. Pushing data that is formatted this way has been
+deprecated. You should refactor your code to instead push a properly formatted
+JSON API Relationship Object.</p>
+
+<p>For example, if you previously had something like:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+</pre></td>
+  <td class="code"><pre>let commentsData = {
+  <span class="key">data</span>: [
+    { <span class="key">data</span>: { <span class="key">type</span>: <span class="string"><span class="delimiter">'</span><span class="content">comment</span><span class="delimiter">'</span></span>, <span class="key">id</span>: <span class="integer">1</span> } },
+    { <span class="key">data</span>: { <span class="key">type</span>: <span class="string"><span class="delimiter">'</span><span class="content">comment</span><span class="delimiter">'</span></span>, <span class="key">id</span>: <span class="integer">2</span> } }
+  ]
+};
+
+let post = <span class="local-variable">this</span>.store.peekRecord(<span class="string"><span class="delimiter">'</span><span class="content">post</span><span class="delimiter">'</span></span>, <span class="integer">123</span>);
+
+post.hasMany(<span class="string"><span class="delimiter">'</span><span class="content">comments</span><span class="delimiter">'</span></span>).push(commentsData);
+</pre></td>
+</tr></table>
+</div></div>
+<p>You could remove this deprecation by refactoring your code to:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+</pre></td>
+  <td class="code"><pre>let commentsData = {
+  <span class="key">data</span>: [
+    { <span class="key">type</span>: <span class="string"><span class="delimiter">'</span><span class="content">comment</span><span class="delimiter">'</span></span>, <span class="key">id</span>: <span class="integer">1</span> },
+    { <span class="key">type</span>: <span class="string"><span class="delimiter">'</span><span class="content">comment</span><span class="delimiter">'</span></span>, <span class="key">id</span>: <span class="integer">2</span> }
+  ]
+};
+
+let post = <span class="local-variable">this</span>.store.peekRecord(<span class="string"><span class="delimiter">'</span><span class="content">post</span><span class="delimiter">'</span></span>, <span class="integer">123</span>);
+
+post.hasMany(<span class="string"><span class="delimiter">'</span><span class="content">comments</span><span class="delimiter">'</span></span>).push(commentsData);
+</pre></td>
+</tr></table>
+</div></div><h4 class='anchorable-toc' id='toc_belongstoreference-push-ds-model'>BelongsToReference.push(DS.Model)</h4><h6 class='anchorable-toc' id='toc_until-4-0-0'>until: 4.0.0</h6><h6 class='anchorable-toc' id='toc_id-ds-references-belongs-to-push-record'>id: ds.references.belongs-to.push-record</h6><h6 class='anchorable-toc' id='toc_feature-ds-overhaul-references'>feature: ds-overhaul-references</h6>
+<p>Passing an instance of
+<a href="http://emberjs.com/api/data/classes/DS.Model.html"><code>DS.Model</code></a> to
+<code>BelongsToReference#push</code> has been deprecated. You should instead follow the
+pattern of <code>model.set(&#39;relationship&#39;, value)</code> to update a <code>belongsTo</code>
+relationship with an instance of <code>DS.Model</code>.</p>
+
+<p>For example, if you have something like:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+</pre></td>
+  <td class="code"><pre>let post = <span class="local-variable">this</span>.store.peekRecord(<span class="string"><span class="delimiter">'</span><span class="content">post</span><span class="delimiter">'</span></span>, <span class="integer">123</span>);
+let author = <span class="local-variable">this</span>.store.peekRecord(<span class="string"><span class="delimiter">'</span><span class="content">user</span><span class="delimiter">'</span></span>, <span class="integer">456</span>);
+
+post.belongsTo(<span class="string"><span class="delimiter">'</span><span class="content">author</span><span class="delimiter">'</span></span>).push(author);
+</pre></td>
+</tr></table>
+</div></div>
+<p>You can remove this deprecation by refactoring your code to:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+</pre></td>
+  <td class="code"><pre>let post = <span class="local-variable">this</span>.store.peekRecord(<span class="string"><span class="delimiter">'</span><span class="content">post</span><span class="delimiter">'</span></span>, <span class="integer">123</span>);
+let author = <span class="local-variable">this</span>.store.peekRecord(<span class="string"><span class="delimiter">'</span><span class="content">user</span><span class="delimiter">'</span></span>, <span class="integer">456</span>);
+
+post.set(<span class="string"><span class="delimiter">'</span><span class="content">author</span><span class="delimiter">'</span></span>, author);
+</pre></td>
+</tr></table>
+</div></div><h4 class='anchorable-toc' id='toc_jsonapiserializer-modelnamefrompayloadkey-for-resource'>JSONAPISerializer.modelNameFromPayloadKey for Resource</h4><h6 class='anchorable-toc' id='toc_until-4-0-0'>until: 4.0.0</h6><h6 class='anchorable-toc' id='toc_id-ds-json-api-serializer-deprecated-model-name-for-resource'>id: ds.json-api-serializer.deprecated-model-name-for-resource</h6><h6 class='anchorable-toc' id='toc_feature-ds-payload-type-hooks'>feature: ds-payload-type-hooks</h6>
+<p>Using <code>JSONAPISerializer.modelNameFromPayloadKey</code> to normalize the type of a
+resource has been deprecated in favor of
+<code>JSONAPISerializer.modelNameFromPayloadType</code>.</p>
+
+<p>In the context of a JSON API payload, it is the value of the <code>type</code> key that
+maps to the name of the corresponding <code>DS.Model</code> class rather than the key that
+the data is nested under.</p>
+
+<p>For example, if your API responds with a namespaced resource type in the payload
+when you fetch a <code>post</code>:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+  <td class="code"><pre><span class="comment">// GET /post/1</span>
+
+{
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">data</span><span class="delimiter">&quot;</span></span>: {
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">type</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">api::v1::post</span><span class="delimiter">&quot;</span></span>,
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">id</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">1</span><span class="delimiter">&quot;</span></span>
+  }
+}
+</pre></td>
+</tr></table>
+</div></div>
+<p>Previously, you would want to override <code>modelNameFromPayloadKey</code> to remove the
+namespace:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/serializers/post.js</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> DS from <span class="string"><span class="delimiter">'</span><span class="content">ember-data</span><span class="delimiter">'</span></span>;
+
+<span class="reserved">export</span> <span class="keyword">default</span> DS.JSONAPISerializer.extend({
+  modelNameFromPayloadKey(key) {
+    <span class="keyword">return</span> key.replace(<span class="string"><span class="delimiter">'</span><span class="content">api::v1::</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="delimiter">'</span></span>);
+  }
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>You can remove this deprecation by refactoring your serializer to instead use
+<code>modelNameFromPayloadType</code>:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/serializers/post.js</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> DS from <span class="string"><span class="delimiter">'</span><span class="content">ember-data</span><span class="delimiter">'</span></span>;
+
+<span class="reserved">export</span> <span class="keyword">default</span> DS.JSONAPISerializer.extend({
+  modelNameFromPayloadType(type) {
+    <span class="keyword">return</span> type.replace(<span class="string"><span class="delimiter">'</span><span class="content">api::v1::</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="delimiter">'</span></span>);
+  }
+});
+</pre></td>
+</tr></table>
+</div></div><h4 class='anchorable-toc' id='toc_jsonapiserializer-modelnamefrompayloadkey-for-relationship'>JSONAPISerializer.modelNameFromPayloadKey for Relationship</h4><h6 class='anchorable-toc' id='toc_until-4-0-0'>until: 4.0.0</h6><h6 class='anchorable-toc' id='toc_id-ds-json-api-serializer-deprecated-model-name-for-relationship'>id: ds.json-api-serializer.deprecated-model-name-for-relationship</h6><h6 class='anchorable-toc' id='toc_feature-ds-payload-type-hooks'>feature: ds-payload-type-hooks</h6>
+<p>Using <code>JSONAPISerializer.modelNameFromPayloadKey</code> to normalize the type of a
+relationship has been deprecated in favor of
+<code>JSONAPISerializer.modelNameFromPayloadType</code>.</p>
+
+<p>See <a href="#toc_jsonapiserializer-modelnamefrompayloadkey-for-resource">JSONAPISerializer.modelNameFromPayloadKey for
+Resource</a> for more
+information.</p>
+<h4 class='anchorable-toc' id='toc_jsonapiserializer-payloadkeyfrommodelname-for-resource'>JSONAPISerializer.payloadKeyFromModelName for Resource</h4><h6 class='anchorable-toc' id='toc_until-4-0-0'>until: 4.0.0</h6><h6 class='anchorable-toc' id='toc_id-ds-json-api-serializer-deprecated-payload-type-for-model'>id: ds.json-api-serializer.deprecated-payload-type-for-model</h6><h6 class='anchorable-toc' id='toc_feature-ds-payload-type-hooks'>feature: ds-payload-type-hooks</h6>
+<p>Using <code>JSONAPISerializer.payloadKeyFromModelName</code> to serialize the type of a
+model has been deprecated in favor of
+<a href="http://emberjs.com/api/data/classes/DS.JSONAPISerializer.html#method_payloadTypeFromModelName"><code>JSONAPISerializer.payloadTypeFromModelName</code></a>.</p>
+
+<p>For example, if your API expects a namespaced resource type in the payload that
+is sent when you create a <code>post</code> model:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+  <td class="code"><pre><span class="comment">// POST /api/posts/1</span>
+
+{
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">data</span><span class="delimiter">&quot;</span></span>: {
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">id</span><span class="delimiter">&quot;</span></span>: <span class="integer">1</span>,
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">type</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">api::v1::post</span><span class="delimiter">&quot;</span></span>
+  }
+}
+</pre></td>
+</tr></table>
+</div></div>
+<p>Previously, you would want to override <code>payloadKeyFromModelName</code> to add the
+namespace to the <code>modelName</code>:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/serializers/post.js</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> DS from <span class="string"><span class="delimiter">'</span><span class="content">ember-data</span><span class="delimiter">'</span></span>;
+
+<span class="reserved">export</span> <span class="keyword">default</span> DS.JSONAPISerializer.extend({
+  payloadKeyFromModelName(modelName) {
+    <span class="keyword">return</span> <span class="error">`</span>api::v1::<span class="predefined">$</span>{modelName}<span class="error">`</span>;
+  }
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>You can remove this deprecation by refactoring your serializer to instead use
+<a href="http://emberjs.com/api/data/classes/DS.JSONAPISerializer.html#method_payloadTypeFromModelName"><code>payloadTypeFromModelName</code></a>:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/serializers/post.js</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> DS from <span class="string"><span class="delimiter">'</span><span class="content">ember-data</span><span class="delimiter">'</span></span>;
+
+<span class="reserved">export</span> <span class="keyword">default</span> DS.JSONAPISerializer.extend({
+  payloadTypeFromModelName(modelName) {
+    <span class="keyword">return</span> <span class="error">`</span>api::v1::<span class="predefined">$</span>{modelName}<span class="error">`</span>;
+  }
+});
+</pre></td>
+</tr></table>
+</div></div><h4 class='anchorable-toc' id='toc_jsonapiserializer-payloadkeyfrommodelname-for-belongsto-relationship'>JSONAPISerializer.payloadKeyFromModelName for belongsTo Relationship</h4><h6 class='anchorable-toc' id='toc_until-4-0-0'>until: 4.0.0</h6><h6 class='anchorable-toc' id='toc_id-ds-json-api-serializer-deprecated-payload-type-for-belongs-to'>id: ds.json-api-serializer.deprecated-payload-type-for-belongs-to</h6><h6 class='anchorable-toc' id='toc_feature-ds-payload-type-hooks'>feature: ds-payload-type-hooks</h6>
+<p>Using <code>JSONAPISerializer.payloadKeyFromModelName</code> to serialize the type of a
+<code>belongsTo</code> relationship has been deprecated in favor of
+<a href="http://emberjs.com/api/data/classes/DS.JSONAPISerializer.html#method_payloadTypeFromModelName"><code>JSONAPISerializer.payloadTypeFromModelName</code></a>.</p>
+
+<p>See <a href="#toc_jsonapiserializer-payloadkeyfrommodelname-for-resource">JSONAPISerializer.payloadKeyFromModelName for
+Resource</a> for more
+information.</p>
+<h4 class='anchorable-toc' id='toc_jsonapiserializer-payloadkeyfrommodelname-for-hasmany-relationship'>JSONAPISerializer.payloadKeyFromModelName for hasMany Relationship</h4><h6 class='anchorable-toc' id='toc_until-4-0-0'>until: 4.0.0</h6><h6 class='anchorable-toc' id='toc_id-ds-json-api-serializer-deprecated-payload-type-for-has-many'>id: ds.json-api-serializer.deprecated-payload-type-for-has-many</h6><h6 class='anchorable-toc' id='toc_feature-ds-payload-type-hooks'>feature: ds-payload-type-hooks</h6>
+<p>Using <code>JSONAPISerializer.payloadKeyFromModelName</code> to serialize the type of a
+<code>hasMany</code> relationship has been deprecated in favor of
+<a href="http://emberjs.com/api/data/classes/DS.JSONAPISerializer.html#method_payloadTypeFromModelName"><code>JSONAPISerializer.payloadTypeFromModelName</code></a>.</p>
+
+<p>See <a href="#toc_jsonapiserializer-payloadkeyfrommodelname-for-resource">JSONAPISerializer.payloadKeyFromModelName for
+Resource</a> for more
+information.</p>
+
+
+      </div>
+    </div>
+
+    <main-footer></main-footer>
+
+        <script type="text/javascript" src="/javascripts/deprecations-1921f6e5.js"></script>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
+    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
+  </body>
+</html>

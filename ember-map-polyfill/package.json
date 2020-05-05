@@ -1,0 +1,66 @@
+{
+  "name": "@ember/map-polyfill",
+  "version": "0.0.0",
+  "description": "The default blueprint for ember-cli addons.",
+  "keywords": [
+    "ember-addon"
+  ],
+  "homepage": "https://github.com/emberjs/ember-map-polyfill#readme",
+  "bugs": {
+    "url": "https://github.com/emberjs/ember-map-polyfill/issues"
+  },
+  "license": "MIT",
+  "author": "",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emberjs/ember-map-polyfill.git"
+  },
+  "scripts": {
+    "build": "ember build",
+    "changelog": "lerna-changelog",
+    "start": "ember server",
+    "test": "ember try:each"
+  },
+  "dependencies": {
+    "@ember/ordered-set": "https://github.com/emberjs/ember-ordered-set.git#97f50a7",
+    "ember-cli-babel": "^6.9.0"
+  },
+  "devDependencies": {
+    "ember-cli": "~2.16.2",
+    "ember-cli-code-coverage": "^0.4.2",
+    "ember-cli-dependency-checker": "^2.0.0",
+    "ember-cli-eslint": "^4.0.0",
+    "ember-cli-htmlbars": "^2.0.1",
+    "ember-cli-htmlbars-inline-precompile": "^1.0.0",
+    "ember-cli-inject-live-reload": "^1.4.1",
+    "ember-cli-qunit": "^4.0.0",
+    "ember-cli-shims": "^1.1.0",
+    "ember-disable-prototype-extensions": "^1.1.2",
+    "ember-load-initializers": "^1.0.0",
+    "ember-qunit-assert-helpers": "^0.2.0",
+    "ember-resolver": "^4.0.0",
+    "ember-source": "~2.16.0",
+    "lerna-changelog": "^0.7.0",
+    "loader.js": "^4.2.3"
+  },
+  "engines": {
+    "node": "^4.5 || 6.* || >= 7.*"
+  },
+  "changelog": {
+    "repo": "emberjs/ember-map-polyfill",
+    "labels": {
+      "breaking": ":boom: Breaking Change",
+      "enhancement": ":rocket: Enhancement",
+      "bug": ":bug: Bug Fix",
+      "documentation": ":memo: Documentation",
+      "internal": ":house: Internal"
+    }
+  },
+  "ember-addon": {
+    "configPath": "tests/dummy/config"
+  }
+}

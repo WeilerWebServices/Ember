@@ -1,0 +1,13 @@
+{
+  "name": "log-manager",
+  "description": "Logging library with hierarchy and appenders.",
+  "keywords": [
+    "logger",
+    "logging"
+  ],
+  "version": "0.0.1",
+  "scripts": [
+    "main.js"
+  ],
+  "repo": "organization/thing.js"
+}

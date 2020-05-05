@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#E04E39">
+    <title>Ember.js - Glimmer's In Canary, Test Your Apps!</title>
+    <meta property="st:title" content="Ember.js: Glimmer's In Canary, Test Your Apps!" />
+    <meta property="og:title" content="Ember.js: Glimmer's In Canary, Test Your Apps!" />
+    <meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
+    <meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@emberjs" />
+    <meta name="twitter:title" content="Glimmer's In Canary, Test Your Apps!"/>
+    <meta name="google-site-verification" content="N9yOP2jCLcZBMHUet-JRqU2jnLVPeLDaePpkCqXGQXM" />
+    <meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
+    <link rel="shortcut icon" href="/images/favicon-b8f150dd.png" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
+    <!--[if lte IE 7 ]><link href="/stylesheets/fonts/fontello-ie7-e008d616.css" rel="stylesheet" /><![endif]-->
+    <link href="/stylesheets/site-364c2a35.css" rel="stylesheet" />
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-cf72b59a166beb307683d9d0dae6bb0f.css" />
+    
+  </head>
+
+  <body class="blog blog_2015 blog_2015_05 blog_2015_05_05 blog_2015_05_05_glimmer-merging responsive">
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/common-old-ie-a6691877.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script type="text/javascript" src="/javascripts/common-modern-7c867c7e.js"></script>
+    <!--<![endif]-->
+    <header>
+<nav class="navbar navbar-inverse">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="/"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home" /></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Docs <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="//guides.emberjs.com">Guides</a></li>
+      <li><a href="/api/ember/release">API Reference</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/learn">Learn Ember</a></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Releases <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/builds">Channels</a></li>
+      <li><a href="/builds/release">-- Stable</a></li>
+      <li><a href="/builds/beta">-- Beta</a></li>
+      <li><a href="/builds/canary">-- Canary</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/deprecations">Deprecations</a></li>
+      <li><a href="/statusboard">Status Board</a></li>
+     </ul>
+    </li>
+    <li><a href="/blog">Blog</a></li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/community">The Ember Community</a>
+       <li><a href="/guidelines">Guidelines</a></li>
+       <li><a href="http://github.com/emberjs/">Contribute (Github)</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/community/meetups">Meetups</a></li>
+       <li><a href="http://jobs.emberjs.com/">Job Board</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberconf.com/">Ember Conf</a></li>
+     </ul>
+     </li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="/team">The Team</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/logos">Logos</a></li>
+       <li><a href="/mascots">Mascots</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/ember-users">Who Uses Ember</a></li>
+       <li><a href="/sponsors">Sponsors</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/legal">Legal</a></li>
+       <li><a href="/security">Security</a></li>       
+      </ul>
+     </li>
+   </ul>
+   <form class="navbar-form navbar-right searchbox">
+    <div class="input-group">
+      <label for="search-input" class="control-label sr-only">Search</label>
+        <input type="text" 
+        class="form-control search input ds-input" 
+        placeholder="Search..." 
+        id="search-input" 
+        role="combobox" 
+        aria-expanded="false" 
+        aria-owns="algolia-autocomplete-listbox-0" 
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false" 
+        />
+        <span></span>
+    </div>
+   </form>
+  </div>
+  <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container-fluid -->
+</nav>
+</header>
+
+
+    
+
+    <div id="content-wrapper" class="content-wrapper">
+        <div id="sidebar" class="sidebar" role="complementary">
+          <ol id='toc-list' class="blog-sidebar">
+  <li class='level-1'>
+    <a href="/blog/tags/recent-posts.html">Recent Posts</a>
+    <ol style="display:block">
+      <li class='level-3'><a href="/blog/2018/02/21/2018-ember-community-survey.html">2018 Ember Community Survey</a></li>
+      <li class='level-3'><a href="/blog/2017/10/10/glimmer-progress-report.html">Glimmer.js Progress Report</a></li>
+      <li class='level-3'><a href="/blog/2017/10/03/the-road-to-ember-3-0.html">The Road to Ember 3.0</a></li>
+      <li class='level-3'><a href="/blog/2017/04/05/emberconf-2017-state-of-the-union.html">EmberConf 2017: State of the Union</a></li>
+      <li class='level-3'><a href="/blog/2017/02/28/2017-ember-community-survey.html">2017 Ember Community Survey</a></li>
+    </ol>
+  </li>
+  <li class='level-1'>
+    <a href="/blog/tags/releases.html">Releases</a>
+    <ol style="display:block">
+      <li class='level-3'><a href="/blog/2018/04/13/ember-3-1-released.html">Ember 3.1 and 3.2 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2018/02/16/ember-3-1-beta-released.html">Ember 3.1 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2018/02/14/ember-3-0-released.html">Ember 3.0 Released</a></li>
+      <li class='level-3'><a href="/blog/2018/01/01/ember-2-18-released.html">Ember 2.18 and 3.0 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/11/20/ember-2-17-released.html">Ember 2.16-LTS, Ember 2.17 and 2.18 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/10/11/ember-2-16-released.html">Ember 2.16 and 2.17 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/09/01/ember-2-15-released.html">Ember 2.15 and 2.16 Beta Released</a></li>
+    </ol>
+  </li>
+</ol>
+
+          <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
+        </div>
+      <div id="content" class="main has-sidebar" role="main">
+          
+  <article class="blog-post">
+    <div class="blog-post-header">
+      <h1 class="blog-post-title">Glimmer's In Canary, Test Your Apps!</h1>
+      <div class="blog-post-meta">
+          <time class="blog-post-date">May 5, 2015</time>
+          <div class="blog-post-author">By Yehuda</div>
+      </div>
+    </div>
+    <div class="blog-post-body" id="toc-content">
+      <p>After months of work, <strong>Glimmer is landing in Canary today</strong>.</p>
+
+<p>What this means:</p>
+
+<ul>
+<li>The test suite passes.</li>
+<li>We have tested Glimmer on our own apps, and, for the most part, apps boot and
+run correctly.</li>
+<li>There are still known issues (see below), including with the test helpers.</li>
+<li>At this point, we need community help to identify compatibility issues not
+covered by the test suite.</li>
+<li>We expect to continue improving compatibility with the pre-Glimmer engine for
+some time, as new issues come to light.</li>
+</ul>
+
+<p>Glimmer is the new rendering engine the Ember community has been working on for
+the past several months. It is the first ground-up change to the templating
+engine since SproutCore 2.0, and takes advantage of the groundwork laid by
+HTMLBars to dramatically improve re-rendering performance. It also sets the
+stage for more performance improvements during the 2.x series, and
+React-inspired improvements to the Ember programming model. Best of all, we are
+landing Glimmer in Ember 1.13, compatible with the full public API of Ember
+1.x.</p>
+
+<p>It&#39;s also worth noting that while our apps feel faster, not every
+performance benchmark will necessarily show marked improvement. There
+will be more on this below, but the Glimmer refactor focused primarily
+on dramatic improvements to re-rendering performance and programming
+model improvements.</p>
+
+<p>Initial render of component-heavy pages shows some improvement in most
+of our tests, but you should expect to see the biggest improvements when
+re-rendering lists, especially when you are not using deprecated
+functionality.</p>
+
+<p>Once we land Glimmer, you will probably see a variety of different
+benchmarks testing various aspects of Ember. We expect to see benchmarks
+showing that there are still pathologically slow scenarios in Ember,
+especially in areas that we did not focus on improving. We expect to
+continue to improve performance across Ember throughout the 2.x series,
+and discuss that more below.</p>
+
+<p>Also note that while we took great pains to support features present in
+Ember 1.12 (including many long-deprecated features), that compatibility
+often comes with significant performance costs. In some cases, seemingly
+similar constructs (e.g. <code>{{#each posts as |post|]}</code> vs. <code>{{#each posts
+itemController=&#39;post&#39; as |post|}}</code>) have significantly different
+internal implementation, and the Ember 2.0 version has vastly better
+performance.</p>
+
+<p>Finally, there will be an upcoming guide in the next week or so that
+describes the new features of the Glimmer engine (<code>attrs</code>, new lifecycle
+hooks, keys in <code>#each</code>), but at the moment we are focusing on
+compatibility with 1.x and testing the 1.x API with existing
+applications.</p>
+
+<p>Please follow these instructions to test Ember-CLI apps with Canary:</p>
+
+<ul>
+<li><a href="http://www.ember-cli.com/#using-canary-build-instead-of-release">http://www.ember-cli.com/#using-canary-build-instead-of-release</a></li>
+</ul>
+<h2 class='anchorable-toc' id='toc_known-issues'>Known Issues</h2>
+<p>There are several known issues that you should consider when evaluating
+Glimmer:</p>
+
+<ul>
+<li>There are still a few memory leaks that we have identified and are
+quickly addressing.</li>
+<li>The concept of <code>controller</code> in templates and actions in Ember 1.x was
+fairly nuanced. Glimmer started with a simpler model and layered
+compatibility on top. There are known gaps in the compatibility layer
+that we are still addressing.</li>
+<li>There are still a number of issues in the testing helpers (especially
+the faux unit tests that use &quot;isolated containers&quot;) that are causing
+apps that work correctly to fail tests. We are working to fix the test
+helpers, and should have that work done before we release 1.13 beta.</li>
+<li>There are likely a number of not-yet-known compatibility issues in
+Glimmer. You should assume that the vast majority of issues you
+encounter when testing Glimmer over the next few weeks will be addressed
+before the final release.</li>
+<li>The compatibility layer is quite slow in some areas, making the
+overall Glimmer engine slower than we would like. We have plans to
+improve overall performance through the canary and beta cycle, and
+then of course in the 2.0 release cycle.</li>
+<li><strong>In general, the Glimmer effort was an attempt to improve
+re-rendering performance, especially in large lists.</strong> It also laid
+the groundwork for significant performance work in initial render and
+throughout the framework, but that work is not yet done. Expect to see
+continued performance improvements in Ember throughout the 2.x cycle
+as a result of this change.</li>
+</ul>
+
+<p>The most critical of these caveats should be addressed before we release 1.13
+beta, and we expect to continue work on the remaining issues throughout the
+1.13 beta cycle.</p>
+
+<p>Because of the magnitude of this change, and the proximity to the Ember 2.0
+&quot;cruft removal&quot; pass, we plan to aggressively fix reported bugs during the 1.13
+beta period. There will be another post describing our 1.13 and 2.0 release
+plans with more precision in the next few weeks.</p>
+<h2 class='anchorable-toc' id='toc_performance-gains'>Performance Gains</h2>
+<p>The biggest performance gains in Glimmer come from moving to a simpler
+rendering model, built on top of HTMLBars.</p>
+
+<p>First, this allowed us to remove <strong>all</strong> internal views for constructs
+like <code>{{foo}}</code>, <code>{{#if bar}}</code> and even in <code>{{#each posts as |post|}}</code>.
+This view removal has an impact on initial render, because these
+constructs are very common in real-world templates.</p>
+
+<p>Second, as we have discussed extensively, this allows us to
+significantly improve the performance of re-rendering, which makes it
+practical to re-render lists with entirely new arrays with very good
+performance. Previously, achieving reasonable performance was very
+difficult, and even when possible, came with significant bookkeeping
+overhead.</p>
+
+<p>Interestingly, we have found that when testing real apps, the
+performance gains are much more widespread than we expected, in large
+part because of the simplification of the overall model.</p>
+
+<p><strong>Glimmer&#39;s performance in real applications has pleasantly surprised
+us, exceeding the improvements we&#39;ve seen in benchmarks designed to
+stress-test pathological cases.</strong></p>
+
+<p>When upgrading to Glimmer, please pay special attention to the
+real-world performance of your application <strong>in production mode</strong> and
+after clearing any deprecations with performance warnings.</p>
+<h2 class='anchorable-toc' id='toc_deprecated-features'>Deprecated Features</h2>
+<p>Throughout the 1.x series, Ember has deprecated features we intended to
+remove in 2.0. That process has continued with Ember 1.13, which will
+contain Glimmer.</p>
+
+<p>However, it&#39;s worth noting that Glimmer is the first major change to
+many parts of the view layer since SproutCore 2! As a result,
+perfect compatibility, especially in private APIs, was more
+challenging.</p>
+
+<p>During the process of building Glimmer, we found various semantics of
+&quot;controller&quot;s to be the most challenging. For the most part, this is
+because the concept of controller has a number of different meanings
+depending on context (routes, <code>{{render}}</code>, <code>{{#each posts
+itemController=&#39;post&#39;}}</code>, <code>{{#each posts itemController=&#39;post&#39; as
+|post|}}</code>, <code>{{#with someController}}</code>, etc.).</p>
+
+<p>Controllers and components both manage a template&#39;s &quot;context&quot; (called
+&quot;self&quot; in Glimmer) and serve as a target for actions. Mirroring these
+semantics, which are effectively derived from implementation details of
+Ember 1.x&#39;s rendering engine, has been a challenge. We&#39;re confident they
+are very close, but encourage you to open an issue if they have changed.</p>
+
+<p>Glimmer, through HTMLBars, has a much clearer concept of &quot;scope&quot;, and
+features like <code>{{yield}}</code> work directly with that scope object. We were
+able to get the Ember test suite passing by implementing the old
+semantics on top of the new scope concept, but <strong>we are aware that we
+have gaps in our implementation.</strong></p>
+
+<p>Please let us know if you find controller semantics that we have
+implemented incorrectly. Bug reports would help, JSBins would help more,
+and pull requests with failing tests would help even more.</p>
+
+<p>Finally, for the best experience with Glimmer, you should try to move
+your application away from <code>itemController</code>, <code>{{render}}</code> and other
+constructs that manipulate the controller from the template. We know
+that this is not always possible (our applications all still make
+use of some cases of these features),  which is why we worked so hard on
+compatibility.</p>
+
+<p>That said, you&#39;ll get better performance and a quicker upgrade path to
+2.0 if you work on eliminating uses of these features soon. Implementing
+them correctly added enough complexity that we will want to move
+somewhat aggressively in 2.x to enable us to further improve
+performance.</p>
+
+    </div>
+    <div class="blog-post-footer">
+    </div>
+  </article>
+  <hr>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'emberblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script type="text/javascript" src="/javascripts/blog-a90057c5.js"></script>
+
+      </div>
+    </div>
+
+    <main-footer></main-footer>
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
+    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
+  </body>
+</html>
+

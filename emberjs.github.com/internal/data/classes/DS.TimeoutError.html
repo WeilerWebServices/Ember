@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#e46652">
+    <title>Ember.js - DS.TimeoutError</title>
+    <meta property="st:title" content="Ember.js: DS.TimeoutError" />
+    <meta property="og:title" content="Ember.js: DS.TimeoutError" />
+    <meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
+    <meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@emberjs" />
+    <meta name="twitter:title" content="DS.TimeoutError"/>
+    <meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
+    <link rel="shortcut icon" href="/images/favicon-b8f150dd.png" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
+    <!--[if lte IE 7 ]><link href="/stylesheets/fonts/fontello-ie7-e008d616.css" rel="stylesheet" /><![endif]-->
+    <link href="/stylesheets/site-cfa27167.css" rel="stylesheet" />
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+      <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-cf72b59a166beb307683d9d0dae6bb0f.css" />
+    
+  </head>
+
+  <body class="api api_data api_data_classes api_data_classes_DS not-responsive">
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/common-old-ie-fd21e077.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script type="text/javascript" src="/javascripts/common-modern-e8ff2472.js"></script>
+    <!--<![endif]-->
+
+    <main-navbar></main-navbar>
+
+    
+
+    <div id="content-wrapper">
+        <div id="sidebar">
+              <ol id='toc-list'>
+      <li class='level-1'>
+        <a class="slide-widget-head" href="#">Projects</a>
+        <ol>
+          <li class='level-3 '>
+            <a href="/internal">Ember</a>
+          </li>
+          <li class='level-3 sub-selected'>
+            <a href="/internal/data">Ember Data</a>
+          </li>
+        </ol>
+      </li>
+
+      <li class='level-1'><a href="https://github.com/emberjs/data/commits/v2.13.0" target="_blank"> Tag: v2.13.0</a></li>
+
+
+          <li class="level-1 ">
+                  <a class="slide-widget-head" href='#'>Modules</a>
+
+          <ol class="">
+          
+          <li class="level-3 ">
+                        <a href="/internal/data/modules/ember-data.html">ember-data</a>
+
+          </li>
+        
+          </ol>
+        
+          </li>
+        
+
+          <li class="level-1 ">
+                  <a class="slide-widget-head" href='#'>Namespaces</a>
+
+          <ol class="">
+          
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.html">DS</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/Ember.Date.html">Ember.Date</a>
+
+          </li>
+        
+          </ol>
+        
+          </li>
+        
+
+          <li class="level-1 selected">
+                  <a class="slide-widget-head" href='#'>Classes</a>
+
+          <ol class="selected">
+          
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.AbortError.html">DS.AbortError</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.Adapter.html">DS.Adapter</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.AdapterError.html">DS.AdapterError</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.AdapterPopulatedRecordArray.html">DS.AdapterPopulatedRecordArray</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.BelongsToReference.html">DS.BelongsToReference</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.BooleanTransform.html">DS.BooleanTransform</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.BuildURLMixin.html">DS.BuildURLMixin</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.ConflictError.html">DS.ConflictError</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.DateTransform.html">DS.DateTransform</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.EmbeddedRecordsMixin.html">DS.EmbeddedRecordsMixin</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.Ember.HTMLBars.helpers.html">DS.Ember.HTMLBars.helpers</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.Errors.html">DS.Errors</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.FilteredRecordArray.html">DS.FilteredRecordArray</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.ForbiddenError.html">DS.ForbiddenError</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.HasManyReference.html">DS.HasManyReference</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.InvalidError.html">DS.InvalidError</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.JSONAPIAdapter.html">DS.JSONAPIAdapter</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.JSONAPISerializer.html">DS.JSONAPISerializer</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.JSONSerializer.html">DS.JSONSerializer</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.ManyArray.html">DS.ManyArray</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.Model.html">DS.Model</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.NotFoundError.html">DS.NotFoundError</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.NumberTransform.html">DS.NumberTransform</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.PromiseArray.html">DS.PromiseArray</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.PromiseManyArray.html">DS.PromiseManyArray</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.PromiseObject.html">DS.PromiseObject</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.RESTAdapter.html">DS.RESTAdapter</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.RESTSerializer.html">DS.RESTSerializer</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.RecordArray.html">DS.RecordArray</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.RecordArrayManager.html">DS.RecordArrayManager</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.RecordReference.html">DS.RecordReference</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.RootState.html">DS.RootState</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.Serializer.html">DS.Serializer</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.ServerError.html">DS.ServerError</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.Snapshot.html">DS.Snapshot</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.SnapshotRecordArray.html">DS.SnapshotRecordArray</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.Store.html">DS.Store</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.String.html">DS.String</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.StringTransform.html">DS.StringTransform</a>
+
+          </li>
+        
+          <li class="level-3 sub-selected">
+                        <a href="/internal/data/classes/DS.TimeoutError.html">DS.TimeoutError</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.Transform.html">DS.Transform</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/DS.UnauthorizedError.html">DS.UnauthorizedError</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/Ember.HTMLBars.helpers.html">Ember.HTMLBars.helpers</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/Ember.Inflector.html">Ember.Inflector</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/IdentityMap.html">IdentityMap</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/data/classes/InternalModelMap.html">InternalModelMap</a>
+
+          </li>
+        
+          </ol>
+        
+          </li>
+        
+          <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
+        </div>
+      <div id="content" class="has-sidebar">
+        
+  <h1 class="api-header">
+  DS.TimeoutError Class
+    <a class="edit-page icon-pencil" target="_blank" href="https://github.com/emberjs/data/tree/v2.13.0/addon/adapters/errors.js#L182">addon/adapters/errors.js:182</a>
+</h1>
+
+<hr>
+
+
+
+
+
+<div class="class-info">
+
+
+    <p>Defined in: <a class="api-file-link" href="https://github.com/emberjs/data/tree/v2.13.0/addon/adapters/errors.js#L182">addon/adapters/errors.js:182</a></p>
+
+    <p>Module: <a href="/internal/data/modules/ember-data.html">ember-data</a></p>
+</div>
+
+  <div class="description">
+    <p>A <code>DS.TimeoutError</code> is used by an adapter to signal that a request
+to the external API has timed out. I.e. no response was received from
+the external API within an allowed time period.</p>
+
+<p>An example use case would be to warn the user to check their internet
+connection if an adapter operation has timed out:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/routes/application.js</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> Ember from <span class="string"><span class="delimiter">'</span><span class="content">ember</span><span class="delimiter">'</span></span>;
+<span class="reserved">import</span> DS from <span class="string"><span class="delimiter">'</span><span class="content">ember-data</span><span class="delimiter">'</span></span>;
+
+const { TimeoutError } = DS;
+
+<span class="reserved">export</span> <span class="keyword">default</span> Ember.Route.extend({
+  <span class="key">actions</span>: {
+    error(error, transition) {
+      <span class="keyword">if</span> (error <span class="keyword">instanceof</span> TimeoutError) {
+        <span class="comment">// alert the user</span>
+        alert(<span class="string"><span class="delimiter">'</span><span class="content">Are you still connected to the internet?</span><span class="delimiter">'</span></span>);
+        <span class="keyword">return</span>;
+      }
+
+      <span class="comment">// ...other error handling logic</span>
+    }
+  }
+});
+</pre></td>
+</tr></table>
+</div></div>
+  </div>
+
+
+
+
+      </div>
+    </div>
+
+    <main-footer></main-footer>
+
+        <script type="text/javascript" src="/javascripts/internal_api-1e296e32.js"></script>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
+    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
+  </body>
+</html>

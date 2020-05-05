@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#e46652">
+    <title>Ember.js - ember-runtime</title>
+    <meta property="st:title" content="Ember.js: ember-runtime" />
+    <meta property="og:title" content="Ember.js: ember-runtime" />
+    <meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
+    <meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@emberjs" />
+    <meta name="twitter:title" content="ember-runtime"/>
+    <meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
+    <link rel="shortcut icon" href="/images/favicon-b8f150dd.png" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
+    <!--[if lte IE 7 ]><link href="/stylesheets/fonts/fontello-ie7-e008d616.css" rel="stylesheet" /><![endif]-->
+    <link href="/stylesheets/site-cfa27167.css" rel="stylesheet" />
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+      <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-cf72b59a166beb307683d9d0dae6bb0f.css" />
+    
+  </head>
+
+  <body class="api api_modules api_modules_ember-runtime not-responsive">
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/common-old-ie-fd21e077.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script type="text/javascript" src="/javascripts/common-modern-e8ff2472.js"></script>
+    <!--<![endif]-->
+
+    <main-navbar></main-navbar>
+
+    
+
+    <div id="content-wrapper">
+        <div id="sidebar">
+              <ol id='toc-list'>
+      <li class='level-1'>
+        <a class="slide-widget-head" href="#">Projects</a>
+        <ol>
+          <li class='level-3 sub-selected'>
+            <a href="/internal">Ember</a>
+          </li>
+          <li class='level-3 '>
+            <a href="/internal/data">Ember Data</a>
+          </li>
+        </ol>
+      </li>
+
+      <li class='level-1'><a href="https://github.com/emberjs/ember.js/commits/v2.12.0" target="_blank"> Tag: v2.12.0</a></li>
+
+
+          <li class="level-1 selected">
+                  <a class="slide-widget-head" href='#'>Modules</a>
+
+          <ol class="selected">
+          
+          <li class="level-3 ">
+                        <a href="/internal/modules/ember.html">ember</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/modules/ember-application.html">ember-application</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/modules/ember-debug.html">ember-debug</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/modules/ember-extension-support.html">ember-extension-support</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/modules/ember-glimmer.html">ember-glimmer</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/modules/ember-htmlbars.html">ember-htmlbars</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/modules/ember-metal.html">ember-metal</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/modules/ember-routing.html">ember-routing</a>
+
+          </li>
+        
+          <li class="level-3 sub-selected">
+                        <a href="/internal/modules/ember-runtime.html">ember-runtime</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/modules/ember-testing.html">ember-testing</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/modules/ember-views.html">ember-views</a>
+
+          </li>
+        
+          </ol>
+        
+          </li>
+        
+
+          <li class="level-1 ">
+                  <a class="slide-widget-head" href='#'>Namespaces</a>
+
+          <ol class="">
+          
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.html">Ember</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.AutoLocation.html">Ember.AutoLocation</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.FEATURES.html">Ember.FEATURES</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Instrumentation.html">Ember.Instrumentation</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Location.html">Ember.Location</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.String.html">Ember.String</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.computed.html">Ember.computed</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.inject.html">Ember.inject</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.run.html">Ember.run</a>
+
+          </li>
+        
+          </ol>
+        
+          </li>
+        
+
+          <li class="level-1 ">
+                  <a class="slide-widget-head" href='#'>Classes</a>
+
+          <ol class="">
+          
+          <li class="level-3 ">
+                        <a href="/internal/classes/Backburner.html">Backburner</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/BucketCache.html">BucketCache</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Container.html">Container</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/ContainerProxyMixin.html">ContainerProxyMixin</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Descriptor.html">Descriptor</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.ActionHandler.html">Ember.ActionHandler</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.ActionSupport.html">Ember.ActionSupport</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Application.html">Ember.Application</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.ApplicationInstance.html">Ember.ApplicationInstance</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.ApplicationInstance.BootOptions.html">Ember.ApplicationInstance.BootOptions</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Array.html">Ember.Array</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.ArrayProxy.html">Ember.ArrayProxy</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Binding.html">Ember.Binding</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Checkbox.html">Ember.Checkbox</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.ClassNamesSupport.html">Ember.ClassNamesSupport</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Comparable.html">Ember.Comparable</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Component.html">Ember.Component</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.ComputedProperty.html">Ember.ComputedProperty</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.ContainerDebugAdapter.html">Ember.ContainerDebugAdapter</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Controller.html">Ember.Controller</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.ControllerMixin.html">Ember.ControllerMixin</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Copyable.html">Ember.Copyable</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.CoreObject.html">Ember.CoreObject</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.CoreView.html">Ember.CoreView</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.DataAdapter.html">Ember.DataAdapter</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Debug.html">Ember.Debug</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.DefaultResolver.html">Ember.DefaultResolver</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.EachProxy.html">Ember.EachProxy</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Engine.html">Ember.Engine</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.EngineInstance.html">Ember.EngineInstance</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Enumerable.html">Ember.Enumerable</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Error.html">Ember.Error</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.EventDispatcher.html">Ember.EventDispatcher</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Evented.html">Ember.Evented</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Freezable.html">Ember.Freezable</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.HTMLBars.html">Ember.HTMLBars</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.HashLocation.html">Ember.HashLocation</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Helper.html">Ember.Helper</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.HistoryLocation.html">Ember.HistoryLocation</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.InjectedProperty.html">Ember.InjectedProperty</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.LinkComponent.html">Ember.LinkComponent</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Map.html">Ember.Map</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.MapWithDefault.html">Ember.MapWithDefault</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Mixin.html">Ember.Mixin</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.MutableArray.html">Ember.MutableArray</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.MutableEnumerable.html">Ember.MutableEnumerable</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Namespace.html">Ember.Namespace</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.NativeArray.html">Ember.NativeArray</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.NoneLocation.html">Ember.NoneLocation</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Object.html">Ember.Object</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.ObjectProxy.html">Ember.ObjectProxy</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Observable.html">Ember.Observable</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.OrderedSet.html">Ember.OrderedSet</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.PromiseProxyMixin.html">Ember.PromiseProxyMixin</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.ProxyMixin.html">Ember.ProxyMixin</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Route.html">Ember.Route</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Router.html">Ember.Router</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Service.html">Ember.Service</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.TargetActionSupport.html">Ember.TargetActionSupport</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Templates.helpers.html">Ember.Templates.helpers</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Test.html">Ember.Test</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Test.Adapter.html">Ember.Test.Adapter</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.Test.QUnitAdapter.html">Ember.Test.QUnitAdapter</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.TextArea.html">Ember.TextArea</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.TextField.html">Ember.TextField</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.TextSupport.html">Ember.TextSupport</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.View.html">Ember.View</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Ember.ViewMixin.html">Ember.ViewMixin</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Function.html">Function</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Libraries.html">Libraries</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/RSVP.html">RSVP</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/RSVP.EventTarget.html">RSVP.EventTarget</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/RSVP.Promise.html">RSVP.Promise</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Registry.html">Registry</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/RegistryProxyMixin.html">RegistryProxyMixin</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/RoutingService.html">RoutingService</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/String.html">String</a>
+
+          </li>
+        
+          <li class="level-3 ">
+                        <a href="/internal/classes/Transition.html">Transition</a>
+
+          </li>
+        
+          </ol>
+        
+          </li>
+        
+          <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
+        </div>
+      <div id="content" class="has-sidebar">
+        
+  <h1 class="api-header">ember-runtime Module</h1>
+
+<hr>
+
+  <p>Parent: <a href="/internal/modules/ember.html">ember</a></p>
+
+
+<p><p>Defines string helper methods including string formatting and localization.
+Unless <code>EmberENV.EXTEND_PROTOTYPES.String</code> is <code>false</code> these methods will also be
+added to the <code>String.prototype</code> as well.</p>
+</p>
+
+
+  <h2>Classes and Namespaces</h2>
+  <ul>
+    <li class="public"><a href="/internal/classes/Ember.String.html">Ember.String</a></li>
+    <li class="public"><a href="/internal/classes/Ember.Controller.html">Ember.Controller</a></li>
+    <li class="public"><a href="/internal/classes/Ember.inject.html">Ember.inject</a></li>
+    <li class=""><a href="/internal/classes/Function.html">Function</a></li>
+    <li class=""><a href="/internal/classes/String.html">String</a></li>
+    <li class="private"><a href="/internal/classes/Ember.ProxyMixin.html">Ember.ProxyMixin</a></li>
+    <li class="private"><a href="/internal/classes/Ember.ActionHandler.html">Ember.ActionHandler</a></li>
+    <li class="public"><a href="/internal/classes/Ember.Array.html">Ember.Array</a></li>
+    <li class="private"><a href="/internal/classes/Ember.Comparable.html">Ember.Comparable</a></li>
+    <li class="public"><a href="/internal/classes/ContainerProxyMixin.html">ContainerProxyMixin</a></li>
+    <li class="private"><a href="/internal/classes/Ember.Copyable.html">Ember.Copyable</a></li>
+    <li class="private"><a href="/internal/classes/Ember.Enumerable.html">Ember.Enumerable</a></li>
+    <li class="public"><a href="/internal/classes/Ember.Evented.html">Ember.Evented</a></li>
+    <li class="private deprecated"><a href="/internal/classes/Ember.Freezable.html">Ember.Freezable</a></li>
+    <li class="public"><a href="/internal/classes/Ember.MutableArray.html">Ember.MutableArray</a></li>
+    <li class="public"><a href="/internal/classes/Ember.MutableEnumerable.html">Ember.MutableEnumerable</a></li>
+    <li class="public"><a href="/internal/classes/Ember.Observable.html">Ember.Observable</a></li>
+    <li class="public"><a href="/internal/classes/Ember.PromiseProxyMixin.html">Ember.PromiseProxyMixin</a></li>
+    <li class="private"><a href="/internal/classes/RegistryProxyMixin.html">RegistryProxyMixin</a></li>
+    <li class="private"><a href="/internal/classes/Ember.TargetActionSupport.html">Ember.TargetActionSupport</a></li>
+    <li class="public"><a href="/internal/classes/Ember.ArrayProxy.html">Ember.ArrayProxy</a></li>
+    <li class="public"><a href="/internal/classes/Ember.CoreObject.html">Ember.CoreObject</a></li>
+    <li class="public"><a href="/internal/classes/Ember.Namespace.html">Ember.Namespace</a></li>
+    <li class="public"><a href="/internal/classes/Ember.NativeArray.html">Ember.NativeArray</a></li>
+    <li class="public"><a href="/internal/classes/Ember.Object.html">Ember.Object</a></li>
+  </ul>
+
+
+      </div>
+    </div>
+
+    <main-footer></main-footer>
+
+        <script type="text/javascript" src="/javascripts/internal_api-1e296e32.js"></script>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
+    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
+  </body>
+</html>

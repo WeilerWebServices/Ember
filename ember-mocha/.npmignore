@@ -1,0 +1,15 @@
+/config/ember-try.js
+/dist
+/tests
+/tmp
+**/.gitkeep
+.*
+*.tgz
+ember-cli-build.js
+testem.js
+yarn.lock
+yarn-error.log
+
+# ember-try
+.node_modules.ember-try/
+package.json.ember-try

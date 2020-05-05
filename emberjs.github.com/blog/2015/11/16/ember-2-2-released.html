@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#E04E39">
+    <title>Ember.js - Ember.js 2.2 and 2.3 Beta Released</title>
+    <meta property="st:title" content="Ember.js: Ember.js 2.2 and 2.3 Beta Released" />
+    <meta property="og:title" content="Ember.js: Ember.js 2.2 and 2.3 Beta Released" />
+    <meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
+    <meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@emberjs" />
+    <meta name="twitter:title" content="Ember.js 2.2 and 2.3 Beta Released"/>
+    <meta name="google-site-verification" content="N9yOP2jCLcZBMHUet-JRqU2jnLVPeLDaePpkCqXGQXM" />
+    <meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
+    <link rel="shortcut icon" href="/images/favicon-b8f150dd.png" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
+    <!--[if lte IE 7 ]><link href="/stylesheets/fonts/fontello-ie7-e008d616.css" rel="stylesheet" /><![endif]-->
+    <link href="/stylesheets/site-364c2a35.css" rel="stylesheet" />
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-cf72b59a166beb307683d9d0dae6bb0f.css" />
+    
+  </head>
+
+  <body class="blog blog_2015 blog_2015_11 blog_2015_11_16 blog_2015_11_16_ember-2-2-released responsive">
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/common-old-ie-a6691877.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script type="text/javascript" src="/javascripts/common-modern-7c867c7e.js"></script>
+    <!--<![endif]-->
+    <header>
+<nav class="navbar navbar-inverse">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="/"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home" /></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Docs <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="//guides.emberjs.com">Guides</a></li>
+      <li><a href="/api/ember/release">API Reference</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/learn">Learn Ember</a></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Releases <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/builds">Channels</a></li>
+      <li><a href="/builds/release">-- Stable</a></li>
+      <li><a href="/builds/beta">-- Beta</a></li>
+      <li><a href="/builds/canary">-- Canary</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/deprecations">Deprecations</a></li>
+      <li><a href="/statusboard">Status Board</a></li>
+     </ul>
+    </li>
+    <li><a href="/blog">Blog</a></li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/community">The Ember Community</a>
+       <li><a href="/guidelines">Guidelines</a></li>
+       <li><a href="http://github.com/emberjs/">Contribute (Github)</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/community/meetups">Meetups</a></li>
+       <li><a href="http://jobs.emberjs.com/">Job Board</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberconf.com/">Ember Conf</a></li>
+     </ul>
+     </li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="/team">The Team</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/logos">Logos</a></li>
+       <li><a href="/mascots">Mascots</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/ember-users">Who Uses Ember</a></li>
+       <li><a href="/sponsors">Sponsors</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/legal">Legal</a></li>
+       <li><a href="/security">Security</a></li>       
+      </ul>
+     </li>
+   </ul>
+   <form class="navbar-form navbar-right searchbox">
+    <div class="input-group">
+      <label for="search-input" class="control-label sr-only">Search</label>
+        <input type="text" 
+        class="form-control search input ds-input" 
+        placeholder="Search..." 
+        id="search-input" 
+        role="combobox" 
+        aria-expanded="false" 
+        aria-owns="algolia-autocomplete-listbox-0" 
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false" 
+        />
+        <span></span>
+    </div>
+   </form>
+  </div>
+  <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container-fluid -->
+</nav>
+</header>
+
+
+    
+
+    <div id="content-wrapper" class="content-wrapper">
+        <div id="sidebar" class="sidebar" role="complementary">
+          <ol id='toc-list' class="blog-sidebar">
+  <li class='level-1'>
+    <a href="/blog/tags/recent-posts.html">Recent Posts</a>
+    <ol style="display:block">
+      <li class='level-3'><a href="/blog/2018/02/21/2018-ember-community-survey.html">2018 Ember Community Survey</a></li>
+      <li class='level-3'><a href="/blog/2017/10/10/glimmer-progress-report.html">Glimmer.js Progress Report</a></li>
+      <li class='level-3'><a href="/blog/2017/10/03/the-road-to-ember-3-0.html">The Road to Ember 3.0</a></li>
+      <li class='level-3'><a href="/blog/2017/04/05/emberconf-2017-state-of-the-union.html">EmberConf 2017: State of the Union</a></li>
+      <li class='level-3'><a href="/blog/2017/02/28/2017-ember-community-survey.html">2017 Ember Community Survey</a></li>
+    </ol>
+  </li>
+  <li class='level-1'>
+    <a href="/blog/tags/releases.html">Releases</a>
+    <ol style="display:block">
+      <li class='level-3'><a href="/blog/2018/04/13/ember-3-1-released.html">Ember 3.1 and 3.2 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2018/02/16/ember-3-1-beta-released.html">Ember 3.1 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2018/02/14/ember-3-0-released.html">Ember 3.0 Released</a></li>
+      <li class='level-3'><a href="/blog/2018/01/01/ember-2-18-released.html">Ember 2.18 and 3.0 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/11/20/ember-2-17-released.html">Ember 2.16-LTS, Ember 2.17 and 2.18 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/10/11/ember-2-16-released.html">Ember 2.16 and 2.17 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/09/01/ember-2-15-released.html">Ember 2.15 and 2.16 Beta Released</a></li>
+    </ol>
+  </li>
+</ol>
+
+          <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
+        </div>
+      <div id="content" class="main has-sidebar" role="main">
+          
+  <article class="blog-post">
+    <div class="blog-post-header">
+      <h1 class="blog-post-title">Ember.js 2.2 and 2.3 Beta Released</h1>
+      <div class="blog-post-meta">
+          <time class="blog-post-date">November 16, 2015</time>
+          <div class="blog-post-author">By Matthew Beale</div>
+      </div>
+    </div>
+    <div class="blog-post-body" id="toc-content">
+      <p>Ember.js 2.2, a minor version release of Ember with backwards compatible
+changes, is released today. This release represents the work of over 60
+contributors.</p>
+
+<p>Ember.js 2.3 beta, the branch of Ember that will be released as stable in
+roughly six weeks, is also being released today.</p>
+<h3 class='anchorable-toc' id='toc_changes-in-ember-js-2-2'>Changes in Ember.js 2.2</h3>
+<p>Ember.js releases occur every six weeks, regardless of how significant the
+changes are. 2.2 introduces no new features, but does include performance
+improvements and bug fixes.</p>
+
+<p>Notable improvements include a performance fix for Ember&#39;s <code>_super</code>
+implementation under minification, and the skipping of <code>view</code> and <code>controller</code>
+template locals logic when operating without the view and controller legacy
+addons.</p>
+
+<p>For more details on changes landing in 2.2, review the
+<a href="https://github.com/emberjs/ember.js/blob/v2.2.0/CHANGELOG.md">Ember.js 2.2.0 CHANGELOG</a>.</p>
+<h3 class='anchorable-toc' id='toc_ember-js-2-3-beta'>Ember.js 2.3 beta</h3>
+<p>Ember.js 2.3 beta is released today, and in six weeks it will become the
+new stable version of Ember. This beta cycle introduces several new features
+and a notable deprecation.</p>
+<h4 class='anchorable-toc' id='toc_code-visit-code-api'><code>visit</code> API</h4>
+<p><a href="https://github.com/tildeio/ember-cli-fastboot">Ember FastBoot</a> and new testing
+APIs motivated the addition of a <code>visit</code> method for <code>Ember.Application</code> and
+<code>Ember.ApplicationInstance</code> objects. Called on <code>Ember.Application</code> this
+method accepts several configuration options.</p>
+
+<p>For example, you might use this API to manually boot an Ember application
+and then instruct it to visit a URL:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+11
+12
+13
+14
+15
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> MyApp from <span class="string"><span class="delimiter">'</span><span class="content">my-app</span><span class="delimiter">'</span></span>;
+
+<span class="predefined">$</span>(<span class="keyword">function</span>() {
+  let App = MyApp.create({ <span class="key">autoboot</span>: <span class="predefined-constant">false</span> });
+  let options = {
+    <span class="comment">// Prevent this application from updating the URL in the address bar</span>
+    <span class="key">location</span>: <span class="string"><span class="delimiter">'</span><span class="content">none</span><span class="delimiter">'</span></span>,
+    <span class="comment">// Override the default `rootElement` to render into a specific `div`</span>
+    <span class="comment">// on the page</span>
+    <span class="key">rootElement</span>: <span class="string"><span class="delimiter">'</span><span class="content">#demo</span><span class="delimiter">'</span></span>
+  };
+  App.visit(<span class="string"><span class="delimiter">'</span><span class="content">/demo</span><span class="delimiter">'</span></span>, options).then((<span class="comment">/* appInstance */</span>) =&gt; {
+    <span class="predefined">$</span>(<span class="string"><span class="delimiter">'</span><span class="content">#loading</span><span class="delimiter">'</span></span>).fadeOut(); <span class="comment">// Or any other logic after rendering</span>
+  });
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>Importantly, the addition of this API means <strong>FastBoot
+is now usable with Ember.js beta</strong>. FastBoot itself remains experimental,
+however this is the first time you can use it with a stock build of Ember.js.
+The <a href="https://github.com/tildeio/ember-cli-fastboot">README.md for ember-cli-fastboot</a>
+is the best place to start if you want to try FastBoot.</p>
+
+<p>You can read more about the <code>visit</code> API and its use cases in the <a href="https://github.com/emberjs/ember.js/blob/0810d913f9d358e5d37d25a1efd2295ebaebc6e2/packages/ember-application/lib/system/application.js#L985-L1181">unpublished
+<code>visit</code> API documentation</a>.
+Reviewing the main implementation PR at <a href="https://github.com/emberjs/ember.js/pull/12394">emberjs/emberjs #12394</a> and the integration into FastBoot at
+<a href="https://github.com/tildeio/ember-cli-fastboot/pull/71">tildeio/ember-cli-fastboot #71</a>
+may also be helpful.</p>
+
+<p>Many thanks to <a href="https://twitter.com/tomdale">@tomdale</a> and
+<a href="https://twitter.com/chancancode">@chancancode</a> for their work implementing
+this API and for their continued work on FastBoot.</p>
+<h4 class='anchorable-toc' id='toc_hash-helper'>Hash Helper</h4>
+<p>The <code>(hash</code> helper creates an object from arguments passed to it during
+invocation, and then returns that object. For example this usage would create an object with
+the property <code>name</code>:</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+</pre></td>
+  <td class="code"><pre><span class="inline"><span class="inline-delimiter">{{#</span><span class="attribute-name">with</span> <span class="error">(</span><span class="attribute-name">hash</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">'</span><span class="content">Bob</span><span class="delimiter">'</span></span><span class="error">)</span> <span class="attribute-name">as</span> <span class="error">|</span><span class="attribute-name">person</span><span class="error">|</span><span class="inline-delimiter">}}</span></span>
+  Hello, my name is <span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">person.name</span><span class="inline-delimiter">}}</span></span>
+<span class="inline"><span class="inline-delimiter">{{/</span><span class="attribute-name">with</span><span class="inline-delimiter">}}</span></span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>This helper is introduced to make the new contextual components feature
+more convenient, and it will often be used with the <code>{{yield</code> helper. For
+example:</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/templates/components/nice-person.hbs</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre><span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">yield</span> <span class="error">(</span><span class="attribute-name">hash</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">'</span><span class="content">Bob</span><span class="delimiter">'</span></span><span class="error">)</span><span class="inline-delimiter">}}</span></span>
+</pre></td>
+</tr></table>
+</div></div><div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/templates/index.hbs</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+</pre></td>
+  <td class="code"><pre><span class="inline"><span class="inline-delimiter">{{#</span><span class="attribute-name">nice-person</span> <span class="attribute-name">as</span> <span class="error">|</span><span class="attribute-name">person</span><span class="error">|</span><span class="inline-delimiter">}}</span></span>
+  Hello, my name is <span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">person.name</span><span class="inline-delimiter">}}</span></span>
+<span class="inline"><span class="inline-delimiter">{{/</span><span class="attribute-name">nice-person</span><span class="inline-delimiter">}}</span></span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>See the <a href="https://github.com/emberjs/ember.js/blob/04ec1c639e3ac7aa93ec24bf7fcf35e18c62fed6/packages/ember-htmlbars/lib/helpers/hash.js#L6-L31">unpublished documentation</a> for
+for details on this helper, and read the contextual components section below
+for further context.</p>
+
+<p>Thanks to <a href="https://twitter.com/serabe">@Serabe</a> for his implementation of this
+feature and to <a href="https://twitter.com/MiguelCamba">@MiguelCamba</a> for his fantastic
+<a href="https://github.com/cibernox/ember-hash-helper-polyfill">ember-hash-helper-polyfill</a>
+addon. Using the polyfill you can start using <code>(hash</code> with Ember.js 1.13 or
+later.</p>
+<h4 class='anchorable-toc' id='toc_contextual-components'>Contextual Components</h4>
+<p>The new contextual components feature allows for multiple components to
+privately share data, but be invoked in a flexible manner. For example,
+this <code>{{alert-box}}</code> component yields a contextual component composed
+of the <code>alert-box-button</code> component and the attribute <code>onclick</code>:</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/templates/components/alert-box.hbs</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+</pre></td>
+  <td class="code"><pre><span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">alert-box</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+  <span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">yield</span> <span class="error">(</span><span class="attribute-name">hash</span>
+    <span class="attribute-name">close-button</span>=<span class="error">(</span><span class="attribute-value">component</span> <span class="error">'</span><span class="attribute-name">alert-box-button</span><span class="error">'</span> <span class="attribute-name">onclick</span>=<span class="error">(</span><span class="attribute-value">action</span> <span class="error">'</span><span class="attribute-name">close</span><span class="error">'</span><span class="error">)</span><span class="error">)</span>
+  <span class="error">)</span><span class="inline-delimiter">}}</span></span>
+<span class="tag">&lt;/div&gt;</span>
+</pre></td>
+</tr></table>
+</div></div><div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/templates/index.hbs</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+  <td class="code"><pre><span class="inline"><span class="inline-delimiter">{{#</span><span class="attribute-name">alert-box</span> <span class="attribute-name">as</span> <span class="error">|</span><span class="attribute-name">box</span><span class="error">|</span><span class="inline-delimiter">}}</span></span>
+  Danger, Will Robinson!
+  <span class="tag">&lt;div</span> <span class="attribute-name">style</span>=<span class="string"><span class="delimiter">&quot;</span><span class="key">float</span>:<span class="value">right</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+    <span class="inline"><span class="inline-delimiter">{{#</span><span class="attribute-name">box.close-button</span><span class="inline-delimiter">}}</span></span>
+      It's just a plain old meteorite.
+    <span class="inline"><span class="inline-delimiter">{{/</span><span class="attribute-name">box.close-button</span><span class="inline-delimiter">}}</span></span>
+  <span class="tag">&lt;/div&gt;</span>
+<span class="inline"><span class="inline-delimiter">{{/</span><span class="attribute-name">alert-box</span><span class="inline-delimiter">}}</span></span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>Contextual components are created using the nested form of the
+<code>component</code> helper, and may be passed attrs and positional params. Contextual
+components must be invoked with a <code>.</code> in their path, unless they are being
+passed to the invoking <code>{{component</code> helper.</p>
+
+<p>This new feature is a powerful tool for addon authors, allowing them to
+yield components without having arguments to those components become de-facto
+public API. In addition, when the local lookup feature of Ember&#39;s pods
+architecture arrives the combination of these features will permit
+completely private components to be yielded.</p>
+
+<p>For more information about contextual components see the <a href="https://github.com/emberjs/ember.js/blob/04ec1c639e3ac7aa93ec24bf7fcf35e18c62fed6/packages/ember-htmlbars/lib/keywords/component.js#L52-L73">unpublished
+documentation</a>. Further details about the API design decisions can be found in
+<a href="https://github.com/emberjs/rfcs/blob/master/text/0064-contextual-component-lookup.md">RFC #64</a>.</p>
+
+<p>Thanks again to <a href="https://twitter.com/serabe">@Serabe</a> for his implementation
+of this feature as well as <a href="https://twitter.com/mixonic">@mixonic</a> and
+<a href="https://twitter.com/_mmun">@_mmun</a> for their efforts on the RFC and design.</p>
+<h4 class='anchorable-toc' id='toc_introducing-owners-and-deprecating-containers'>Introducing Owners and Deprecating Containers</h4>
+<p>Ember&#39;s container API is one of the more commonly used private APIs still
+exposed. In Ember.js 2.1, a major refactor of application
+boot removed access to the container from initializers and instance initializers,
+creating public API alternatives.</p>
+
+<p><strong>In Ember 2.3, accessing the <code>container</code> property on a framework-generated
+object will be deprecated in favor of a public owner API.</strong></p>
+
+<p>For example, this component will dynamically lookup an audio service based
+on the <code>audioType</code> of its model:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+11
+12
+13
+14
+15
+16
+17
+18
+19
+<strong>20</strong>
+21
+22
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> Ember from <span class="string"><span class="delimiter">'</span><span class="content">ember</span><span class="delimiter">'</span></span>;
+const {
+  Component,
+  computed,
+  getOwner
+} = Ember;
+
+<span class="comment">// Usage:</span>
+<span class="comment">//</span>
+<span class="comment">//   {{play-audio model=audioModel}}</span>
+<span class="comment">//</span>
+<span class="reserved">export</span> <span class="keyword">default</span> Component.extend({
+  <span class="key">audioService</span>: computed(<span class="string"><span class="delimiter">'</span><span class="content">model.audioType</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
+    let owner = getOwner(<span class="local-variable">this</span>);
+    let serviceName = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">model.audioType</span><span class="delimiter">'</span></span>);
+    <span class="keyword">return</span> owner.lookup(<span class="error">`</span>service:audio-<span class="predefined">$</span>{serviceName}<span class="error">`</span>);
+  }),
+  click() {
+    let player = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">audioService</span><span class="delimiter">'</span></span>);
+    player.play(<span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">model.file</span><span class="delimiter">'</span></span>));
+  }
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>The return value of <code>getOwner</code> will be an <a href="http://emberjs.com/api/classes/Ember.ApplicationInstance.html"><code>Ember.ApplicationInstance</code></a>
+for objects generated by the framework.</p>
+
+<p><strong>This change means ember-qunit 0.4.16+ is required for use with Ember 2.3.</strong></p>
+
+<p>For more information about migrating code from using <code>container</code> to <code>getOwner</code>,
+see the <a href="http://emberjs.com/deprecations/v2.x/#toc_injected-container-access">deprecation guide</a>.
+Further details about the API design decisions can be found in
+<a href="https://github.com/emberjs/ember.js/pull/11874">emberjs/emberjs #11874</a>
+and <a href="https://github.com/emberjs/ember.js/issues/12555">emberjs/emberjs #12555</a>.</p>
+
+<p>Many thanks to <a href="https://twitter.com/dgeb">@dgeb</a> for his tireless efforts
+implementing this feature, and for his time buildling consensus around
+improvements to the Ember dependency injection API. Additionally credit is
+due to <a href="https://twitter.com/rwjblue">@rwjblue</a> for his upgrade PRs to
+<a href="https://github.com/emberjs/data/pull/3912">Ember Data</a>, <a href="https://github.com/ef4/liquid-fire/pull/388">Liquid-Fire</a>, and <a href="https://github.com/jamesarosen/ember-i18n/pull/336">Ember-i18n</a>.
+These provide a good example of how to upgrade any addon or app codebase.</p>
+
+<p>For more details on changes landing in 2.3, review the
+<a href="https://github.com/emberjs/ember.js/blob/v2.3.0-beta.1/CHANGELOG.md">Ember.js 2.3.0-beta.1 CHANGELOG</a>.</p>
+
+    </div>
+    <div class="blog-post-footer">
+    </div>
+  </article>
+  <hr>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'emberblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script type="text/javascript" src="/javascripts/blog-a90057c5.js"></script>
+
+      </div>
+    </div>
+
+    <main-footer></main-footer>
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
+    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
+  </body>
+</html>
+

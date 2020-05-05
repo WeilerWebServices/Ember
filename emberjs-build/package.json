@@ -1,0 +1,57 @@
+{
+  "name": "emberjs-build",
+  "version": "0.20.1",
+  "description": "Build pipeline for Ember.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 9000 tests/*",
+    "test:debug": "mocha debug --timeout 5000 tests/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:emberjs/emberjs-build.git"
+  },
+  "keywords": [
+    "ember.js",
+    "ember"
+  ],
+  "author": [
+    "Alex Navasardyan <alex.navasardyan@gmail.com>",
+    "Robert Jackson <me@rwjblue.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emberjs/emberjs-build/issues"
+  },
+  "homepage": "https://github.com/emberjs/emberjs-build",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-files": "^1.2.0",
+    "htmlbars": "^0.11.1",
+    "mocha": "^2.0.1",
+    "mocha-eslint": "^2.0.2",
+    "walk-sync": "^0.2.6"
+  },
+  "dependencies": {
+    "amd-name-resolver": "0.0.4",
+    "broccoli": "0.16.3",
+    "broccoli-babel-transpiler": "^5.6.1",
+    "broccoli-concat": "^2.0.0",
+    "broccoli-file-creator": "^1.0.0",
+    "broccoli-funnel": "^1.0.1",
+    "broccoli-kitchen-sink-helpers": "^0.2.6",
+    "broccoli-lint-eslint": "^3.2.0",
+    "broccoli-merge-trees": "^1.1.1",
+    "broccoli-persistent-filter": "^1.0.8",
+    "broccoli-source": "^1.1.0",
+    "broccoli-stew": "^1.1.1",
+    "broccoli-string-replace": "0.1.1",
+    "broccoli-uglify-sourcemap": "^1.0.1",
+    "core-object": "0.0.4",
+    "ember-cli-yuidoc": " 0.8.4",
+    "git-repo-version": "0.3.0",
+    "js-string-escape": "^1.0.0",
+    "json-stable-stringify": "^1.0.1",
+    "lodash": "^3.10.1"
+  }
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#E04E39">
+    <title>Ember.js - Starting a Meetup</title>
+    <meta property="st:title" content="Ember.js: Starting a Meetup" />
+    <meta property="og:title" content="Ember.js: Starting a Meetup" />
+    <meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
+    <meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@emberjs" />
+    <meta name="twitter:title" content="Starting a Meetup"/>
+    <meta name="google-site-verification" content="N9yOP2jCLcZBMHUet-JRqU2jnLVPeLDaePpkCqXGQXM" />
+    <meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
+    <link rel="shortcut icon" href="/images/favicon-b8f150dd.png" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
+    <!--[if lte IE 7 ]><link href="/stylesheets/fonts/fontello-ie7-e008d616.css" rel="stylesheet" /><![endif]-->
+    <link href="/stylesheets/site-364c2a35.css" rel="stylesheet" />
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-cf72b59a166beb307683d9d0dae6bb0f.css" />
+    
+  </head>
+
+  <body class="community community_meetups-getting-started community_meetups-getting-started_index responsive">
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/common-old-ie-a6691877.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script type="text/javascript" src="/javascripts/common-modern-7c867c7e.js"></script>
+    <!--<![endif]-->
+    <header>
+<nav class="navbar navbar-inverse">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="/"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home" /></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Docs <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="//guides.emberjs.com">Guides</a></li>
+      <li><a href="/api/ember/release">API Reference</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/learn">Learn Ember</a></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Releases <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/builds">Channels</a></li>
+      <li><a href="/builds/release">-- Stable</a></li>
+      <li><a href="/builds/beta">-- Beta</a></li>
+      <li><a href="/builds/canary">-- Canary</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/deprecations">Deprecations</a></li>
+      <li><a href="/statusboard">Status Board</a></li>
+     </ul>
+    </li>
+    <li><a href="/blog">Blog</a></li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/community">The Ember Community</a>
+       <li><a href="/guidelines">Guidelines</a></li>
+       <li><a href="http://github.com/emberjs/">Contribute (Github)</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/community/meetups">Meetups</a></li>
+       <li><a href="http://jobs.emberjs.com/">Job Board</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberconf.com/">Ember Conf</a></li>
+     </ul>
+     </li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="/team">The Team</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/logos">Logos</a></li>
+       <li><a href="/mascots">Mascots</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/ember-users">Who Uses Ember</a></li>
+       <li><a href="/sponsors">Sponsors</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/legal">Legal</a></li>
+       <li><a href="/security">Security</a></li>       
+      </ul>
+     </li>
+   </ul>
+   <form class="navbar-form navbar-right searchbox">
+    <div class="input-group">
+      <label for="search-input" class="control-label sr-only">Search</label>
+        <input type="text" 
+        class="form-control search input ds-input" 
+        placeholder="Search..." 
+        id="search-input" 
+        role="combobox" 
+        aria-expanded="false" 
+        aria-owns="algolia-autocomplete-listbox-0" 
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false" 
+        />
+        <span></span>
+    </div>
+   </form>
+  </div>
+  <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container-fluid -->
+</nav>
+</header>
+
+
+    
+
+    <div id="content-wrapper" class="content-wrapper">
+      <div id="content" class="main" role="main">
+        <h1>
+  Getting Your Meetup Up and Running
+</h1>
+
+<p>
+  Running an Ember User Group can be challenging, but <em>really</em> rewarding: thanks so much for stepping up! We're here to help however we can.
+</p>
+
+<p>
+  The three main things to do for your first user group meetup are: 
+  <ol>
+    <li> Find a location to meet</li> 
+    <li> Find one or two willing speakers</li>
+    <li> Find interested people</li>
+  </ol>
+</p>
+
+<h3>Location</h3>
+
+<p>
+  Many software companies are willing to sponsor meetups in their conference rooms or common spaces—they're a good place to start asking. Other meetups have had good results with reserving space in restaurants, pubs and co-working spaces—just make sure they have the A/V equipment you need, a wireless network powerful enough to host your audience, and ideally ample power as well. 
+</p>
+<p>
+  Note that when a company donates space, they're usually expecting to receive a sponsor/host shout out on the site and in person in exchange.
+</p>
+
+<h3>Speakers</h3>
+<p>
+  Ideally, speakers are local and can talk about their experiences with Ember; if you're having trouble finding a speaker, let us know and we can try and set up a remote session with a member of the Core Team or other talented community member. 
+</p>
+<p>
+  We definitely recommend having only one speaker per meetup from any single company, as otherwise it can start to feel kind'v corporate-sales-pitchy :p
+</p>
+
+<h3>Attendees</h3> 
+
+<p>
+  Hopefully, you know at least a few people who are interested in joining the user group. Most of us have been using Meetup.com to organize our groups, and it's been very effective. 
+</p>
+<p>
+  Most meetups spread by word of mouth, but we'll be sure to tweet about your new group to help get you the attention and attendance you need, if you let us know. 
+</p>
+<p>
+  Lastly, definitely go around to other relevant tech meetups in the area to talk about starting the new group. That's definitely your market right there. 
+</p>
+
+<h3>Sponsorship</h3>
+
+<p>
+  Considering that many groups are able to do most of the above for free, sponsorship is not always necessary... but it can be a good way to help cover costs and extras. At our SF and Portland meetups we seek out sponsors for space and food (we find that Pizza and Beer help increase attendance dramatically... no surprise there).
+</p>
+<p>
+  If you've got some local sponsors you could talk to, here are some of the other things you might want to ask them for help with:
+  <ul>
+    <li>—Sponsorship of Meetup.com fees </li>
+    <li>—Sponsorship of event space</li>
+    <li>—Sponsorship of food, drinks and/or snacks</li>
+  </ul>
+</p>
+
+<p>
+  If you're able to raise additional cash, that's even better. Some of the most successful meetup groups we've worked with over the years (not necessarily Ember) have been able to raise enough funds to periodically fly in core team members or other bigwig speakers.
+</p>
+<p>
+  On a smaller scale, you could always get swag made (as in, Ember or Meetup branded swag, versus the sort of things sponsors might give you with their branding). It's not at all required, but worth thinking about and planning for if you have options / funding. 
+</p>
+
+<h3>Some other tidbits</h3>
+<ul>
+  <li>—For more content like this, <a href="https://medium.com/@wifelette/the-bits-n-bobs-of-starting-a-user-group-a44cfdd6bed9">check out @wifelette's blog post</a>; much of the same content, but some new tips and tricks.</li>
+  <li>—Check out the <a href="/meetup-assets">Meetup Resources</a> page for help with art and assets for your Group.</li> 
+  <li>—We don't have a ton of funding yet on the central side of things, but we do have some Tomster stickers! Send us a mailing address once you've got your first meetup scheduled and we can send some your way.</li>
+  <li>—There's an Ember Meetup Organizers google group that we can add you to once things start getting real (instructions on the <a href="/meetup-assets">Resources Page</a>). Can be a really great resource for helping with the path forward. 
+  <li>—You can add your group to the <a href="/community/meetups">Meetups page / directory</a> on the Ember website once you're up and running (<a href="https://github.com/emberjs/website/">just submit a PR</a>).</li>
+</ul>
+
+<p> 
+  Keep us in the loop—we’re excited to see Ember Meetups starting up all around the globe! And if you have questions or have other ideas for how we can help, <a href="mailto:events@tilde.io">reach out to Leah</a>. We look forward to hearing from you.
+</p>
+
+      </div>
+    </div>
+
+    <main-footer></main-footer>
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
+    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
+  </body>
+</html>

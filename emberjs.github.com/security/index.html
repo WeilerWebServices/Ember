@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#E04E39">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ember.js - Security Policy</title>
+    <meta property="st:title" content="Ember.js: Security Policy" />
+    <meta property="og:title" content="Ember.js: Security Policy" />
+    <meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
+    <meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@emberjs" />
+    <meta name="twitter:title" content="Security Policy"/>
+    <meta name="google-site-verification" content="N9yOP2jCLcZBMHUet-JRqU2jnLVPeLDaePpkCqXGQXM" />
+    <meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
+    <link rel="shortcut icon" href="/images/favicon-b8f150dd.png" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
+    <!--[if lte IE 7 ]><link href="/stylesheets/fonts/fontello-ie7-e008d616.css" rel="stylesheet" /><![endif]-->
+    <link href="/stylesheets/site-364c2a35.css" rel="stylesheet" />
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-cf72b59a166beb307683d9d0dae6bb0f.css" />
+    
+  </head>
+
+  <body class="security security_index responsive">
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/common-old-ie-a6691877.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script type="text/javascript" src="/javascripts/common-modern-7c867c7e.js"></script>
+    <!--<![endif]-->
+    <header>
+<nav class="navbar navbar-inverse">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="/"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home" /></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Docs <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="//guides.emberjs.com">Guides</a></li>
+      <li><a href="/api/ember/release">API Reference</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/learn">Learn Ember</a></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Releases <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/builds">Channels</a></li>
+      <li><a href="/builds/release">-- Stable</a></li>
+      <li><a href="/builds/beta">-- Beta</a></li>
+      <li><a href="/builds/canary">-- Canary</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/deprecations">Deprecations</a></li>
+      <li><a href="/statusboard">Status Board</a></li>
+     </ul>
+    </li>
+    <li><a href="/blog">Blog</a></li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/community">The Ember Community</a>
+       <li><a href="/guidelines">Guidelines</a></li>
+       <li><a href="http://github.com/emberjs/">Contribute (Github)</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/community/meetups">Meetups</a></li>
+       <li><a href="http://jobs.emberjs.com/">Job Board</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberconf.com/">Ember Conf</a></li>
+     </ul>
+     </li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="/team">The Team</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/logos">Logos</a></li>
+       <li><a href="/mascots">Mascots</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/ember-users">Who Uses Ember</a></li>
+       <li><a href="/sponsors">Sponsors</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/legal">Legal</a></li>
+       <li><a href="/security">Security</a></li>       
+      </ul>
+     </li>
+   </ul>
+   <form class="navbar-form navbar-right searchbox">
+    <div class="input-group">
+      <label for="search-input" class="control-label sr-only">Search</label>
+        <input type="text" 
+        class="form-control search input ds-input" 
+        placeholder="Search..." 
+        id="search-input" 
+        role="combobox" 
+        aria-expanded="false" 
+        aria-owns="algolia-autocomplete-listbox-0" 
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false" 
+        />
+        <span></span>
+    </div>
+   </form>
+  </div>
+  <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container-fluid -->
+</nav>
+</header>
+
+
+    
+
+    <div id="content-wrapper" class="content-wrapper">
+      <div id="content" class="main" role="main">
+        <h1 class='anchorable-toc' id='toc_ember-js-security-policy'>Ember.js Security Policy</h1><h2 class='anchorable-toc' id='toc_reporting-a-bug'>Reporting a Bug</h2>
+<p>We take security very seriously. Thank you for taking the time to
+responsibly disclose any issues you find.</p>
+
+<p>All security bugs in Ember.js or Ember
+Data should be reported by email to
+<a href="mailto:security@emberjs.com">security@emberjs.com</a>. This list is
+delivered to a subset of the core team who handle security issues. Your
+email will be acknowledged within 24 hours, and you&#39;ll receive a more
+detailed response to your email within 48 hours indicating the next
+steps in handling your report. If you would like, you can encrypt your
+report using <a href="/security/public-key.txt">our public key</a>.</p>
+
+<p>This email address receives a large amount of spam, so be sure to use a
+descriptive subject line to avoid having your report be missed. After
+the initial reply to your report, the security team will endeavor to
+keep you informed of the progress being made towards a fix and full
+announcement. As recommended by
+<a href="https://dl.packetstormsecurity.net/papers/general/rfpolicy-2.0.txt">RFPolicy</a>, these updates will
+be sent at least every five days. In reality, this is more likely to be
+every 24-48 hours.</p>
+
+<p>If you have not received a reply to your email within 48 hours, or have
+not heard from the security team for the past five days, there are a few
+steps you can take:</p>
+
+<ol>
+<li>Contact the current security coordinator (<a href="mailto:ember-security@rwjblue.com">Robert Jackson</a>)
+directly.</li>
+<li>Contact the back-up contact (<a href="mailto:tom@tomdale.net">Tom Dale</a>) directly.</li>
+<li>Post on the <a href="http://discuss.emberjs.com/">Ember.js discussion forums</a>
+or ask in #emberjs.</li>
+</ol>
+
+<p>Please note that the discussion forums and #emberjs IRC channel are public
+areas. When escalating in these venues, please do not discuss your
+issue. Simply say that you’re trying to get a hold of someone from the
+security team.</p>
+<h2 class='anchorable-toc' id='toc_disclosure-policy'>Disclosure Policy</h2>
+<p>Ember.js has a 5 step disclosure policy.</p>
+
+<ol>
+<li><p>The security report is received and is assigned a primary handler.
+This person will coordinate the fix and release process. The problem
+is confirmed and a list of all affected versions is determined. Code is
+audited to find any potential similar problems. Fixes are prepared for
+all releases which are still under maintenance. These fixes are <strong>not</strong>
+committed to the public repository but rather held locally pending the
+announcement.</p></li>
+<li><p>A suggested embargo date for this vulnerability is chosen and a <a href="http://cve.mitre.org/">CVE</a>(Common Vulnerabilities and Exposures (CVE®)) is assigned for the vulnerability.</p></li>
+<li><p>On the embargo date, the Ember.js security mailing list is sent a copy of
+the announcement. The changes are pushed to the public repository and
+new builds are deployed to emberjs.com. Within 6 hours of the
+mailing list being notified, a copy of the advisory will be published on
+the <a href="/blog">Ember.js blog</a>.</p></li>
+<li><p>Typically the embargo date will be set 72 hours from the time the CVE
+is issued. However, this may vary depending on the severity of
+the bug or difficulty in applying a fix.</p></li>
+<li><p>This process can take some time, especially when coordination is
+required with maintainers of other projects. Every effort will be
+made to handle the bug in as timely a manner as possible, however it’s
+important that we follow the release process above to ensure that the
+disclosure is handled in a consistent manner.</p></li>
+</ol>
+<h2 class='anchorable-toc' id='toc_receiving-security-updates'>Receiving Security Updates</h2>
+<p>The best way to receive all the security announcements is to subscribe
+to the <a href="https://groups.google.com/forum/#!forum/ember-security">Ember.js security mailing list</a>. The mailing list is very low
+traffic, and it receives the public notifications the moment the embargo
+is lifted.</p>
+
+<p>No one outside the core team and the initial reporter will be
+notified prior to the lifting of the embargo. We regret that we cannot
+make exceptions to this policy for high traffic or important sites, as
+any disclosure beyond the minimum required to coordinate a fix could
+cause an early leak of the vulnerability.</p>
+<h2 class='anchorable-toc' id='toc_comments-on-this-policy'>Comments on This Policy</h2>
+<p>If you have any suggestions to improve this policy, please send an email
+to security@emberjs.com.</p>
+
+      </div>
+    </div>
+
+    <main-footer></main-footer>
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
+    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
+  </body>
+</html>

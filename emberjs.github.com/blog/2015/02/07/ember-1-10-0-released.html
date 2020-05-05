@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#E04E39">
+    <title>Ember.js - Ember.js 1.10.0 and 1.11 Beta Released</title>
+    <meta property="st:title" content="Ember.js: Ember.js 1.10.0 and 1.11 Beta Released" />
+    <meta property="og:title" content="Ember.js: Ember.js 1.10.0 and 1.11 Beta Released" />
+    <meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
+    <meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@emberjs" />
+    <meta name="twitter:title" content="Ember.js 1.10.0 and 1.11 Beta Released"/>
+    <meta name="google-site-verification" content="N9yOP2jCLcZBMHUet-JRqU2jnLVPeLDaePpkCqXGQXM" />
+    <meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
+    <link rel="shortcut icon" href="/images/favicon-b8f150dd.png" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
+    <!--[if lte IE 7 ]><link href="/stylesheets/fonts/fontello-ie7-e008d616.css" rel="stylesheet" /><![endif]-->
+    <link href="/stylesheets/site-364c2a35.css" rel="stylesheet" />
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-cf72b59a166beb307683d9d0dae6bb0f.css" />
+    
+  </head>
+
+  <body class="blog blog_2015 blog_2015_02 blog_2015_02_07 blog_2015_02_07_ember-1-10-0-released responsive">
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/common-old-ie-a6691877.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script type="text/javascript" src="/javascripts/common-modern-7c867c7e.js"></script>
+    <!--<![endif]-->
+    <header>
+<nav class="navbar navbar-inverse">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="/"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home" /></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Docs <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="//guides.emberjs.com">Guides</a></li>
+      <li><a href="/api/ember/release">API Reference</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/learn">Learn Ember</a></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Releases <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/builds">Channels</a></li>
+      <li><a href="/builds/release">-- Stable</a></li>
+      <li><a href="/builds/beta">-- Beta</a></li>
+      <li><a href="/builds/canary">-- Canary</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/deprecations">Deprecations</a></li>
+      <li><a href="/statusboard">Status Board</a></li>
+     </ul>
+    </li>
+    <li><a href="/blog">Blog</a></li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/community">The Ember Community</a>
+       <li><a href="/guidelines">Guidelines</a></li>
+       <li><a href="http://github.com/emberjs/">Contribute (Github)</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/community/meetups">Meetups</a></li>
+       <li><a href="http://jobs.emberjs.com/">Job Board</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberconf.com/">Ember Conf</a></li>
+     </ul>
+     </li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="/team">The Team</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/logos">Logos</a></li>
+       <li><a href="/mascots">Mascots</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/ember-users">Who Uses Ember</a></li>
+       <li><a href="/sponsors">Sponsors</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/legal">Legal</a></li>
+       <li><a href="/security">Security</a></li>       
+      </ul>
+     </li>
+   </ul>
+   <form class="navbar-form navbar-right searchbox">
+    <div class="input-group">
+      <label for="search-input" class="control-label sr-only">Search</label>
+        <input type="text" 
+        class="form-control search input ds-input" 
+        placeholder="Search..." 
+        id="search-input" 
+        role="combobox" 
+        aria-expanded="false" 
+        aria-owns="algolia-autocomplete-listbox-0" 
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false" 
+        />
+        <span></span>
+    </div>
+   </form>
+  </div>
+  <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container-fluid -->
+</nav>
+</header>
+
+
+    
+
+    <div id="content-wrapper" class="content-wrapper">
+        <div id="sidebar" class="sidebar" role="complementary">
+          <ol id='toc-list' class="blog-sidebar">
+  <li class='level-1'>
+    <a href="/blog/tags/recent-posts.html">Recent Posts</a>
+    <ol style="display:block">
+      <li class='level-3'><a href="/blog/2018/02/21/2018-ember-community-survey.html">2018 Ember Community Survey</a></li>
+      <li class='level-3'><a href="/blog/2017/10/10/glimmer-progress-report.html">Glimmer.js Progress Report</a></li>
+      <li class='level-3'><a href="/blog/2017/10/03/the-road-to-ember-3-0.html">The Road to Ember 3.0</a></li>
+      <li class='level-3'><a href="/blog/2017/04/05/emberconf-2017-state-of-the-union.html">EmberConf 2017: State of the Union</a></li>
+      <li class='level-3'><a href="/blog/2017/02/28/2017-ember-community-survey.html">2017 Ember Community Survey</a></li>
+    </ol>
+  </li>
+  <li class='level-1'>
+    <a href="/blog/tags/releases.html">Releases</a>
+    <ol style="display:block">
+      <li class='level-3'><a href="/blog/2018/04/13/ember-3-1-released.html">Ember 3.1 and 3.2 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2018/02/16/ember-3-1-beta-released.html">Ember 3.1 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2018/02/14/ember-3-0-released.html">Ember 3.0 Released</a></li>
+      <li class='level-3'><a href="/blog/2018/01/01/ember-2-18-released.html">Ember 2.18 and 3.0 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/11/20/ember-2-17-released.html">Ember 2.16-LTS, Ember 2.17 and 2.18 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/10/11/ember-2-16-released.html">Ember 2.16 and 2.17 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/09/01/ember-2-15-released.html">Ember 2.15 and 2.16 Beta Released</a></li>
+    </ol>
+  </li>
+</ol>
+
+          <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
+        </div>
+      <div id="content" class="main has-sidebar" role="main">
+          
+  <article class="blog-post">
+    <div class="blog-post-header">
+      <h1 class="blog-post-title">Ember.js 1.10.0 and 1.11 Beta Released</h1>
+      <div class="blog-post-meta">
+          <time class="blog-post-date">February 7, 2015</time>
+          <div class="blog-post-author">By Matthew Beale</div>
+      </div>
+    </div>
+    <div class="blog-post-body" id="toc-content">
+      <p>We are pleased to announce the release of both Ember.js 1.10.0 and the
+first beta in the 1.11 series. This comes as the tenth cycle of our
+release process that began just after 1.0 was released.</p>
+
+<p>The 1.10 release represents the effort of at least 50 contributors
+across over 553 commits.</p>
+<h2 class='anchorable-toc' id='toc_the-htmlbars-templating-engine'>The HTMLBars Templating Engine</h2>
+<p>Throughout 2014 the Ember.js community has poured its shared effort into
+a new templating solution. This new library, dubbed HTMLBars, makes available
+features and performance improvements impossible to support with Handlebars
+(the previous library). We are delighted to announce the inclusion of
+the HTMLBars templating engine in Ember.js 1.10.</p>
+
+<p>HTMLBars will enable the implementation of several APIs described in
+<a href="https://github.com/emberjs/rfcs/pull/15">The Road to Ember 2.0</a>, and contributes
+to our continued improvement of rendering performance. Additionally,
+it will allow us to continue supporting all Ember 1.x template syntax.</p>
+
+<p>This long-term effort would not have succeeded without the continued
+contributions of the Ember community and core team. In no particular
+order and with apologies to anyone we&#39;ve missed we would like to thank
+<a href="http://twitter.com/krisselden">@krisselden</a>, <a href="http://twitter.com/wycats">@wycats</a>,
+<a href="http://twitter.com/_mmun">@_mmun</a>, <a href="http://twitter.com/nerd20">@nerd20</a>,
+<a href="http://twitter.com/mixonic">@mixonic</a>, <a href="http://twitter.com/ebryn">@ebryn</a>,
+<a href="https://twitter.com/salzhrani">@salzhrani</a>, <a href="http://twitter.com/rwjblue">@rwjblue</a>,
+<a href="http://twitter.com/tomdale">@tomdale</a>, <a href="http://github.com/oneeman">oneeman</a>,
+<a href="http://twitter.com/kpdecker">@kpdecker</a> and the many alpha and beta
+testers who provided feedback and bug reports. You are the stuff &quot;stability without
+stagnation&quot; is made of.</p>
+<h2 class='anchorable-toc' id='toc_new-features-in-ember-js-1-10'>New Features in Ember.js 1.10</h2><h4 class='anchorable-toc' id='toc_htmlbars-0-8-5'>HTMLBars 0.8.5</h4>
+<p>Ember.js 1.10 is dependent on HTMLBars 0.8.5. To ease this and later template
+library version changes, Ember&#39;s template compiler will be packaged as a
+part of the release files. For example, a JSBin in Ember 1.9 would need to be
+updated from:</p>
+<div class="highlight html "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+</pre></td>
+  <td class="code"><pre><span class="tag">&lt;script</span> <span class="attribute-name">src</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v2.0.0.js</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/script&gt;</span>
+<span class="tag">&lt;script</span> <span class="attribute-name">src</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://builds.emberjs.com/tags/v1.9.1/ember.js</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/script&gt;</span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>to</p>
+<div class="highlight html "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+</pre></td>
+  <td class="code"><pre><span class="tag">&lt;script</span> <span class="attribute-name">src</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://builds.emberjs.com/tags/v1.10.0/ember-template-compiler.js</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/script&gt;</span>
+<span class="tag">&lt;script</span> <span class="attribute-name">src</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://builds.emberjs.com/tags/v1.10.0/ember.debug.js</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/script&gt;</span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>The <code>ember-template-compiler.js</code> is only required for template compilation. The
+runtime dependencies for HTMLBars are built into the framework file.</p>
+
+<p>To smoothly upgrade to 1.10 and HTMLBars, Ember-CLI users should update to a
+version at or after 0.1.12, remove
+their application&#39;s Handlebars dependency, and modify the Brocfile to not load Handlebars.
+<a href="https://github.com/rwjblue/components-in-subdirs/commit/78e7ed2d072f42d9cf0fd3d9fc2376f106ab762e">This diff</a>
+shows the changes needed to upgrade an Ember-CLI app to 1.10.</p>
+
+<p>Ember App-Kit users should upgrade to Ember-CLI.</p>
+
+<p>Ember-Rails users should upgrade to version 0.16.1, then remove their Handlebars
+dependency.</p>
+
+<p>Developers of applications that follow a non-standard build pipeline should
+review the instructions <a href="/blog/2015/02/05/compiling-templates-in-1-10-0.html">published by Robert Jackson this week</a>
+and join the conversation at <a href="http://discuss.emberjs.com/">discuss.emberjs.com</a>
+or on IRC.</p>
+<h4 class='anchorable-toc' id='toc_performance-improvements'>Performance Improvements</h4>
+<p>Ember.js 1.8 introduced a performance regression that we expected to re-coup in
+the 1.10 release. In December the team at <a href="http://www.discourse.org/">Discourse</a> created the
+<a href="https://github.com/eviltrout/ember-performance">ember-performance</a> repo.
+This project aids Ember developers in profiling and measuring performance in the
+framework.</p>
+
+<p>Using these benchmarks, we&#39;re pleased to report a twelve percent improvement
+in common rendering scenarios between 1.7 and 1.10, and as much as a fifty
+percent improvement between 1.9 and 1.10.</p>
+
+<p>Better rendering and general framework performance continue to be a priority for
+the core team and community. Specific goals include reactive rendering for
+HTMLBars, more optimized metal views, limiting observation, and refinements to the Ember
+object model.</p>
+<h4 class='anchorable-toc' id='toc_chained-else-blocks'>Chained Else Blocks</h4>
+<p>HTMLBars is built using the Handlebars parser, and will continue to gain
+features related to template syntax. Ember 1.10 features support for chained
+else helpers, the most common use being <code>else if</code>. An example:</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+</pre></td>
+  <td class="code"><pre><span class="inline"><span class="inline-delimiter">{{#</span><span class="attribute-name">if</span> <span class="attribute-name">isAtWork</span><span class="inline-delimiter">}}</span></span>
+  Ship that code!
+<span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">else</span> <span class="attribute-name">if</span> <span class="attribute-name">isReading</span><span class="inline-delimiter">}}</span></span>
+  You can finish War and Peace eventually...
+<span class="inline"><span class="inline-delimiter">{{/</span><span class="attribute-name">if</span><span class="inline-delimiter">}}</span></span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>Chained else helpers work with any <code>else</code>, including those of <code>with</code> and <code>each</code>
+helpers.</p>
+
+<p>You can read more about the implemetation <a href="https://github.com/wycats/handlebars.js/pull/892">in the Handlebars repo</a>.
+Thanks to <a href="http://twitter.com/kpdecker">@kpdecker</a> for this improvement.</p>
+<h4 class='anchorable-toc' id='toc_block-params'>Block Params</h4>
+<p>Ember 1.10 introduces block parameters. Block params provide consistent
+scope to templates, and allow components to pass internal values to a downstream
+scope.</p>
+
+<p>For example:</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td>
+  <td class="code"><pre><span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">currentUser.name</span><span class="inline-delimiter">}}</span></span> <span class="comment">{{! available on the controller }}</span>
+<span class="inline"><span class="inline-delimiter">{{#</span><span class="attribute-name">each</span> <span class="attribute-name">cars</span> <span class="attribute-name">as</span> <span class="error">|</span><span class="attribute-name">car</span><span class="error">|</span><span class="inline-delimiter">}}</span></span>
+  <span class="inline"><span class="inline-delimiter">{{#</span><span class="attribute-name">with</span> <span class="attribute-name">car.manufacturer</span> <span class="attribute-name">as</span> <span class="error">|</span><span class="attribute-name">make</span><span class="error">|</span><span class="inline-delimiter">}}</span></span>
+    <span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">make.name</span><span class="inline-delimiter">}}</span></span>
+    <span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">currentUser.name</span><span class="inline-delimiter">}}</span></span> <span class="comment">{{! still the controller scope }}</span>
+  <span class="inline"><span class="inline-delimiter">{{/</span><span class="attribute-name">with</span><span class="inline-delimiter">}}</span></span>
+<span class="inline"><span class="inline-delimiter">{{/</span><span class="attribute-name">each</span><span class="inline-delimiter">}}</span></span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>Preserving template context results in easier to read templates, and passing
+variables into child scopes allows for new patterns of component composition.</p>
+
+<p>Block params are passed from a template via the <code>yield</code> helper. For example, this
+component yields the <code>fullName</code> and <code>age</code> values:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/components/x-customer.js</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+11
+12
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">default</span> Ember.Component.extend({
+
+  <span class="function">fullName</span>: <span class="keyword">function</span>(){
+    <span class="keyword">var</span> customer = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">customer</span><span class="delimiter">'</span></span>);
+    <span class="keyword">return</span> [customer.get(<span class="string"><span class="delimiter">'</span><span class="content">firstName</span><span class="delimiter">'</span></span>), customer.get(<span class="string"><span class="delimiter">'</span><span class="content">lastName</span><span class="delimiter">'</span></span>)].join(<span class="string"><span class="delimiter">'</span><span class="content"> </span><span class="delimiter">'</span></span>);
+  }.property(<span class="string"><span class="delimiter">'</span><span class="content">customer.firstName</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">customer.lastName</span><span class="delimiter">'</span></span>),
+
+  <span class="function">age</span>: <span class="keyword">function</span>(){
+    <span class="keyword">return</span> (<span class="keyword">new</span> Date() - <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">birthday</span><span class="delimiter">'</span></span>)) / (<span class="integer">86400000</span> * <span class="integer">365</span>);
+  }.property(<span class="string"><span class="delimiter">'</span><span class="content">birthday</span><span class="delimiter">'</span></span>)
+
+});
+</pre></td>
+</tr></table>
+</div></div><div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/components/x-customer.hbs</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+</pre></td>
+  <td class="code"><pre><span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">customer</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+  <span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">yield</span> <span class="attribute-name">fullName</span> <span class="attribute-name">age</span><span class="inline-delimiter">}}</span></span>
+<span class="tag">&lt;/div&gt;</span>
+</pre></td>
+</tr></table>
+</div></div><div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/templates/index.hbs</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+</pre></td>
+  <td class="code"><pre><span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">layout</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+  <span class="inline"><span class="inline-delimiter">{{#</span><span class="attribute-name">x-customer</span> <span class="attribute-name">customer</span>=<span class="attribute-value">model</span> <span class="attribute-name">birthday</span>=<span class="attribute-value">model.birthday</span> <span class="attribute-name">as</span> <span class="error">|</span><span class="attribute-name">fullName</span> <span class="attribute-name">age</span><span class="error">|</span><span class="inline-delimiter">}}</span></span>
+    Hello, <span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">fullName</span><span class="inline-delimiter">}}</span></span>. You are <span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">age</span><span class="inline-delimiter">}}</span></span> years old.
+  <span class="inline"><span class="inline-delimiter">{{/</span><span class="attribute-name">x-customer</span><span class="inline-delimiter">}}</span></span>
+<span class="tag">&lt;/div&gt;</span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>Many thanks to <a href="https://twitter.com/_mmun">@_mmun</a> for the implementation of this new feature.</p>
+<h4 class='anchorable-toc' id='toc_injected-properties'>Injected Properties</h4>
+<p>Ember 1.x has exposed two APIs for managing dependency injection. The first is
+the application initializer API, using <code>register</code> and <code>inject</code> methods on an
+application instance. The second allows configuration of an injection on
+controllers via <code>needs</code>. You can read more about these patterns in
+<a href="/guides/understanding-ember/dependency-injection-and-service-lookup/">the dependency injection guide</a>.</p>
+
+<p>The new injected properties offer a more declarative API for dependency injection.</p>
+
+<p>Use <code>Ember.inject.service()</code> to inject a service with the same name as the property
+it is injected as. In this example, the <code>storage</code> service is injected onto the
+<code>storage</code> property:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">default</span> Ember.Component.extend({
+  <span class="key">storage</span>: Ember.inject.service()
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>Passing a name to the <code>service()</code> method allows a different service to be injected.
+For example:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">default</span> Ember.Component.extend({
+  <span class="key">storage</span>: Ember.inject.service(<span class="string"><span class="delimiter">'</span><span class="content">local-storage</span><span class="delimiter">'</span></span>)
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>In addition to injecting services, controllers can be injected with <code>Ember.inject.controller</code>.</p>
+
+<p>Importantly, these injections are lazy. When used within a unit test, a stubbed service can
+be passed during <code>create</code>. For example:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+11
+12
+13
+</pre></td>
+  <td class="code"><pre>test(<span class="string"><span class="delimiter">&quot;</span><span class="content">a value is saved on storage</span><span class="delimiter">&quot;</span></span>, <span class="keyword">function</span>(){
+  expect(<span class="integer">1</span>);
+  <span class="keyword">var</span> component = <span class="local-variable">this</span>.subject({
+    <span class="key">storage</span>: {
+      <span class="function">write</span>: <span class="keyword">function</span>(){
+        ok(<span class="predefined-constant">true</span>, <span class="string"><span class="delimiter">'</span><span class="content">value was written</span><span class="delimiter">'</span></span>);
+      }
+    }
+  });
+
+  <span class="keyword">var</span> element = <span class="local-variable">this</span>.append();
+  element.click();
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>Refer to the <a href="/api/#method_inject_service">API documentation</a> to read about this new feature in
+detail.</p>
+
+<p>Thanks to <a href="https://github.com/slindberg">slindberg</a> for his implementation of this feature.</p>
+<h4 class='anchorable-toc' id='toc_notable-deprecations'>Notable Deprecations</h4>
+<p>As Ember.js moves forward, various APIs are deprecated to allow for their
+removal in a later major release (such as 2.0). The
+<a href="/deprecations/">deprecations page</a> summarizes
+deprecations and demonstrates how to update to a new API.</p>
+
+<ul>
+<li>The explicit <code>{{bind}}</code> helper has been deprecated. This helper has
+long been marked private, and was a legacy Sproutcore
+feature. This helper will be removed in Ember 1.11.</li>
+<li>Quote-less outlet names are deprecated in 1.10. An example of this is
+<code>{{outlet modal}}</code>, which should be re-written as <code>{{outlet &quot;modal&quot;}}</code>.
+This ensures the outlet helper is consistent with others, where unquoted
+words are values and not string literals.</li>
+<li>The <code>beforeObserver</code> feature is deprecated in Ember 1.10. Before observers
+are rarely used, but introduce significant overhead to the observer system
+in general. For observer use that requires the previous value of a property
+be known, implementing a cache is simple and more efficient. Read more about
+how to do this on <a href="/deprecations/v1.x#toc_deprecate-beforeobservers">the deprecations page</a>.</li>
+<li>Observing the <code>childViews</code> array of a <code>ContainerView</code> is deprecated.</li>
+<li>Setting the <code>childViews</code> property on a view definition is deprecated in
+1.10. For example:</li>
+</ul>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+</pre></td>
+  <td class="code"><pre><span class="keyword">var</span> ChildB = Ember.View.extend();
+
+<span class="reserved">export</span> <span class="keyword">default</span> Ember.ContainerView.extend({
+  <span class="key">childViews</span>: [ <span class="string"><span class="delimiter">'</span><span class="content">childA</span><span class="delimiter">'</span></span>, ChildB ],
+  <span class="key">childA</span>: Ember.View.extend()
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>This use of <code>childViews</code> is inconsistent with other uses throughout Ember, and
+as a result is difficult to implement with good performance. Explicitly creating
+views upon initialization is preferred:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+</pre></td>
+  <td class="code"><pre><span class="keyword">var</span> ChildB = Ember.View.extend();
+
+<span class="reserved">export</span> <span class="keyword">default</span> Ember.ContainerView.extend({
+  <span class="function">init</span>: <span class="keyword">function</span>(){
+    <span class="local-variable">this</span>._super();
+    <span class="local-variable">this</span>.pushObject(<span class="local-variable">this</span>.createChildView(<span class="local-variable">this</span>.childA));
+    <span class="local-variable">this</span>.pushObject(<span class="local-variable">this</span>.createChildView(ChildB));
+  },
+  <span class="key">childA</span>: Ember.View.extend()
+});
+</pre></td>
+</tr></table>
+</div></div><h2 class='anchorable-toc' id='toc_new-features-in-ember-js-1-11-beta'>New Features in Ember.js 1.11 beta</h2>
+<p>Ember.js 1.11 beta continues a series of releases iterating the framework
+toward our 2.0 goals. In six weeks, these and a few other features will
+be declared stable.</p>
+<h4 class='anchorable-toc' id='toc_inline-if'>Inline if</h4>
+<p>In 1.11 Ember&#39;s <code>if</code> helper can be used in the inline form:</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre><span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">if</span> <span class="attribute-name">isEnabled</span> <span class="error">'</span><span class="attribute-name">active</span><span class="error">'</span> <span class="error">'</span><span class="attribute-name">disabled</span><span class="error">'</span><span class="inline-delimiter">}}</span></span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>Thanks to <a href="https://twitter.com/marciojunior_me">@marciojunior_me</a> for
+implementing this feature.</p>
+<h4 class='anchorable-toc' id='toc_each-with-index'>Each with Index</h4>
+<p>The <code>each</code> helper will support an <code>index</code> block param in Ember 1.11:</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+</pre></td>
+  <td class="code"><pre><span class="inline"><span class="inline-delimiter">{{#</span><span class="attribute-name">each</span> <span class="attribute-name">people</span> <span class="attribute-name">as</span> <span class="error">|</span><span class="attribute-name">person</span> <span class="attribute-name">index</span><span class="error">|</span><span class="inline-delimiter">}}</span></span>
+  <span class="comment">{{! The first index value will be 0 }}</span>
+  <span class="tag">&lt;div&gt;</span><span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">index</span><span class="inline-delimiter">}}</span></span>: <span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">person.name</span><span class="inline-delimiter">}}</span></span><span class="tag">&lt;/div&gt;</span>
+<span class="inline"><span class="inline-delimiter">{{/</span><span class="attribute-name">each</span><span class="inline-delimiter">}}</span></span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>Thanks to <a href="https://twitter.com/_mmun">@_mmun</a> for
+implementing this feature.</p>
+<h4 class='anchorable-toc' id='toc_bound-attribute-syntax'>Bound Attribute Syntax</h4>
+<p>Current Ember developers are familiar with the <code>bind-attr</code> syntax, used
+to declare an attribute binding on an HTML element. An original
+motivation for HTMLBars was to improve on this syntax.</p>
+
+<p>Ember 1.11 introduces a more intuitive API for attribute binding. For
+example, here the <code>color</code> variable is bound to the class of a div:</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre><span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span></span><span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">color</span><span class="inline-delimiter">}}</span></span><span class="string"><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/div&gt;</span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>The inline if helper can also be used in these contexts:</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre><span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span></span><span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">color</span><span class="inline-delimiter">}}</span></span><span class="string"> </span><span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">if</span> <span class="attribute-name">isEnabled</span> <span class="error">'</span><span class="attribute-name">active</span><span class="error">'</span> <span class="error">'</span><span class="attribute-name">disabled</span><span class="error">'</span><span class="inline-delimiter">}}</span></span><span class="string"><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/div&gt;</span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>For some attributes, like the <code>disabled</code> boolean, passing a literal value
+is desirable. An example:</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre><span class="tag">&lt;input</span> <span class="attribute-name">disabled</span>=<span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">isDisabled</span><span class="inline-delimiter">}}</span></span><span class="tag">&gt;</span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>To allow the data-binding of non-string values to boolean properties and
+custom element properties, bound attributes are implemented with a
+<strong>property-first</strong> setter.</p>
+
+<p>When binding to an attribute, Ember first checks to see if that attribute is a
+property of the element&#39;s DOM node (with normalization of capitalization). If it
+is, the value is set with a property. For example:</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre><span class="tag">&lt;input</span> <span class="attribute-name">disabled</span>=<span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">isDisabled</span><span class="inline-delimiter">}}</span></span><span class="tag">&gt;</span>
+</pre></td>
+</tr></table>
+</div></div><div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+</pre></td>
+  <td class="code"><pre><span class="comment">// disabled is a property of input elements, so...</span>
+input.disabled = <span class="predefined-constant">true</span>;
+</pre></td>
+</tr></table>
+</div></div>
+<p>If the attribute is not present as a property, then its value is set as an
+attribute:</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre><span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">color</span><span class="inline-delimiter">}}</span></span><span class="tag">&gt;</span>
+</pre></td>
+</tr></table>
+</div></div><div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+</pre></td>
+  <td class="code"><pre><span class="comment">// class is not a property of div elements, do...</span>
+div.setAttribute(<span class="string"><span class="delimiter">'</span><span class="content">class</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">red</span><span class="delimiter">'</span></span>);
+</pre></td>
+</tr></table>
+</div></div>
+<p>For SVG attributes and the style attribute, we&#39;ve made a exceptions to this pattern.
+Despite these exceptions, the property-first rule is a good way to describe what is
+happening behind the scenes. In practice, the binding syntax feels natural.</p>
+
+<p>Many thanks to <a href="http://twitter.com/mixonic">@mixonic</a>, <a href="http://twitter.com/_mmun">@_mmun</a>,
+and <a href="http://twitter.com/wycats">@wycats</a> for their effort on the design and implementation
+of this feature.</p>
+<h4 class='anchorable-toc' id='toc_named-substates'>Named Substates</h4>
+<p>Two routing substates exist for Ember routes. The <code>loading</code> substate will be entered
+if the async hooks of a route are still processing, and the <code>error</code> substate will be
+entered when an async hook promise is rejected.</p>
+
+<p>Substates are sibling routes. When the <code>new</code> route of <code>cars.new</code> is loading, the <code>cars.loading</code>
+substate is entered. The <code>application</code> route has no parent namespace to nest its siblings.
+This makes using the <code>loading</code> and <code>error</code> substates impossible for an application route.</p>
+
+<p>Named substates add a new lookup method for substates. The name of the route is pre-pended
+onto the substate. So a valid loading substate for <code>application</code> can be defined as
+<code>application_loading</code>.</p>
+
+<p>Thanks to <a href="http://twitter.com/machty">@machty</a> for landing this feature.</p>
+<h4 class='anchorable-toc' id='toc_component-helper'>Component Helper</h4>
+<p>Ember components can be bound via the <code>component</code> helper. For example this logic
+in a template:</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td>
+  <td class="code"><pre><span class="inline"><span class="inline-delimiter">{{#</span><span class="attribute-name">if</span> <span class="attribute-name">isRed</span><span class="inline-delimiter">}}</span></span>
+  <span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">x-red</span><span class="inline-delimiter">}}</span></span>
+<span class="inline"><span class="inline-delimiter">{{/</span><span class="attribute-name">if</span><span class="inline-delimiter">}}</span></span>
+<span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">if</span> <span class="attribute-name">isBlue</span><span class="inline-delimiter">}}</span></span>
+  <span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">x-blue</span><span class="inline-delimiter">}}</span></span>
+<span class="inline"><span class="inline-delimiter">{{/</span><span class="attribute-name">if</span><span class="inline-delimiter">}}</span></span>
+<span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">if</span> <span class="attribute-name">isGreen</span><span class="inline-delimiter">}}</span></span>
+  <span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">x-green</span><span class="inline-delimiter">}}</span></span>
+<span class="inline"><span class="inline-delimiter">{{/</span><span class="attribute-name">if</span><span class="inline-delimiter">}}</span></span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>Can now be replaced by a computed property and the <code>component</code> helper.</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre><span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">component</span> <span class="attribute-name">colorComponentName</span><span class="inline-delimiter">}}</span></span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>The property <code>colorComponentName</code> should have a value of <code>x-red</code>, <code>x-blue</code> etc. As
+the value of the property changes, the rendered component will also change.</p>
+
+<p>A big thank you to <a href="https://twitter.com/lukemelia">@lukemelia</a> for shipping
+this new feature.</p>
+<h4 class='anchorable-toc' id='toc_notable-deprecations-in-1-11'>Notable Deprecations in 1.11</h4>
+<p>The following deprecations are scheduled for release with Ember.js 1.11:</p>
+
+<ul>
+<li>The <code>ObjectController</code> will be removed in Ember 2.0. In Ember 1.11,
+both explicitly using an <code>ObjectController</code> and using the proxying behavior
+of a generated <code>ObjectController</code> will raise deprecation warnings.</li>
+</ul>
+
+<p>As the features included in Ember 1.12 are developed, additional deprecations
+may be added to the 1.11 release.</p>
+<h2 class='anchorable-toc' id='toc_changelogs'>Changelogs</h2>
+<ul>
+<li><a href="https://github.com/emberjs/ember.js/blob/v1.10.0/CHANGELOG.md">Ember.js 1.10.0 CHANGELOG</a></li>
+<li><a href="https://github.com/emberjs/ember.js/blob/v1.11.0-beta.1/CHANGELOG.md">Ember.js 1.11.0-beta.1 CHANGELOG</a></li>
+</ul>
+
+<p><em>Using Ember? Please take ten minutes to share your
+feedback by participating in the <a href="http://goo.gl/forms/6yIsF3TNsQ">2015 Ember Community Survey</a>. Open
+until February 20th.</em></p>
+
+    </div>
+    <div class="blog-post-footer">
+    </div>
+  </article>
+  <hr>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'emberblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script type="text/javascript" src="/javascripts/blog-a90057c5.js"></script>
+
+      </div>
+    </div>
+
+    <main-footer></main-footer>
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
+    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,11 @@
+*.gem
+.bundle
+Gemfile.lock
+gemfiles/*.lock
+pkg/*
+*.rbc
+*.log
+test/dummy/tmp
+.DS_Store
+*.swp
+*.swo

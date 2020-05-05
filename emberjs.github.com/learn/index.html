@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#E04E39">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ember.js - Learn</title>
+    <meta property="st:title" content="Ember.js: Learn" />
+    <meta property="og:title" content="Ember.js: Learn" />
+    <meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
+    <meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@emberjs" />
+    <meta name="twitter:title" content="Learn"/>
+    <meta name="google-site-verification" content="N9yOP2jCLcZBMHUet-JRqU2jnLVPeLDaePpkCqXGQXM" />
+    <meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
+    <link rel="shortcut icon" href="/images/favicon-b8f150dd.png" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
+    <!--[if lte IE 7 ]><link href="/stylesheets/fonts/fontello-ie7-e008d616.css" rel="stylesheet" /><![endif]-->
+    <link href="/stylesheets/site-364c2a35.css" rel="stylesheet" />
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-cf72b59a166beb307683d9d0dae6bb0f.css" />
+    
+  </head>
+
+  <body class="learn learn_index responsive">
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/common-old-ie-a6691877.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script type="text/javascript" src="/javascripts/common-modern-7c867c7e.js"></script>
+    <!--<![endif]-->
+    <header>
+<nav class="navbar navbar-inverse">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="/"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home" /></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Docs <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="//guides.emberjs.com">Guides</a></li>
+      <li><a href="/api/ember/release">API Reference</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/learn">Learn Ember</a></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Releases <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/builds">Channels</a></li>
+      <li><a href="/builds/release">-- Stable</a></li>
+      <li><a href="/builds/beta">-- Beta</a></li>
+      <li><a href="/builds/canary">-- Canary</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/deprecations">Deprecations</a></li>
+      <li><a href="/statusboard">Status Board</a></li>
+     </ul>
+    </li>
+    <li><a href="/blog">Blog</a></li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/community">The Ember Community</a>
+       <li><a href="/guidelines">Guidelines</a></li>
+       <li><a href="http://github.com/emberjs/">Contribute (Github)</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/community/meetups">Meetups</a></li>
+       <li><a href="http://jobs.emberjs.com/">Job Board</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberconf.com/">Ember Conf</a></li>
+     </ul>
+     </li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="/team">The Team</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/logos">Logos</a></li>
+       <li><a href="/mascots">Mascots</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/ember-users">Who Uses Ember</a></li>
+       <li><a href="/sponsors">Sponsors</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/legal">Legal</a></li>
+       <li><a href="/security">Security</a></li>       
+      </ul>
+     </li>
+   </ul>
+   <form class="navbar-form navbar-right searchbox">
+    <div class="input-group">
+      <label for="search-input" class="control-label sr-only">Search</label>
+        <input type="text" 
+        class="form-control search input ds-input" 
+        placeholder="Search..." 
+        id="search-input" 
+        role="combobox" 
+        aria-expanded="false" 
+        aria-owns="algolia-autocomplete-listbox-0" 
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false" 
+        />
+        <span></span>
+    </div>
+   </form>
+  </div>
+  <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container-fluid -->
+</nav>
+</header>
+
+
+    <div class="legal-wrapper">
+  <article>
+    <h1>Learning Ember.js</h1>
+    <p><img src="/images/tomsters/teaching-reverse-79f66d70.png" alt="" role="presentation" class="learning-tomster"> Are you getting started on your Ember.js adventure? Check out our official reading material:
+    </p>
+
+    <ul>
+      <li> <a href="https://guides.emberjs.com/current/getting-started/quick-start/"><strong>Quick start</strong><i class="icon-link-ext"></i></a>: An easy breezy introduction to the framework.</li>
+      <li> <a href="https://guides.emberjs.com/current/tutorial/ember-cli/"><strong>Tutorial</strong><i class="icon-link-ext"></i></a>: Follow our tutorial to build, and deploy, your first Ember.js application!</li>
+      <li> <a href="https://guides.emberjs.com/"><strong>Guides</strong><i class="icon-link-ext"></i></a>: Whether you're just getting started and want to get familiar with Ember, or you're looking to refresh your knowledge on a certain feature, the Guides are the place for you.</li>
+    </ul>
+    <section>
+      <h2>API Reference</h2>
+
+      <p>
+        Explore the available API of the various Ember ecosystem libraries. This is where you want to go to read in details about the various features, including example code.
+      </p>
+
+      <ul class="api-reference-list">
+        <li><a href="http://emberjs.com/api/">
+          <img src="/images/learn/ember-4a021047.png" class="project-logo" alt="Ember">
+        </a></li>
+        <li><a href="http://emberjs.com/api/ember-data/">
+          <img src="/images/learn/ember-data-e1223a93.png" class="project-logo" alt="Ember Data">
+        </a></li>
+        <li><a href="http://ember-cli.com/api/">
+          <img src="/images/learn/ember-cli-72d04b19.png" class="project-logo" alt="Ember CLI">
+        </a></li>
+      </ul>
+    </section>
+    <section>
+      <h2 id="deprecations" class="anchorable-toc"> <a href="http://emberjs.com/deprecations/">Deprecation Guides<i class="icon-link-ext"></i></a></h2>
+      <p>
+        The broader JavaScript ecosystem is always changing and evolving, so Ember has processes
+        and tools in place to protect your app from churn while still providing the best new web
+        app features. Ember uses a careful deprecation process to roll out changes to the API.
+        You can read our <a href="http://emberjs.com/deprecations/">deprecation guides</a>
+        to see past and upcoming deprecations. Major changes are often accompanied by codemod tools,
+        which are often announced in release blog posts.
+      </p>
+   </section>
+    <section>
+      <h2>Ecosystem</h2>
+
+      <p>
+        One of the main strengths of Ember is how shared conventions enable developers to build on top of each other's work and improve the ecosystem for everyone. For example, here are some projects closely maintained by Ember teams:
+      </p>
+
+      <p>
+        <strong>Ember CLI</strong>: The official command line toolkit to develop Ember applications. Check out the <a href="https://ember-cli.com/user-guide/">User Guide</a>, and the documentation on how to <a href="https://ember-cli.com/extending/">extend Ember CLI</a> as an addon developer.
+      </p>
+
+      <p><strong>Ember Inspector</strong>: A browser plugin/bookmarklet that helps you inspect and debug applications. Learn how best to use it in the <a href="https://guides.emberjs.com/current/ember-inspector/installation/">Ember Inspector Guides</a>.</p>
+
+      <p><strong>Liquid Fire</strong>: A toolkit to add animations and transitions to your application. Check out their <a href="http://ember-animation.github.io/liquid-fire/">interactive documentation</a>.</p>
+
+      <p><strong>Ember Twiddle</strong>: Online code editor so you can share working snippets of code or reproductions of bugs. Try it out <a href="http://ember-twiddle.com/">today</a>!</p>
+
+      <p><strong>FastBoot</strong>: Server-side rendering library for Ember applications. Check out the <a href="http://www.ember-fastboot.com/quickstart">Quickstart</a> to get up and running, and the <a href="http://www.ember-fastboot.com/docs/user-guide">User Guide</a> for more detailed information.
+      </p>
+    </section>
+    <section>
+      <h2 id="showcase" class="anchorable-toc">Showcase</h2>
+      <p>In this section you will find applications that are maintained by the Ember.js teams with the help of contributors. While software is always a work in progress, the goal is to showcase patterns and solutions applied in real-world applications.</p>
+      <p>Whether you're simply interested in checking out how some feature is implemented, or you're looking to contribute, one of these projects might pique your interest!</p>
+
+      <div class="showcase">
+          <div class="showcase--item">
+            <div class="showcase--screenshot">
+              <img class="showcase--image" src="/images/learn/showcase-super-rentals-841f9606.png" alt="Super Rentals tutorial application">
+            </div>
+            <div class="showcase--description">
+              <h3> <a href="https://ember-learn-super-rentals.herokuapp.com/rentals">Super Rentals<i class="icon-link-ext"></i></a></h3>
+
+              <p>Repository: <a href="https://github.com/ember-learn/super-rentals">https://github.com/ember-learn/super-rentals</a></p>
+
+              <p>
+                If you've gone through our <a href="https://guides.emberjs.com/v3.0.0/tutorial/ember-cli/">Tutorial</a> you will already be familiar with this application! <strong>Super Rentals</strong> is a good starter project to get acclimated to the Ember.js way of doing things. In this repository you'll be able to see:
+
+                <ul>
+                  <li>Basic routing, and routing with dynamic segments</li>
+                  <li>Acceptance, integration, and unit tests using <a href="http://www.ember-cli-mirage.com/">Ember CLI Mirage</a>.</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+          <div class="showcase--item">
+            <div class="showcase--screenshot">
+              <img class="showcase--image" src="/images/learn/showcase-builds-8dc8848d.png" alt="Builds page application">
+            </div>
+            <div class="showcase--description">
+              <h3> <a href="https://emberjs.com/builds">Builds<i class="icon-link-ext"></i></a></h3>
+
+              <p>Repository: <a href="https://github.com/ember-learn/builds">https://github.com/ember-learn/builds</a></p>
+
+              <p>
+                This is the application that the Ember.js team built to display our <a href="http://emberjs.com/builds/">various release channels</a>. It is slightly more complex than Super Rentals, and you'll be able to see:
+
+                <ul>
+                  <li>Usage of <a href="http://ember-cli-deploy.com/">Ember CLI Deploy</a> to deploy to S3.</li>
+                  <li>Loading of an Ember.js application via JavaScript in the <a href="https://github.com/emberjs/website">website</a>.</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+          <div class="showcase--item">
+            <div class="showcase--screenshot">
+              <img class="showcase--image" src="/images/learn/showcase-api-docs-c0875a84.png" alt="API docs application">
+            </div>
+            <div class="showcase--description">
+              <h3> <a href="https://emberjs.com/api/">API Docs<i class="icon-link-ext"></i></a></h3>
+
+              <p>Repository: <a href="https://github.com/ember-learn/ember-api-docs">https://github.com/ember-learn/ember-api-docs</a></p>
+
+              <p>
+                This application was built to display our <a href="http://emberjs.com/api/">versioned API docs</a>.  You'll be able to learn about:
+
+                <ul>
+                  <li>A more full-featured Ember web app in action</li>
+                  <li>Usage of <a href="https://ember-fastboot.com/">Ember FastBoot</a>.</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+      </div>
+    </section>
+    <section>
+      <a href="/statusboard"><h2 id="statusboard">Status Board</h2></a>
+      <p>
+        Interested in seeing the overall picture of what we're working on next? Check out our <a href="/statusboard">Status Board</a> for more details!
+      </p>
+    </section>
+    <section>
+      <h2 id="faq">Frequently Asked Questions</h2>
+
+      <h3 id="faq-glimmer">What is Glimmer? Do I need to learn it too?</h3>
+
+      <p>
+        Glimmer is a rendering engine used in Ember. However, in order to build Ember apps, you don't need to know anything about Glimmer, other than it's super fast and that the contributors to the core codebase love to geek out about it. It's all behind the scenes. If you're curious to know how the Glimmer project fits into the roadmap for Ember's development, you can <a href="https://discuss.emberjs.com/t/readers-questions-will-breaking-up-ember-remove-the-need-for-glimmer-js/14325">learn more here</a>.
+      </p>
+
+      <h3 id="faq-pitch">How do I pitch Ember at my company?</h3>
+
+      <p>
+        Here are some <a href="https://discuss.emberjs.com/t/readers-questions-how-do-i-pitch-ember-at-my-company/14289"> strategies</a> that may help you out.
+      </p>
+
+      <h3 id="faq-controllers">Is it ok to use controllers?</h3>
+
+      <p>
+        Yes. Controllers are the right place to put URL query params, actions and attributes that need to be passed from the route level to components, and lifecycle hook code.
+      </p>
+
+      <h3 id="faq-future-proof">How do I future-proof my Ember.js application?</h3>
+      
+      <p>
+        You should not try to future proof your application. Ember.js has a strong emphasis on developer productivity, which means that framework developers take great care when designing new functionality and provide migration paths. Here are some ways to keep up to date on future changes:
+      </p>
+
+      <ul>
+        <li>
+          Feature Flags: Many new features are implemented under optional flags so that users can try them out and report any issues.
+        </li>
+        <li>
+          RFCs: Ember.js follows a community-driven process for its development that incorporates <a href="https://github.com/emberjs/rfcs">RFCs for features and deprecations.</a> An RFC is a Request for Comments. Before changes are made to Ember's API, they are proposed publicly and the community is asked to review and comment. Anyone can create an RFC, not just Core Team members. RFCs undergo many edits to incorporate community feedback. If a proposal has enough support, it is merged, meaning that work may begin to integrate the functionality into the codebase.
+        </li>
+        <li>
+          Deprecations: The <a href="http://emberjs.com/deprecations/">Deprecation Guides</a> contain upcoming deprecations and how to resolve them.
+        </li>
+        <li>
+          Codemods: When it's time for a major version upgrade, and there are syntax edits to make, tools like codemods are provided to help you make changes quickly. 
+        </li>
+        <li>
+          LTS lifecycle: If you won't be updating your app versions frequently, consider using the Long Term Support (LTS) versions of Ember. These are usually every 4 minor releases (for example, 2.8, 2.12, 2.16) and final major releases (2.18). LTS versions have extended windows for bugfixes and security updates.
+        </li>
+        <li>
+          Release schedule: Every six weeks, candidate features are reviewed and either deemed ready to be included in the stable release, or carry on in beta for another cycle until the next release happens.
+        </li>
+      </ul>
+      <p>
+        In short, the best way to make sure you have a healthy application is to comment on RFCs, clean up deprecations when you see them, and when possible, test your application against beta and canary releases of Ember.
+      </p>
+    </section>
+  </article>
+</div>
+
+
+    <div id="content-wrapper" class="content-wrapper">
+      <div id="content" class="main" role="main">
+        
+      </div>
+    </div>
+
+    <main-footer></main-footer>
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
+    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
+  </body>
+</html>

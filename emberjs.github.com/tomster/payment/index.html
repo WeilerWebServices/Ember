@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#E04E39">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ember.js - Tomster Commission Payment</title>
+    <meta property="st:title" content="Ember.js: Tomster Commission Payment" />
+    <meta property="og:title" content="Ember.js: Tomster Commission Payment" />
+    <meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
+    <meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@emberjs" />
+    <meta name="twitter:title" content="Tomster Commission Payment"/>
+    <meta name="google-site-verification" content="N9yOP2jCLcZBMHUet-JRqU2jnLVPeLDaePpkCqXGQXM" />
+    <meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
+    <link rel="shortcut icon" href="/images/favicon-b8f150dd.png" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
+    <!--[if lte IE 7 ]><link href="/stylesheets/fonts/fontello-ie7-e008d616.css" rel="stylesheet" /><![endif]-->
+    <link href="/stylesheets/site-364c2a35.css" rel="stylesheet" />
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-cf72b59a166beb307683d9d0dae6bb0f.css" />
+    
+  </head>
+
+  <body class="tomster tomster_payment tomster_payment_index responsive">
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/common-old-ie-a6691877.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script type="text/javascript" src="/javascripts/common-modern-7c867c7e.js"></script>
+    <!--<![endif]-->
+    <header>
+<nav class="navbar navbar-inverse">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="/"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home" /></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Docs <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="//guides.emberjs.com">Guides</a></li>
+      <li><a href="/api/ember/release">API Reference</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/learn">Learn Ember</a></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Releases <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/builds">Channels</a></li>
+      <li><a href="/builds/release">-- Stable</a></li>
+      <li><a href="/builds/beta">-- Beta</a></li>
+      <li><a href="/builds/canary">-- Canary</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/deprecations">Deprecations</a></li>
+      <li><a href="/statusboard">Status Board</a></li>
+     </ul>
+    </li>
+    <li><a href="/blog">Blog</a></li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/community">The Ember Community</a>
+       <li><a href="/guidelines">Guidelines</a></li>
+       <li><a href="http://github.com/emberjs/">Contribute (Github)</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/community/meetups">Meetups</a></li>
+       <li><a href="http://jobs.emberjs.com/">Job Board</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberconf.com/">Ember Conf</a></li>
+     </ul>
+     </li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="/team">The Team</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/logos">Logos</a></li>
+       <li><a href="/mascots">Mascots</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/ember-users">Who Uses Ember</a></li>
+       <li><a href="/sponsors">Sponsors</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/legal">Legal</a></li>
+       <li><a href="/security">Security</a></li>       
+      </ul>
+     </li>
+   </ul>
+   <form class="navbar-form navbar-right searchbox">
+    <div class="input-group">
+      <label for="search-input" class="control-label sr-only">Search</label>
+        <input type="text" 
+        class="form-control search input ds-input" 
+        placeholder="Search..." 
+        id="search-input" 
+        role="combobox" 
+        aria-expanded="false" 
+        aria-owns="algolia-autocomplete-listbox-0" 
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false" 
+        />
+        <span></span>
+    </div>
+   </form>
+  </div>
+  <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container-fluid -->
+</nav>
+</header>
+
+
+    
+
+    <div id="content-wrapper" class="content-wrapper">
+      <div id="content" class="main" role="main">
+        <h1>Tomster and Zoey Commission Payments</h1>
+
+<div class="tomster-payment section">
+  <div class="left-col">
+    <p>This form is processed using <a href="https://stripe.com" target="_blank">Stripe</a>.</p>
+    <p>This form is only for Tomsters and Zoeys that we've already discussed payment and details on. If you have a new idea, <a href="/tomster/commission">reach out to discuss</a> first :)</p>
+     <form id="tomster-payment-form" name="tomster-payment-form" class="tomster-form wufoo topLabel page" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://tilde.wufoo.com/forms/q3qhbsp095gijb/#public">
+      <ul>
+        <li id="foli1">
+          <label class="desc" id="title1" for="Field1">
+            Name
+            <span id="req_1" class="req">*</span>
+          </label>
+          <span class="inline-field">
+            <input id="Field1" name="Field1" type="text" class="field text fn" value="" size="22" tabindex="1" placeholder="First" required>
+          </span>
+          <span class="inline-field">
+            <input id="Field2" name="Field2" type="text" class="field text ln" value="" size="22" tabindex="2" placeholder="Last" required>
+          </span>
+        </li>
+        <li id="foli9">
+          <label class="desc" id="title9" for="Field9">
+            Company
+          </label>
+          <div>
+            <input id="Field9" name="Field9" type="text" class="field text medium" value="" maxlength="255" tabindex="3" onkeyup="">
+          </div>
+        </li>
+        <li id="foli3">
+          <label class="desc" id="title3" for="Field3">
+            Email
+            <span id="req_3" class="req">*</span>
+          </label>
+          <div>
+            <input id="Field3" name="Field3" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="4" required>
+          </div>
+        </li>
+        <li id="foli11">
+          <label class="desc" id="title11" for="Field11">
+            Which Tomster or Zoey is this payment for?
+            <span id="req_11" class="req">*</span>
+          </label>
+          <div>
+            <input id="Field11" name="Field11" type="text" class="field text medium" value="" maxlength="255" tabindex="5" onkeyup="" required>
+          </div>
+        </li>
+        <li id="foli4">
+          <label class="desc" id="title4" for="Field4">
+            Commission Amount
+            <span id="req_4" class="req">*</span>
+          </label>
+          <span class="symbol inline-field">$</span>
+          <span class="inline-field">
+            <input id="Field4" name="Field4" type="text" class="field text currency nospin" value="" size="10" tabindex="6" required>
+          </span>
+          <span class="symbol radix inline-field">.</span>
+          <span class="cents inline-field">
+            <input id="Field4-1" name="Field4-1" type="text" class="field text nospin" value="" size="2" maxlength="2" tabindex="7">
+          </span>
+        </li>
+        <li id="foli13">
+          <label class="desc" id="title13" for="Field13">
+            Signed License Agreement
+            <span id="req_13" class="req">*</span>
+          </label>
+          <div>
+            <input id="Field13" name="Field13" type="file" class="field file" size="12" tabindex="8" required>
+          </div>
+        </li>
+        <li class="buttons">
+          <div>
+            <input id="saveForm" name="saveForm" class="orange button" type="submit" value="Let's Do This!">
+          </div>
+        </li>
+        <li style="display: none;">
+          <label for="comment">Do Not Fill This Out</label>
+          <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+          <input type="hidden" id="idstamp" name="idstamp" value="h9Ab53gqbgg7YKEj5J7p/Kxokx5OlhEX0RtkdPdY2mo=">
+        </li>
+      </ul>
+    </form>
+  </div>
+  <div class="right-col">
+    <img src="/images/tomster-faq-2e7a68b0.png" width="95%">
+  </div>
+</div>
+
+<script src="/javascripts/app/tomster/jquery.validate.min-c9953fe3.js"></script>
+<script src="/javascripts/app/tomster/wufoo-70e46f58.js"></script>
+<script type="text/javascript" charset="utf-8">
+  $(function(){
+    $("#tomster-payment-form").validate();
+  });
+</script>
+
+      </div>
+    </div>
+
+    <main-footer></main-footer>
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
+    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
+  </body>
+</html>

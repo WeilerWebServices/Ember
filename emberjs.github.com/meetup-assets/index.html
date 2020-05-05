@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#E04E39">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ember.js - Meetups</title>
+    <meta property="st:title" content="Ember.js: Meetups" />
+    <meta property="og:title" content="Ember.js: Meetups" />
+    <meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
+    <meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@emberjs" />
+    <meta name="twitter:title" content="Meetups"/>
+    <meta name="google-site-verification" content="N9yOP2jCLcZBMHUet-JRqU2jnLVPeLDaePpkCqXGQXM" />
+    <meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
+    <link rel="shortcut icon" href="/images/favicon-b8f150dd.png" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
+    <!--[if lte IE 7 ]><link href="/stylesheets/fonts/fontello-ie7-e008d616.css" rel="stylesheet" /><![endif]-->
+    <link href="/stylesheets/site-364c2a35.css" rel="stylesheet" />
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-cf72b59a166beb307683d9d0dae6bb0f.css" />
+    
+  </head>
+
+  <body class="meetup-assets meetup-assets_index responsive">
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/common-old-ie-a6691877.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script type="text/javascript" src="/javascripts/common-modern-7c867c7e.js"></script>
+    <!--<![endif]-->
+    <header>
+<nav class="navbar navbar-inverse">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="/"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home" /></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Docs <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="//guides.emberjs.com">Guides</a></li>
+      <li><a href="/api/ember/release">API Reference</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/learn">Learn Ember</a></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Releases <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/builds">Channels</a></li>
+      <li><a href="/builds/release">-- Stable</a></li>
+      <li><a href="/builds/beta">-- Beta</a></li>
+      <li><a href="/builds/canary">-- Canary</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/deprecations">Deprecations</a></li>
+      <li><a href="/statusboard">Status Board</a></li>
+     </ul>
+    </li>
+    <li><a href="/blog">Blog</a></li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/community">The Ember Community</a>
+       <li><a href="/guidelines">Guidelines</a></li>
+       <li><a href="http://github.com/emberjs/">Contribute (Github)</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/community/meetups">Meetups</a></li>
+       <li><a href="http://jobs.emberjs.com/">Job Board</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberconf.com/">Ember Conf</a></li>
+     </ul>
+     </li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="/team">The Team</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/logos">Logos</a></li>
+       <li><a href="/mascots">Mascots</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/ember-users">Who Uses Ember</a></li>
+       <li><a href="/sponsors">Sponsors</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/legal">Legal</a></li>
+       <li><a href="/security">Security</a></li>       
+      </ul>
+     </li>
+   </ul>
+   <form class="navbar-form navbar-right searchbox">
+    <div class="input-group">
+      <label for="search-input" class="control-label sr-only">Search</label>
+        <input type="text" 
+        class="form-control search input ds-input" 
+        placeholder="Search..." 
+        id="search-input" 
+        role="combobox" 
+        aria-expanded="false" 
+        aria-owns="algolia-autocomplete-listbox-0" 
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false" 
+        />
+        <span></span>
+    </div>
+   </form>
+  </div>
+  <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container-fluid -->
+</nav>
+</header>
+
+
+    
+
+    <div id="content-wrapper" class="content-wrapper">
+      <div id="content" class="main" role="main">
+        <h1>
+  Ember Meetup Resources
+</h1>
+
+<p>
+  Running an Ember User Group can be challenging, but <em>really</em> rewarding: thanks so much for stepping up! We're here to help however we can. <a href="mailto:meetups@emberjs.com">Reach out to Leah and Crystal</a> if you have questions, ideas, or anything else User Group / Meetup related.
+</p>
+
+<p>
+  If you're looking for a little help getting started, <a href="/community/meetups-getting-started">we've put together some starter tips for you</a>. Hope it's helpful!
+</p>
+
+<div>
+  <h1 class="second">
+    Assets
+  </h1>
+
+  <h2>Branding Materials</h2>
+
+  <p>
+    We've created user group badges and branding to help give our groups a consistent feel. You can create your own by
+    <a href="/images/meetups/EmberMeetUp_180x135.psd">downloading the PSD</a>. We've got some other materials in the works and will post them here and email the organizers' Google Group as things come together.
+  </p>
+
+  <img style="float: right" src="/images/meetups/07sanfrancisco-91bfd134.png">
+
+  <p>
+    If you're using Meetup.com to manage your group, you can also use <a href="/images/meetups/MeetupHeader_960x150.psd">this header template</a> for your group's pages. It's optimized for Meetup (960 x 150); you can just add your location and you're good to go.
+  </p>
+
+  <div style="background:url(/images/meetups/meetup-header_portland_cropped.png) center top no-repeat; width: 100%; height: 75px;"></div>
+  <div style="clear:both;"></div>
+
+  <h2>Logos</h2>
+
+  <p>
+    If you have questions about acceptable uses of the Ember logo, or other format requests, please <a href="mailto:leah@emberjs.com">get in touch</a>. In general, manipulations of any sort are not allowed.
+  </p>
+
+  <ul class="inline_list">
+    <li><a href="/images/logos/ember-logo.ai">Logo in Illustrator format</a></li>
+    <li><a href="/images/logos/ember-logo-54c216ce.png">Logo in PNG format, transparent background</a></li>
+  </ul>
+
+  <h2>Stickers</h2>
+
+  <p>
+    The Ember Core Team has a small stash of Ember stickers donated by the folks at <a href="http://tilde.io">Tilde</a>. These are distributed as requested while in stock. If you'd like to print your own Ember stickers, here are the files you'll need for the canonical ones.
+  </p>
+
+  <ul class="inline_list">
+    <li><a href="/images/stickers/ember-sticker.ai">Ember Logo Stickers</a>, best printed die-cut at 3.0" x 1.25"</li>
+    <li><a href="/images/stickers/tomster-sticker.ai">Ember Mascot Stickers</a>, best printed die-cut at 3" x 3"</li>
+  </ul>
+
+  <p>
+    We recommend printing your stickers with <a href="http://www.stickermule.com/unlock?ref_id=3368978601">StickerMule</a>, who are long time supporters of Open Source. The link here will also get you $10 off your first order.
+  </p>
+
+    <div>
+      <h2 class="second">
+      Custom Tomsters and Zoeys
+      </h2>
+
+      <p>
+        You may have noticed that some user groups (Salt Lake City, Munich, London, etc.) have their own custom Tomster and/or Zoey variants. These have been commissioned and licensed by the groups; they paid a small commission fee to have the character designed by one of the official designers, and we granted them a license to use that variant for non-commercial user group related purposes.
+      </p>
+
+      <p class="tomsterVar">
+        <a href="http://www.meetup.com/Ember-js-Munich/">
+          <img width="180px" src="/images/community/tomsters/Ember-Munich-Half-sm-aacd9337.png">
+        </a>
+        <a href="http://www.meetup.com/Ember-ATX/">
+          <img width="180px" src="/images/community/tomsters/Ember-Austin-Zoey-Half-sm-c9b20e48.png">
+        </a>
+        <a href="http://www.meetup.com/Vancouver-Ember-js/">
+          <img width="180px" src="/images/community/tomsters/Ember-Vancouver-Half-sm-48c2a6c7.png">
+        </a>
+      </p>
+
+      <p>
+          Thankfully, our designers love Ember and therefore give us ridiculously fair deals. Pricing ranges from $80 to $300, depending on the extent of the request. On average, most user groups spend $200.
+      </p>
+      <p>
+          If you're interested in commissioning a Meetup/User Group Tomster or Zoey, <a href="../tomster/commission/">reach out to us with details</a>.
+      </p>
+  </div>
+
+  <h1>Recording Your Meetup</h1>
+
+  <p>
+    Many Ember Meetup organizers have done the community a tremendous service by having their meetups recorded. In some cases groups are able to find sponsors, and in others, sponsors pick up either the expense and/or the labor.
+  </p>
+  <p>
+    The London group was the first to roll their own, with Portland and other cities to follow. Overall one-time equipment spend in USD was approximately $350, plus two HDMI cords and the use of an iPhone or Tablet.
+  </p>
+  <p>
+    If you're interested in recording your meetups on your own, here are the items some of those groups have had success with:
+  </p>
+  <ul>
+    <li>
+      —<a href="https://www.amazon.com/AmazonBasics-60-Inch-Lightweight-Tripod-Bag/dp/B005KP473Q/ref=sr_1_2?ie=UTF8&qid=1475263846&sr=8-2&keywords=tripod">Lightweight tripod</a> with adjustable-height legs, rubber feet and great maneuverability.
+    </li>
+    <li>
+      —<a href="https://www.amazon.com/gp/product/B009GHYLKS/ref=oh_aui_search_detailpage?ie=UTF8&psc=1">Phone-sized mount</a> so your phone can hook into the tripod.
+    </li>
+    <li>
+      —<a href="https://www.amazon.com/gp/product/B00MIQ40JQ/ref=oh_aui_detailpage_o06_s00?ie=UTF8&psc=1">Game Capture device</a> for recording the presenter's slides.
+    </li>
+    <li>
+      —<a href="https://www.amazon.com/gp/product/B003QKBVYK/ref=oh_aui_detailpage_o06_s00?ie=UTF8&psc=1">Voice recorder</a> so you're recording the speaker's audio separately, and not using the not-too-great cell phone video audio.
+    </li>
+    <li>
+      —<a href="https://www.amazon.com/gp/product/B00KMILKGS/ref=oh_aui_detailpage_o06_s00?ie=UTF8&psc=1">Lavalier Mic</a> that plugs into the voice recorder, to allow your speakers maximum maneuverability.
+    </li>
+  </ul>
+<p>
+  To make this setup work, you'll need a laptop, in <em>addition</em> to the presenter's laptop. The basic process is:
+  <ul>
+    <li>
+      —The presenter's laptop gets plugged via HDMI into the Video Capture device (HDMI In).
+    </li>
+    <li>
+      —The video capture device gets plugged via HDMI into the projector (HDMI Out).
+    </li>
+    <li>
+      —The video capture device <em>also</em> plugs into the extra laptop via USB.
+    </li>
+    <li>
+      —The presenter wears the Voice Recording device in a pocket, with the Lavalier mic plugged in and attached somewhere near their neck. This will record your separate, clear audio stream.
+    </li>
+    <li>
+      —The tripod is positioned somewhere with a good view of the speaker, with the phone-specific-attachment screwed in, and then the phone inserted horizontally.
+    </li>
+    <li>
+      —When everything's ready to go, hit the record button on the capturing laptop, hit the record button on the iPhone, hit the record button on the voice recorder, and you're off to the races.
+    </li>
+    <li>
+      —After the event, download all three files onto one laptop, and use something like Screenflow to sync them up and produce your video. Alternatively, if you have <em>some</em> sponsorship, you can find a local producer or videographer to do this work for you for a few hundred dollars, depending on the volume of content.
+    </li>
+  </ul>
+</p>
+
+<h1>Organizers Groups</h1>
+  <p>
+    There's an infrequently-used but future-helpful group of Ember Meetup Organizers, which we use for organizer chit chat and announcements. <a href="https://groups.google.com/forum/#!forum/ember-meetup-organizers">You can apply to join the group here</a>. Be sure to list what group you're a part of in your application to ensure acceptance.
+  </p>
+
+  <p>
+    There's also an Ember Meetup Organizer Slack Channel, which we're happy to add new organizers to. <a href="mailto:meetups@emberjs.com">Reach out via email to be added</a>, and be sure to specify what group you're working on.
+  </p>
+
+</div>
+
+      </div>
+    </div>
+
+    <main-footer></main-footer>
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
+    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
+  </body>
+</html>

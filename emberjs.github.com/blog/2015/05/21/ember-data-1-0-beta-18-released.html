@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#E04E39">
+    <title>Ember.js - Ember Data v1.0.0-beta.17/18 Released</title>
+    <meta property="st:title" content="Ember.js: Ember Data v1.0.0-beta.17/18 Released" />
+    <meta property="og:title" content="Ember.js: Ember Data v1.0.0-beta.17/18 Released" />
+    <meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
+    <meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@emberjs" />
+    <meta name="twitter:title" content="Ember Data v1.0.0-beta.17/18 Released"/>
+    <meta name="google-site-verification" content="N9yOP2jCLcZBMHUet-JRqU2jnLVPeLDaePpkCqXGQXM" />
+    <meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
+    <link rel="shortcut icon" href="/images/favicon-b8f150dd.png" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
+    <!--[if lte IE 7 ]><link href="/stylesheets/fonts/fontello-ie7-e008d616.css" rel="stylesheet" /><![endif]-->
+    <link href="/stylesheets/site-364c2a35.css" rel="stylesheet" />
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-cf72b59a166beb307683d9d0dae6bb0f.css" />
+    
+  </head>
+
+  <body class="blog blog_2015 blog_2015_05 blog_2015_05_21 blog_2015_05_21_ember-data-1-0-beta-18-released responsive">
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/common-old-ie-a6691877.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script type="text/javascript" src="/javascripts/common-modern-7c867c7e.js"></script>
+    <!--<![endif]-->
+    <header>
+<nav class="navbar navbar-inverse">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="/"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home" /></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Docs <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="//guides.emberjs.com">Guides</a></li>
+      <li><a href="/api/ember/release">API Reference</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/learn">Learn Ember</a></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Releases <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/builds">Channels</a></li>
+      <li><a href="/builds/release">-- Stable</a></li>
+      <li><a href="/builds/beta">-- Beta</a></li>
+      <li><a href="/builds/canary">-- Canary</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/deprecations">Deprecations</a></li>
+      <li><a href="/statusboard">Status Board</a></li>
+     </ul>
+    </li>
+    <li><a href="/blog">Blog</a></li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/community">The Ember Community</a>
+       <li><a href="/guidelines">Guidelines</a></li>
+       <li><a href="http://github.com/emberjs/">Contribute (Github)</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/community/meetups">Meetups</a></li>
+       <li><a href="http://jobs.emberjs.com/">Job Board</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberconf.com/">Ember Conf</a></li>
+     </ul>
+     </li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="/team">The Team</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/logos">Logos</a></li>
+       <li><a href="/mascots">Mascots</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/ember-users">Who Uses Ember</a></li>
+       <li><a href="/sponsors">Sponsors</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/legal">Legal</a></li>
+       <li><a href="/security">Security</a></li>       
+      </ul>
+     </li>
+   </ul>
+   <form class="navbar-form navbar-right searchbox">
+    <div class="input-group">
+      <label for="search-input" class="control-label sr-only">Search</label>
+        <input type="text" 
+        class="form-control search input ds-input" 
+        placeholder="Search..." 
+        id="search-input" 
+        role="combobox" 
+        aria-expanded="false" 
+        aria-owns="algolia-autocomplete-listbox-0" 
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false" 
+        />
+        <span></span>
+    </div>
+   </form>
+  </div>
+  <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container-fluid -->
+</nav>
+</header>
+
+
+    
+
+    <div id="content-wrapper" class="content-wrapper">
+        <div id="sidebar" class="sidebar" role="complementary">
+          <ol id='toc-list' class="blog-sidebar">
+  <li class='level-1'>
+    <a href="/blog/tags/recent-posts.html">Recent Posts</a>
+    <ol style="display:block">
+      <li class='level-3'><a href="/blog/2018/02/21/2018-ember-community-survey.html">2018 Ember Community Survey</a></li>
+      <li class='level-3'><a href="/blog/2017/10/10/glimmer-progress-report.html">Glimmer.js Progress Report</a></li>
+      <li class='level-3'><a href="/blog/2017/10/03/the-road-to-ember-3-0.html">The Road to Ember 3.0</a></li>
+      <li class='level-3'><a href="/blog/2017/04/05/emberconf-2017-state-of-the-union.html">EmberConf 2017: State of the Union</a></li>
+      <li class='level-3'><a href="/blog/2017/02/28/2017-ember-community-survey.html">2017 Ember Community Survey</a></li>
+    </ol>
+  </li>
+  <li class='level-1'>
+    <a href="/blog/tags/releases.html">Releases</a>
+    <ol style="display:block">
+      <li class='level-3'><a href="/blog/2018/04/13/ember-3-1-released.html">Ember 3.1 and 3.2 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2018/02/16/ember-3-1-beta-released.html">Ember 3.1 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2018/02/14/ember-3-0-released.html">Ember 3.0 Released</a></li>
+      <li class='level-3'><a href="/blog/2018/01/01/ember-2-18-released.html">Ember 2.18 and 3.0 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/11/20/ember-2-17-released.html">Ember 2.16-LTS, Ember 2.17 and 2.18 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/10/11/ember-2-16-released.html">Ember 2.16 and 2.17 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/09/01/ember-2-15-released.html">Ember 2.15 and 2.16 Beta Released</a></li>
+    </ol>
+  </li>
+</ol>
+
+          <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
+        </div>
+      <div id="content" class="main has-sidebar" role="main">
+          
+  <article class="blog-post">
+    <div class="blog-post-header">
+      <h1 class="blog-post-title">Ember Data v1.0.0-beta.17/18 Released</h1>
+      <div class="blog-post-meta">
+          <time class="blog-post-date">May 21, 2015</time>
+          <div class="blog-post-author">By Stanley Stuart</div>
+      </div>
+    </div>
+    <div class="blog-post-body" id="toc-content">
+      <p>Beta.17 and Beta.18 contained many bugfixes from the community! Please check
+them out in the <a href="https://github.com/emberjs/data/blob/master/CHANGELOG.md">CHANGELOG</a>. Thank you to everyone who submitted
+patches!</p>
+
+<p>While many bugs were stomped, some important changes are worth calling out:</p>
+<h1 class='anchorable-toc' id='toc_possibly-breaking-deprecations'>(Possibly) Breaking Deprecations</h1><h2 class='anchorable-toc' id='toc_record-constructor-typekey-is-now-record-constructor-modelname'>record.constructor.typeKey is now record.constructor.modelName</h2>
+<p>In Ember Data, when you ask for a model, Ember Data looks its class up using
+Ember&#39;s <a href="http://guides.emberjs.com/v1.10.0/understanding-ember/dependency-injection-and-service-lookup/">Dependency Injection</a> API.  When the model class is looked
+up, Ember Data stores the type on the model class.</p>
+
+<p>For example, when the following code runs in your application:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre><span class="keyword">var</span> post = <span class="local-variable">this</span>.store.getById(<span class="string"><span class="delimiter">'</span><span class="content">post</span><span class="delimiter">'</span></span>, <span class="integer">1</span>);
+</pre></td>
+</tr></table>
+</div></div>
+<p>and Ember Data will store the string &quot;post&quot; on the model class:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre>console.log(post.constructor.typeKey); <span class="comment">// 'post'</span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>Ember Data uses this <code>typeKey</code> property internally when creating and extracting
+payloads in Serializers, and when locating models in Adapters. The <code>typeKey</code> is
+also currently available on Snapshots, which are passed to adapter and
+serializer methods. <code>typeKey</code> was previously always normalized to be a
+camelCased string.</p>
+
+<p>In Ember Data 1.0.0-beta.18, this property is now called <code>modelName</code>. In
+addition, the <code>modelName</code> is a dasherized string. For example, if you had a
+model called <code>TacoShop</code>, it would be stored on the model&#39;s constructor&#39;s
+<code>modelName</code> property as <code>taco-shop</code>, whereas previously it would be stored as
+<code>tacoShop</code>.</p>
+
+<p>Accessing the <code>typeKey</code> property should still work, but will trigger
+deprecation warnings.</p>
+
+<p>If you don&#39;t have any custom serializers or adapters, you are good to go;
+outgoing payloads and URLs shouldn&#39;t change. If you&#39;ve overridden a method in
+your subclass, remember to call <code>this._super</code>, or to normalize modelName in
+your code. If you need to transform this string, you can use Ember.String&#39;s
+<a href="http://emberjs.com/api/classes/Ember.String.html#method_camelize">camelize</a> and <a href="http://emberjs.com/api/classes/Ember.String.html#method_underscore">underscore</a> functions. Keep in mind you
+can&#39;t change <code>modelName</code> on the model&#39;s constructor; it is <strong>read-only</strong> and
+will trigger an assertion error if you try to override it.</p>
+
+<p>We changed <code>typeKey</code> to <code>modelName</code> to allow us to align to dasherized strings
+as Ember and Ember CLI also align with dasherized strings. Changing the name
+allows us to make this change with a deprecation phase.</p>
+<h2 class='anchorable-toc' id='toc_ds-restserializer-typeforroot-is-now-ds-restserializer-modelnamefrompayloadkey'>DS.RESTSerializer.typeForRoot is now DS.RESTSerializer.modelNameFromPayloadKey</h2>
+<p>To gain more consistency in the naming change of  <code>typeKey</code> to <code>modelName</code>,
+<code>typeForRoot</code> has been renamed to <code>modelNameFromPayloadKey</code>. The function
+serves the same purpose, so this should be a quick refactor you can achieve via
+search and replace in your project. While <em>calling</em> typeForRoot will trigger a
+deprecation warning, overriding in a subclass won&#39;t.</p>
+<h1 class='anchorable-toc' id='toc_new-features'>New Features</h1><h2 class='anchorable-toc' id='toc_ds-restserializer-payloadkeyfrommodelname'>DS.RESTSerializer.payloadKeyFromModelName</h2>
+<p>While <code>modelNameFromPayloadKey</code> returns a <em>model</em> for a JSON payload key,
+<code>payloadKeyFromModelName</code> can be used to override the serialization of a model
+<em>to the server.</em> For instance, you may have a Post model, but your server
+expects a <code>message</code> as the root. You can override it like so:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/serializers/application.js</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">default</span> DS.RESTSerializer.extend({
+  <span class="key">payloadKeyFromModelName</span>: (modelName) {
+    <span class="keyword">if</span> (modelName === <span class="string"><span class="delimiter">'</span><span class="content">post</span><span class="delimiter">'</span></span>) {
+      <span class="keyword">return</span> <span class="string"><span class="delimiter">'</span><span class="content">message</span><span class="delimiter">'</span></span>;
+    }
+    <span class="keyword">return</span> <span class="local-variable">this</span>._super(modelName);
+  }
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>This would produce the following payload:</p>
+<div class="highlight json "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+</pre></td>
+  <td class="code"><pre>{
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">message</span><span class="delimiter">&quot;</span></span>: {
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">id</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">1</span><span class="delimiter">&quot;</span></span>,
+    <span class="key"><span class="delimiter">&quot;</span><span class="content">title</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Action Cable comes with 3 Months of Free HBO</span><span class="delimiter">&quot;</span></span>
+  }
+}
+</pre></td>
+</tr></table>
+</div></div>
+<p>Another example is that ActiveModelSerializer uses this hook to convert a
+dasherized <code>modelName</code> to an <code>under_scored</code> string.</p>
+
+<p>While this was possible previously in Ember Data, we noticed that users used
+several different hooks to achieve this goal, so it made sense to make one
+unifying place for this kind of serialization.</p>
+<h2 class='anchorable-toc' id='toc_store-unloadall-can-now-unload-all-models-when-not-passed-a-modelname'>store.unloadAll() can now unload all models when not passed a modelName</h2>
+<p>Previously, <code>store.unloadAll</code> required a <code>modelName</code> argument to unload records
+of a type.  Now, you can unload all records without calling <code>store.destroy</code>.
+Thanks to <a href="https://github.com/emberjs/data/pull/2999">svox1</a> for this pull
+request!</p>
+<h2 class='anchorable-toc' id='toc_ds-restadapter-buildurl-refactored-into-different-hooks'>DS.RESTAdapter.buildURL refactored into different hooks</h2>
+<p><code>buildURL</code> has been refactored into several hooks like <code>urlForFindQuery</code>. This
+makes overriding methods like <code>buildURL</code> easier to reason about and easier to
+change without breaking other request types. Thanks to
+<a href="https://github.com/emberjs/data/pull/2966">thejameskyle</a> for taking on this
+refactor!</p>
+
+<p>While beta.17 did introduce a regression, this has been fixed in beta.18.</p>
+
+<!-- Links -->
+
+    </div>
+    <div class="blog-post-footer">
+    </div>
+  </article>
+  <hr>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'emberblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script type="text/javascript" src="/javascripts/blog-a90057c5.js"></script>
+
+      </div>
+    </div>
+
+    <main-footer></main-footer>
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
+    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#E04E39">
+    <title>Ember.js - Ember 1.7.0 and 1.8 Beta Released</title>
+    <meta property="st:title" content="Ember.js: Ember 1.7.0 and 1.8 Beta Released" />
+    <meta property="og:title" content="Ember.js: Ember 1.7.0 and 1.8 Beta Released" />
+    <meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
+    <meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@emberjs" />
+    <meta name="twitter:title" content="Ember 1.7.0 and 1.8 Beta Released"/>
+    <meta name="google-site-verification" content="N9yOP2jCLcZBMHUet-JRqU2jnLVPeLDaePpkCqXGQXM" />
+    <meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
+    <link rel="shortcut icon" href="/images/favicon-b8f150dd.png" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
+    <!--[if lte IE 7 ]><link href="/stylesheets/fonts/fontello-ie7-e008d616.css" rel="stylesheet" /><![endif]-->
+    <link href="/stylesheets/site-364c2a35.css" rel="stylesheet" />
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-cf72b59a166beb307683d9d0dae6bb0f.css" />
+    
+  </head>
+
+  <body class="blog blog_2014 blog_2014_08 blog_2014_08_23 blog_2014_08_23_ember-1-7-0-released responsive">
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/common-old-ie-a6691877.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script type="text/javascript" src="/javascripts/common-modern-7c867c7e.js"></script>
+    <!--<![endif]-->
+    <header>
+<nav class="navbar navbar-inverse">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="/"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home" /></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Docs <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="//guides.emberjs.com">Guides</a></li>
+      <li><a href="/api/ember/release">API Reference</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/learn">Learn Ember</a></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Releases <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/builds">Channels</a></li>
+      <li><a href="/builds/release">-- Stable</a></li>
+      <li><a href="/builds/beta">-- Beta</a></li>
+      <li><a href="/builds/canary">-- Canary</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/deprecations">Deprecations</a></li>
+      <li><a href="/statusboard">Status Board</a></li>
+     </ul>
+    </li>
+    <li><a href="/blog">Blog</a></li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/community">The Ember Community</a>
+       <li><a href="/guidelines">Guidelines</a></li>
+       <li><a href="http://github.com/emberjs/">Contribute (Github)</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/community/meetups">Meetups</a></li>
+       <li><a href="http://jobs.emberjs.com/">Job Board</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberconf.com/">Ember Conf</a></li>
+     </ul>
+     </li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="/team">The Team</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/logos">Logos</a></li>
+       <li><a href="/mascots">Mascots</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/ember-users">Who Uses Ember</a></li>
+       <li><a href="/sponsors">Sponsors</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/legal">Legal</a></li>
+       <li><a href="/security">Security</a></li>       
+      </ul>
+     </li>
+   </ul>
+   <form class="navbar-form navbar-right searchbox">
+    <div class="input-group">
+      <label for="search-input" class="control-label sr-only">Search</label>
+        <input type="text" 
+        class="form-control search input ds-input" 
+        placeholder="Search..." 
+        id="search-input" 
+        role="combobox" 
+        aria-expanded="false" 
+        aria-owns="algolia-autocomplete-listbox-0" 
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false" 
+        />
+        <span></span>
+    </div>
+   </form>
+  </div>
+  <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container-fluid -->
+</nav>
+</header>
+
+
+    
+
+    <div id="content-wrapper" class="content-wrapper">
+        <div id="sidebar" class="sidebar" role="complementary">
+          <ol id='toc-list' class="blog-sidebar">
+  <li class='level-1'>
+    <a href="/blog/tags/recent-posts.html">Recent Posts</a>
+    <ol style="display:block">
+      <li class='level-3'><a href="/blog/2018/02/21/2018-ember-community-survey.html">2018 Ember Community Survey</a></li>
+      <li class='level-3'><a href="/blog/2017/10/10/glimmer-progress-report.html">Glimmer.js Progress Report</a></li>
+      <li class='level-3'><a href="/blog/2017/10/03/the-road-to-ember-3-0.html">The Road to Ember 3.0</a></li>
+      <li class='level-3'><a href="/blog/2017/04/05/emberconf-2017-state-of-the-union.html">EmberConf 2017: State of the Union</a></li>
+      <li class='level-3'><a href="/blog/2017/02/28/2017-ember-community-survey.html">2017 Ember Community Survey</a></li>
+    </ol>
+  </li>
+  <li class='level-1'>
+    <a href="/blog/tags/releases.html">Releases</a>
+    <ol style="display:block">
+      <li class='level-3'><a href="/blog/2018/04/13/ember-3-1-released.html">Ember 3.1 and 3.2 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2018/02/16/ember-3-1-beta-released.html">Ember 3.1 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2018/02/14/ember-3-0-released.html">Ember 3.0 Released</a></li>
+      <li class='level-3'><a href="/blog/2018/01/01/ember-2-18-released.html">Ember 2.18 and 3.0 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/11/20/ember-2-17-released.html">Ember 2.16-LTS, Ember 2.17 and 2.18 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/10/11/ember-2-16-released.html">Ember 2.16 and 2.17 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/09/01/ember-2-15-released.html">Ember 2.15 and 2.16 Beta Released</a></li>
+    </ol>
+  </li>
+</ol>
+
+          <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
+        </div>
+      <div id="content" class="main has-sidebar" role="main">
+          
+  <article class="blog-post">
+    <div class="blog-post-header">
+      <h1 class="blog-post-title">Ember 1.7.0 and 1.8 Beta Released</h1>
+      <div class="blog-post-meta">
+          <time class="blog-post-date">August 23, 2014</time>
+          <div class="blog-post-author">By Alex Navasardyan</div>
+      </div>
+    </div>
+    <div class="blog-post-body" id="toc-content">
+      <p>We are pleased to announce that both Ember.js 1.7.0 and the first beta in the 1.8 series
+have been released. This comes as the seventh cycle of our release process that began just
+after 1.0 was released.</p>
+
+<p>This release brings bug fixes, potentially breaking changes and new features.</p>
+<h2 class='anchorable-toc' id='toc_new-features'>New Features</h2><h3 class='anchorable-toc' id='toc_nestable-code-this-route-code'>Nestable <code>this.route</code></h3>
+<p>This change removes the restriction that only <code>this.resource</code> can have nested
+child routes.</p>
+
+<p>Prior to this change, using <code>this.resource</code> would reset the namespace and in order
+to preserve it you had to do the following:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+  <td class="code"><pre><span class="local-variable">this</span>.resource(<span class="string"><span class="delimiter">'</span><span class="content">foo</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
+  <span class="local-variable">this</span>.resource(<span class="string"><span class="delimiter">'</span><span class="content">foo.bar</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
+    <span class="local-variable">this</span>.resource(<span class="string"><span class="delimiter">'</span><span class="content">foo.bar.baz</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
+      <span class="comment">// All this repetition to get an</span>
+      <span class="comment">// intuitively-named FooBarBazRoute</span>
+    });
+  });
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p><code>this.route</code> can be nested like <code>this.resource</code>, but unlike this.resource, the namespace
+of child routes is appended rather than reset to a top-level namespace, allowing the above to be
+written as:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td>
+  <td class="code"><pre><span class="local-variable">this</span>.route(<span class="string"><span class="delimiter">'</span><span class="content">foo</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
+  <span class="local-variable">this</span>.route(<span class="string"><span class="delimiter">'</span><span class="content">bar</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
+    <span class="local-variable">this</span>.route(<span class="string"><span class="delimiter">'</span><span class="content">baz</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
+       <span class="comment">// uses FooBarBazRoute</span>
+       <span class="comment">// generates foo.bar.baz.index</span>
+       <span class="comment">// generates FooBarBazIndexRoute</span>
+     });
+   });
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>Unnested <code>this.route</code> works the same way as before.</p>
+<h3 class='anchorable-toc' id='toc_query-params'>Query Params</h3>
+<p>Thanks to the tireless work of <a href="https://github.com/machty">@machty</a> and team, query params
+support has finally landed and is a part of the 1.7.0 release!</p>
+
+<p>Ember now has first class support for URL query parameters (e.g. <code>/?page=1&amp;sort=last_name</code>).
+With this API, each query param is bound to a property on a controller, such that changes made
+to query params in the URL (e.g. user presses the back button) will update the controller property,
+and vice versa.</p>
+
+<p>The API handles many of tricky aspects of maintaining a binding to a URL, such as:</p>
+
+<ul>
+<li>coalescing multiple controller property changes into a single URL update</li>
+<li>correctly casting new URL query param values to the datatype expected by the controller property
+(e.g. <code>&quot;true&quot;</code> for a boolean property casts to <code>true</code>, <code>&quot;123&quot;</code> for a numeric property casts to <code>123</code>)</li>
+<li>omitting default query param values from the URL so as to not unnecessarily clutter the URL
+with default values</li>
+</ul>
+
+<p>Please read the <a href="/guides/routing/query-params/">Query Params Guide</a> for more information.</p>
+<h2 class='anchorable-toc' id='toc_breaking-changes-and-deprecations'>Breaking Changes and Deprecations</h2>
+<p>The following are a few deprecation warnings and breaking changes that have been included in 1.7.
+Please review the new <a href="http://emberjs.com/deprecations/">Deprecations Page</a> for more details.</p>
+<h3 class='anchorable-toc' id='toc_controller-s-code-model-code-property'>Controller&#39;s <code>model</code> property</h3>
+<p>On Controllers, the content property is now derived from model. This reduces many caveats
+with model/content, and also sets a simple ground rule: Never set a controller&#39;s content,
+rather always set its model.</p>
+<h3 class='anchorable-toc' id='toc_code-bind-attr-code-and-empty-arrays'><code>bind-attr</code> and empty arrays</h3>
+<p>An empty array is treated as falsy value in <code>bind-attr</code> to be in consistent with <code>if</code> helper.
+Breaking for apps that relies on the previous behaviour which treats an empty array as
+truthy value in <code>bind-attr</code>.</p>
+<h2 class='anchorable-toc' id='toc_other-improvements'>Other Improvements</h2>
+<p><code>Ember</code> is now using <code>RSVP</code> 3.0.13 and brings fixes for <code>RSVP.hash</code> in IE8.</p>
+<h2 class='anchorable-toc' id='toc_ember-1-8-0-beta-1'>Ember 1.8.0-beta.1</h2><h3 class='anchorable-toc' id='toc_support-for-ie-6-and-7'>Support for IE 6 and 7</h3>
+<p>Usage of Ember is deprecated for Internet Explorer 6 and 7, support will be removed
+in the next major version.</p>
+<h3 class='anchorable-toc' id='toc_refactored-view-layer'>Refactored view layer</h3>
+<p>Internal implementation of the view layer has been refactored. Many of you remember
+<code>script</code> tags in the DOM:</p>
+<div class="highlight html "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+</pre></td>
+  <td class="code"><pre><span class="tag">&lt;script</span> <span class="attribute-name">id</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">metamorph-1-start</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">text/x-placeholder</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/script&gt;</span>
+<span class="tag">&lt;script</span> <span class="attribute-name">id</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">metamorph-1-end</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">text/x-placeholder</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="tag">&lt;/script&gt;</span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>That&#39;s how <code>Ember</code> knows how to update the values in the DOM. This refactor removes
+the need for <code>script</code> tags.</p>
+<h3 class='anchorable-toc' id='toc_actions-lookup-on-controller'>Actions lookup on controller</h3>
+<p>Some of you might remember that you could define action handlers in the root of the
+controller, like so:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+</pre></td>
+  <td class="code"><pre>App.HomeController = Ember.ObjectController.extend({
+  <span class="function">someAction</span>: <span class="keyword">function</span>() {
+    <span class="comment">// handle the action</span>
+  }
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>A deprecation warning was added in late 2013 that would print a nice deprecation notice
+if you happen to use an action name that was also found in the root of the controller.
+Unfortunately, even with the deprecation, we still have the possibility to conflict
+with controller level methods and properties.</p>
+
+<p>To define action handler, you should place it under <code>actions</code> hash, like so:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td>
+  <td class="code"><pre>App.HomeController = Ember.ObjectController.extend({
+  <span class="key">actions</span>: {
+    <span class="function">someAction</span>: <span class="keyword">function</span>() {
+      <span class="comment">// handle the action</span>
+    }
+  }
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>This change will remove support for older action lookup in the root of the controller
+completely, and finally allow usage of nearly any action name without the need to
+check if that name was also used by the controller.</p>
+
+<p>Also, this release introduces numerous bug fixes and small improvements. You can see a list of all the changes in the CHANGELOG:</p>
+
+<ul>
+<li><a href="https://github.com/emberjs/ember.js/blob/v1.7.0/CHANGELOG.md">Ember.js 1.7.0 CHANGELOG</a></li>
+<li><a href="https://github.com/emberjs/ember.js/blob/v1.8.0-beta.1/CHANGELOG.md">Ember.js 1.8.0-beta.1 CHANGELOG</a></li>
+</ul>
+
+    </div>
+    <div class="blog-post-footer">
+    </div>
+  </article>
+  <hr>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'emberblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script type="text/javascript" src="/javascripts/blog-a90057c5.js"></script>
+
+      </div>
+    </div>
+
+    <main-footer></main-footer>
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
+    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
+  </body>
+</html>
+

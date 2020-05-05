@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#E04E39">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ember.js - Deprecations for v2.x</title>
+    <meta property="st:title" content="Ember.js: Deprecations for v2.x" />
+    <meta property="og:title" content="Ember.js: Deprecations for v2.x" />
+    <meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
+    <meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@emberjs" />
+    <meta name="twitter:title" content="Deprecations for v2.x"/>
+    <meta name="google-site-verification" content="N9yOP2jCLcZBMHUet-JRqU2jnLVPeLDaePpkCqXGQXM" />
+    <meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
+    <link rel="shortcut icon" href="/images/favicon-b8f150dd.png" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
+    <!--[if lte IE 7 ]><link href="/stylesheets/fonts/fontello-ie7-e008d616.css" rel="stylesheet" /><![endif]-->
+    <link href="/stylesheets/site-1654b74d.css" rel="stylesheet" />
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-cf72b59a166beb307683d9d0dae6bb0f.css" />
+    
+  </head>
+
+  <body class="deprecations deprecations_v2 responsive">
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/common-old-ie-a6691877.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script type="text/javascript" src="/javascripts/common-modern-7c867c7e.js"></script>
+    <!--<![endif]-->
+    <header>
+<nav class="navbar navbar-inverse">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="/"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home" /></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Docs <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="//guides.emberjs.com">Guides</a></li>
+      <li><a href="/api">API Reference</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/learn">Learn Ember</a></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Releases <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/builds">Channels</a></li>
+      <li><a href="/builds/release">-- Stable</a></li>
+      <li><a href="/builds/beta">-- Beta</a></li>
+      <li><a href="/builds/canary">-- Canary</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/deprecations">Deprecations</a></li>
+      <li><a href="/statusboard">Status Board</a></li>
+     </ul>
+    </li>
+    <li><a href="/blog">Blog</a></li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/community">The Ember Community</a>
+       <li><a href="/guidelines">Guidelines</a></li>
+       <li><a href="http://github.com/emberjs/">Contribute (Github)</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/community/meetups">Meetups</a></li>
+       <li><a href="http://jobs.emberjs.com/">Job Board</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberconf.com/">Ember Conf</a></li>
+     </ul>
+     </li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="/team">The Team</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/logos">Logos</a></li>
+       <li><a href="/mascots">Mascots</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/ember-users">Who Uses Ember</a></li>
+       <li><a href="/sponsors">Sponsors</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/legal">Legal</a></li>
+       <li><a href="/security">Security</a></li>       
+      </ul>
+     </li>
+   </ul>
+   <form class="navbar-form navbar-right searchbox">
+    <div class="input-group">
+      <label for="search-input" class="control-label sr-only">Search</label>
+        <input type="text" 
+        class="form-control search input ds-input" 
+        placeholder="Search..." 
+        id="search-input" 
+        role="combobox" 
+        aria-expanded="false" 
+        aria-owns="algolia-autocomplete-listbox-0" 
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false" 
+        />
+        <span></span>
+    </div>
+   </form>
+  </div>
+  <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container-fluid -->
+</nav>
+</header>
+
+
+    
+
+    <div id="content-wrapper" class="content-wrapper">
+        <div id="sidebar" class="sidebar" role="complementary">
+              <ol id='toc-list'>
+    </ol>
+
+          <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
+        </div>
+      <div id="content" class="main has-sidebar" role="main">
+        
+  <h2 class='anchorable-toc' id='toc_deprecations-added-in-ember-2-x'>Deprecations Added in Ember 2.x</h2>
+<p>What follows is a list of deprecations introduced to Ember.js during the 2.x
+cycle.</p>
+
+<p>For more information on deprecations in Ember, see the <a href="/deprecations">main deprecations page</a>.</p>
+<h3 class='anchorable-toc' id='toc_deprecations-added-in-2-0'>Deprecations Added in 2.0</h3><h4 class='anchorable-toc' id='toc_ember-string-fmt'>Ember.String.fmt</h4><h5 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h5><h5 class='anchorable-toc' id='toc_id-ember-string-utils-fmt'>id: ember-string-utils.fmt</h5>
+<p><code>Ember.String.fmt</code> was designed at a time when interpolating values in a JavaScript
+string was cumbersome. With template strings, it has become pratical to do it, and
+they are recommended over <code>Ember.String.fmt</code>.</p>
+
+<p>To use the examples from the documentation, you should update your code from:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+</pre></td>
+  <td class="code"><pre>let firstName = <span class="string"><span class="delimiter">'</span><span class="content">John</span><span class="delimiter">'</span></span>;
+let lastName = <span class="string"><span class="delimiter">'</span><span class="content">Doe</span><span class="delimiter">'</span></span>;
+
+<span class="string"><span class="delimiter">&quot;</span><span class="content">Hello %@ %@</span><span class="delimiter">&quot;</span></span>.fmt(<span class="string"><span class="delimiter">'</span><span class="content">John</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">Doe</span><span class="delimiter">'</span></span>);     <span class="comment">// &quot;Hello John Doe&quot;</span>
+<span class="string"><span class="delimiter">&quot;</span><span class="content">Hello %@2, %@1</span><span class="delimiter">&quot;</span></span>.fmt(<span class="string"><span class="delimiter">'</span><span class="content">John</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">Doe</span><span class="delimiter">'</span></span>);  <span class="comment">// &quot;Hello Doe, John&quot;</span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>To the following:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+</pre></td>
+  <td class="code"><pre>let firstName = <span class="string"><span class="delimiter">'</span><span class="content">John</span><span class="delimiter">'</span></span>;
+let lastName = <span class="string"><span class="delimiter">'</span><span class="content">Doe</span><span class="delimiter">'</span></span>;
+
+<span class="error">`</span>Hello <span class="predefined">$</span>{firstName} <span class="predefined">$</span>{lastName}<span class="error">`</span>  <span class="comment">// &quot;Hello John Doe&quot;</span>
+<span class="error">`</span>Hello <span class="predefined">$</span>{lastName}, <span class="predefined">$</span>{firstName}<span class="error">`</span>  <span class="comment">// &quot;Hello Doe, John&quot;</span>
+</pre></td>
+</tr></table>
+</div></div><h4 class='anchorable-toc' id='toc_link-to-s-code-currentwhen-code'>Link-to&#39;s <code>currentWhen</code></h4><h5 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h5><h5 class='anchorable-toc' id='toc_id-ember-routing-view-deprecated-current-when'>id: ember-routing-view.deprecated-current-when</h5>
+<p>When developers wanted to customize in what route a <code>{{link-to}}</code> should be considered &quot;active&quot; they
+could pass it using <code>currentWhen</code>.</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre><span class="inline"><span class="inline-delimiter">{{#</span><span class="attribute-name">link-to</span> <span class="error">'</span><span class="attribute-name">item</span><span class="error">'</span> <span class="attribute-name">currentWhen</span>=<span class="string"><span class="delimiter">'</span><span class="content">index</span><span class="delimiter">'</span></span><span class="inline-delimiter">}}</span></span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>Now <code>currentWhen</code> is deprecated in favour of the hyphenated <code>current-when</code>, with the exact
+same semantics:</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre><span class="inline"><span class="inline-delimiter">{{#</span><span class="attribute-name">link-to</span> <span class="error">'</span><span class="attribute-name">item</span><span class="error">'</span> <span class="attribute-name">current-when</span>=<span class="string"><span class="delimiter">'</span><span class="content">index</span><span class="delimiter">'</span></span><span class="inline-delimiter">}}</span></span>
+</pre></td>
+</tr></table>
+</div></div><h3 class='anchorable-toc' id='toc_deprecations-added-in-2-1'>Deprecations Added in 2.1</h3><h4 class='anchorable-toc' id='toc_initializer-arity'>Initializer Arity</h4><h6 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h6><h6 class='anchorable-toc' id='toc_id-ember-application-app-initializer-initialize-arguments'>id: ember-application.app-initializer-initialize-arguments</h6>
+<p>In prior versions of Ember initializers have taken two arguments (generally labeled as
+<code>container</code> and <code>application</code>). Starting with Ember 2.1 providing two arguments to an
+<code>initializer</code> will trigger a deprecation.</p>
+
+<p>The following initializer for Ember 2.0 will trigger a deprecation:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">function</span> <span class="function">initialize</span>(container, application) {
+  application.inject(<span class="string"><span class="delimiter">'</span><span class="content">route</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">service:session</span><span class="delimiter">'</span></span>);
+}
+
+<span class="reserved">export</span> <span class="keyword">default</span> {
+  <span class="key">name</span>: <span class="string"><span class="delimiter">'</span><span class="content">inject-session</span><span class="delimiter">'</span></span>,
+  <span class="key">initialize</span>: initialize
+}
+</pre></td>
+</tr></table>
+</div></div>
+<p>To clear the deprecation, remove the first argument (<code>container</code> in the above example):</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">function</span> <span class="function">initialize</span>(application) {
+  application.inject(<span class="string"><span class="delimiter">'</span><span class="content">route</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">service:session</span><span class="delimiter">'</span></span>);
+}
+
+<span class="reserved">export</span> <span class="keyword">default</span> {
+  <span class="key">name</span>: <span class="string"><span class="delimiter">'</span><span class="content">inject-session</span><span class="delimiter">'</span></span>,
+  <span class="key">initialize</span>: initialize
+}
+</pre></td>
+</tr></table>
+</div></div>
+<p>In some cases an addon might need to support both versions of Ember with the same initializer,
+one way to do this without triggering a deprecation would be the following (using the same
+example as above):</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">function</span> <span class="function">initialize</span>() {
+  let application = <span class="local-variable">arguments</span>[<span class="integer">1</span>] || <span class="local-variable">arguments</span>[<span class="integer">0</span>];
+  application.inject(<span class="string"><span class="delimiter">'</span><span class="content">route</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">service:session</span><span class="delimiter">'</span></span>);
+}
+
+<span class="reserved">export</span> <span class="keyword">default</span> {
+  <span class="key">name</span>: <span class="string"><span class="delimiter">'</span><span class="content">inject-session</span><span class="delimiter">'</span></span>,
+  <span class="key">initialize</span>: initialize
+}
+</pre></td>
+</tr></table>
+</div></div><h4 class='anchorable-toc' id='toc_ember-application-registry-ember-applicationinstance-registry'>Ember.Application#registry / Ember.ApplicationInstance#registry</h4><h5 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h5><h5 class='anchorable-toc' id='toc_id-ember-application-app-instance-registry'>id: ember-application.app-instance-registry</h5>
+<p>When the container and registry were split, the registry was added to <code>Ember.Application</code> instances (provided to
+initializers as the first argument in 2.1) and <code>Ember.ApplicationInstance</code> instances (provided to instance initializers
+as the first argument). Unfortunately, this was done without making it clear that the <code>.registry</code> property on
+<code>Ember.Application</code> instances was private. This lead quite a few addons and applications to directly use the registry.</p>
+
+<p>During the 2.1 cycle a new feature (<code>ember-registry-container-reform</code>) was enabled to provide more
+public API&#39;s to access the <code>registry</code> functionality (without exposing all of the private internals).</p>
+
+<p>The following list can be used to migrate from <code>app.registry.*</code> usage to the new public API&#39;s:</p>
+
+<ul>
+<li><code>app.registry.resolve</code> -&gt; <code>app.resolveRegistration</code></li>
+<li><code>app.registry.register</code> -&gt; <code>app.register</code></li>
+<li><code>app.registry.unregister</code> -&gt; <code>app.unregister</code></li>
+<li><code>app.registry.has</code> -&gt; <code>app.hasRegistration</code></li>
+<li><code>app.registry.option</code> -&gt; <code>app.registerOption</code></li>
+<li><code>app.registry.options</code> -&gt; <code>app.registerOptions</code></li>
+<li><code>app.registry.getOptions</code> -&gt; <code>app.registeredOptions</code></li>
+<li><code>app.registry.optionsForType</code> -&gt; <code>app.registerOptionsForType</code></li>
+<li><code>app.registry.getOptionsForType</code> -&gt; <code>app.registeredOptionsForType</code></li>
+<li><code>app.registry.injection</code> -&gt; <code>app.inject</code></li>
+</ul>
+<h4 class='anchorable-toc' id='toc_ember-applicationinstance-container'>Ember.ApplicationInstance#container</h4><h5 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h5><h5 class='anchorable-toc' id='toc_id-ember-application-app-instance-container'>id: ember-application.app-instance-container</h5>
+<p>When instance initializers were added, using <code>appInstance.container.lookup</code> was suggested in lieu of using the first argument
+to initializers. Unfortunately, the <code>container</code> system has always been private and the previous initializer deprecation led
+users down the wrong path.</p>
+
+<p>During the 2.1 cycle a new feature (<code>ember-registry-container-reform</code>) was enabled to provide more
+public API&#39;s for accessing the container for looking up instances without exposing all of the private internals.</p>
+
+<p>Please refactor from using <code>appInstance.container.lookup</code> to <code>appInstance.lookup</code>.</p>
+
+<p>Before:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/initializers/preload-store.js</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">function</span> <span class="function">initialize</span>(appInstance) {
+  let store = appInstance.container.lookup(<span class="string"><span class="delimiter">'</span><span class="content">service:store</span><span class="delimiter">'</span></span>);
+
+  store.pushPayload(<span class="error">`</span>&lt;payload here&gt;<span class="error">`</span>);
+}
+
+<span class="reserved">export</span> <span class="keyword">default</span> {
+  <span class="key">name</span>: <span class="string"><span class="delimiter">'</span><span class="content">preload-store</span><span class="delimiter">'</span></span>,
+  <span class="key">initialize</span>: initialize
+}
+</pre></td>
+</tr></table>
+</div></div>
+<p>After:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/instance-initializers/preload-store.js</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">function</span> <span class="function">initialize</span>(appInstance) {
+  let store = appInstance.lookup(<span class="string"><span class="delimiter">'</span><span class="content">service:store</span><span class="delimiter">'</span></span>);
+
+  store.pushPayload(<span class="error">`</span>&lt;payload here&gt;<span class="error">`</span>);
+}
+
+<span class="reserved">export</span> <span class="keyword">default</span> {
+  <span class="key">name</span>: <span class="string"><span class="delimiter">'</span><span class="content">preload-store</span><span class="delimiter">'</span></span>,
+  <span class="key">initialize</span>: initialize
+}
+</pre></td>
+</tr></table>
+</div></div><h4 class='anchorable-toc' id='toc_ember-debug-function-options'>Ember debug function options</h4><h5 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h5><h5 class='anchorable-toc' id='toc_id-ember-debug-deprecate-options-missing-ember-debug-deprecate-id-missing-ember-debug-deprecate-until-missing-ember-debug-warn-options-missing-ember-debug-warn-id-missing'>id: ember-debug.deprecate-options-missing, ember-debug.deprecate-id-missing, ember-debug.deprecate-until-missing, ember-debug.warn-options-missing, ember-debug.warn-id-missing</h5>
+<p>Starting in Ember 2.1 various debug functions now require a third argument (commonly called <code>options</code>).</p>
+
+<p><code>id</code> is required by all methods listed below, and the deprecation related methods also require an <code>until</code> property.</p>
+
+<ul>
+<li><code>Ember.deprecate</code></li>
+<li><code>Ember.deprecateFunc</code></li>
+<li><code>Ember.computed.deprecatingAlias</code></li>
+<li><code>Ember.warn</code></li>
+</ul>
+
+<p>The <code>id</code> property is intended to allow runtime debug handlers to uniquely identify the source, and the <code>until</code> property is used
+to indicate the future version when the deprecated behavior will no longer exist.</p>
+
+<p>The goal of these changes is to allow tools like
+<a href="https://github.com/mixonic/ember-cli-deprecation-workflow">ember-cli-deprecation-workflow</a> to make managing
+these deprecations and warnings much easier (by matching on the <code>id</code> instead of the full deprecation/warn message).</p>
+<h4 class='anchorable-toc' id='toc_ember-component-defaultlayout'>Ember.Component#defaultLayout</h4><h5 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h5><h5 class='anchorable-toc' id='toc_id-ember-views-component-defaultlayout'>id: ember-views.component.defaultLayout</h5>
+<p>Specifying a <code>defaultLayout</code> to a component is deprecated in favor of specifying <code>layout</code> directly. <code>defaultLayout</code> was
+often used in order to allow inheriting components to fallback to their parents <code>defaultLayout</code> if a custom <code>layout</code> was
+not provided. Due to the way a components layout is looked up naturally, this is true when using <code>layout</code> properties in
+both locations. Changing the <code>layout</code> detection process allows initial render speed (with many components) to be
+improved pretty significantly.</p>
+
+<p>Before:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+</pre></td>
+  <td class="code"><pre><span class="comment">// Ember &lt; 2.1</span>
+<span class="reserved">import</span> layout from <span class="string"><span class="delimiter">'</span><span class="content">../templates/some-thing-lol</span><span class="delimiter">'</span></span>;
+
+<span class="reserved">export</span> <span class="keyword">default</span> Ember.Component.extend({
+  <span class="key">defaultLayout</span>: layout
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>After:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+</pre></td>
+  <td class="code"><pre><span class="comment">// Ember 2.1 and later</span>
+<span class="reserved">import</span> layout from <span class="string"><span class="delimiter">'</span><span class="content">../templates/some-thing-lol</span><span class="delimiter">'</span></span>;
+
+<span class="reserved">export</span> <span class="keyword">default</span> Ember.Component.extend({
+  <span class="key">layout</span>: layout
+});
+</pre></td>
+</tr></table>
+</div></div><h4 class='anchorable-toc' id='toc_ember-component-currentstate'>Ember.Component#currentState</h4><h5 class='anchorable-toc' id='toc_until-2-3-0'>until: 2.3.0</h5><h5 class='anchorable-toc' id='toc_id-ember-view-current-state'>id: ember-view.current-state</h5>
+<p>The <code>currentState</code> property on <code>Ember.Component</code> instances is a private property that Ember uses
+internally to deal with the various states a component can be in (in DOM, pre-render, destroying, etc). Unfortunately,
+this removes a pretty common term (<code>currentState</code> might be used for many things in a user-land component).</p>
+
+<p>In Ember 2.1 the internal <code>.currentState</code> property has been moved to <code>_currentState</code> to avoid conflicts.</p>
+
+<p>Please keep in mind that <code>.currentState</code> / <code>._currentState</code> is still private and should not be used/relied upon
+outside of Ember internals.</p>
+<h3 class='anchorable-toc' id='toc_deprecations-added-in-2-2'>Deprecations Added in 2.2</h3><h4 class='anchorable-toc' id='toc_function-as-test-in-ember-deprecate-ember-warn-ember-assert'>Function as test in Ember.deprecate, Ember.warn, Ember.assert</h4><h5 class='anchorable-toc' id='toc_until-2-5-0'>until: 2.5.0</h5><h5 class='anchorable-toc' id='toc_id-ember-debug-deprecate-test-as-function'>id: ember-debug.deprecate-test-as-function</h5><h5 class='anchorable-toc' id='toc_deprecated-behavior'>Deprecated behavior</h5>
+<p>Calling <code>Ember.deprecate</code>, <code>Ember.warn</code> or <code>Ember.assert</code> with a function as test argument is deprecated.</p>
+
+<p>You can no longer pass arguments of type <code>function</code> to these methods. Following calls will trigger deprecations:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+11
+12
+13
+14
+15
+</pre></td>
+  <td class="code"><pre>const message = <span class="string"><span class="delimiter">'</span><span class="content">Test message.</span><span class="delimiter">'</span></span>;
+const options = { <span class="key">id</span>: <span class="string"><span class="delimiter">'</span><span class="content">test</span><span class="delimiter">'</span></span>, <span class="key">until</span>: <span class="string"><span class="delimiter">'</span><span class="content">3.0.0</span><span class="delimiter">'</span></span> };
+
+<span class="comment">// passing function</span>
+Ember.deprecate(message, <span class="keyword">function</span>() {
+  <span class="keyword">return</span> <span class="predefined-constant">true</span>;
+}, options);
+
+const myConstructor = {}.constructor;
+
+<span class="comment">// passing constructor (also a function)</span>
+Ember.warn(message, myConstructor, options);
+
+<span class="comment">// passing function with double arrow syntax</span>
+Ember.assert(message, () =&gt; <span class="predefined-constant">true</span>, options);
+</pre></td>
+</tr></table>
+</div></div>
+<p><a href="http://ember-twiddle.com/34d36b9121e017d2388f">Demo.</a></p>
+<h5 class='anchorable-toc' id='toc_refactoring'>Refactoring</h5>
+<p>You have 3 options to refactor second argument from <code>function</code> to <code>boolean</code>:</p>
+
+<ol>
+<li>Use <a href="https://en.wikipedia.org/wiki/Immediately-invoked_function_expression">IIFE</a>.</li>
+<li>Use <code>!!Constructor</code> for constructors.</li>
+<li>Pass <code>boolean</code> directly instead of wrapping it in function.</li>
+</ol>
+
+<p>Example:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+11
+12
+13
+14
+</pre></td>
+  <td class="code"><pre><span class="comment">// ... message, options omitted for brevity</span>
+
+<span class="comment">// passing IIFE (1)</span>
+Ember.deprecate(message, (<span class="keyword">function</span>() {
+    <span class="keyword">return</span> <span class="predefined-constant">true</span>;
+})(), options);
+
+const myConstructor = {}.constructor;
+
+<span class="comment">// passing !!constructor (2)</span>
+Ember.warn(message, !!myConstructor, options);
+
+<span class="comment">// passing boolean directly (3)</span>
+Ember.assert(message, <span class="predefined-constant">true</span>, options);
+</pre></td>
+</tr></table>
+</div></div>
+<p><a href="http://ember-twiddle.com/ed90d0c7812914f09a3f">Demo.</a></p>
+
+<p>In a future version functions will be treated as truthy values instead of being executed.</p>
+<h3 class='anchorable-toc' id='toc_deprecations-added-in-2-3'>Deprecations added in 2.3</h3><h4 class='anchorable-toc' id='toc_injected-container-access'>Injected container access</h4><h5 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h5><h5 class='anchorable-toc' id='toc_id-ember-application-injected-container'>id: ember-application.injected-container</h5>
+<p><code>this.container</code> has been private API since at least Ember 1.0.0. Unfortunately, there was not a public API available
+to use as an alternative.  In the Ember 2.1 cycle a number of public API&#39;s were added to instance initializers
+that allowed access to the container and registry (see <a href="http://emberjs.com/api/classes/ContainerProxyMixin.html">here</a>
+and <a href="http://emberjs.com/api/classes/RegistryProxyMixin.html">here</a> for details of the public API&#39;s), but this new public
+API surface was not added to individual instances that were using <code>this.container</code> directly.</p>
+
+<p>Ember 2.3 now provides a public API for usage from within any instances that were instantiated from the container.</p>
+
+<p>This refactor is relatively straight forward for applications, but still leaves a few gaps for addons that want to function
+without deprecation on all versions while still using the newer paradigms. <a href="https://github.com/rwjblue/ember-getowner-polyfill">ember-getowner-polyfill</a>
+was created for this exact reason.</p>
+
+<p>Note that the <code>getOwner</code> API is natively available in Ember versions 2.3 and up, so you don&#39;t need to install a polyfill. Use it like you would use any other API, as in the <code>After:</code> example.</p>
+
+<p>Before:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+</pre></td>
+  <td class="code"><pre><span class="comment">// Ember &lt; 2.3</span>
+<span class="reserved">import</span> Ember from <span class="string"><span class="delimiter">'</span><span class="content">ember</span><span class="delimiter">'</span></span>;
+
+<span class="reserved">export</span> <span class="keyword">default</span> Ember.Helper.extend({
+  init() {
+    <span class="local-variable">this</span>._super(...<span class="local-variable">arguments</span>);
+
+    <span class="local-variable">this</span>.customThing = <span class="local-variable">this</span>.container.lookup(<span class="string"><span class="delimiter">'</span><span class="content">custom:thing</span><span class="delimiter">'</span></span>);
+  }
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>After:</p>
+
+<p>do an ember install of the polyfill.</p>
+<div class="highlight sh "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre>ember install ember-getowner-polyfill
+</pre></td>
+</tr></table>
+</div></div>
+<p>After it installs, use as follows:-</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+</pre></td>
+  <td class="code"><pre><span class="comment">// Ember &lt; 2.3 needs the polyfill installed, Ember &gt;= 2.3 available natively.</span>
+<span class="reserved">import</span> Ember from <span class="string"><span class="delimiter">'</span><span class="content">ember</span><span class="delimiter">'</span></span>;
+
+<span class="reserved">export</span> <span class="keyword">default</span> Ember.Helper.extend({
+  init() {
+    <span class="local-variable">this</span>._super(...<span class="local-variable">arguments</span>);
+
+    <span class="local-variable">this</span>.customThing = Ember.getOwner(<span class="local-variable">this</span>).lookup(<span class="string"><span class="delimiter">'</span><span class="content">custom:thing</span><span class="delimiter">'</span></span>);
+  }
+});
+</pre></td>
+</tr></table>
+</div></div><h3 class='anchorable-toc' id='toc_deprecations-added-in-2-4'>Deprecations Added in 2.4</h3><h4 class='anchorable-toc' id='toc_render-helper-with-block'>{{#render}} helper with block</h4><h5 class='anchorable-toc' id='toc_until-2-4-0'>until: 2.4.0</h5><h5 class='anchorable-toc' id='toc_id-ember-template-compiler-deprecate-render-block'>id: ember-template-compiler.deprecate-render-block</h5>
+<p>The <code>{{render}}</code> helper was never intended to support a block form, but unfortunatley (mostly
+due to various refactorings in 1.10 and 1.13) it started working in block form. Since this was
+not properly engineered, there are a number of caveats (i.e. the <code>controller</code> and <code>target</code> values of
+anything inside the block are incorrect) that prevent continued support.</p>
+
+<p>Support the following forms will be removed after 2.4:</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+</pre></td>
+  <td class="code"><pre><span class="inline"><span class="inline-delimiter">{{#</span><span class="attribute-name">render</span> <span class="error">'</span><span class="attribute-name">foo</span><span class="error">'</span><span class="inline-delimiter">}}</span></span>
+  <span class="tag">&lt;p&gt;</span>Stuff Here<span class="tag">&lt;/p&gt;</span>
+<span class="inline"><span class="inline-delimiter">{{/</span><span class="attribute-name">render</span><span class="inline-delimiter">}}</span></span>
+</pre></td>
+</tr></table>
+</div></div><div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+</pre></td>
+  <td class="code"><pre><span class="inline"><span class="inline-delimiter">{{#</span><span class="attribute-name">render</span> <span class="error">'</span><span class="attribute-name">foo</span><span class="error">'</span> <span class="attribute-name">someModel</span><span class="inline-delimiter">}}</span></span>
+  <span class="tag">&lt;p&gt;</span>Stuff Here<span class="tag">&lt;/p&gt;</span>
+<span class="inline"><span class="inline-delimiter">{{/</span><span class="attribute-name">render</span><span class="inline-delimiter">}}</span></span>
+</pre></td>
+</tr></table>
+</div></div><h3 class='anchorable-toc' id='toc_deprecations-added-in-2-6'>Deprecations Added in 2.6</h3><h4 class='anchorable-toc' id='toc_ember-component-didinitattrs'>Ember.Component#didInitAttrs</h4><h5 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h5><h5 class='anchorable-toc' id='toc_id-ember-views-did-init-attrs'>id: ember-views.did-init-attrs</h5>
+<p>Using <code>didInitAttrs</code> is deprecated in favour of using <code>init</code>. When <code>init</code> is called the attrs sent in with the component will be
+available after calling <code>this._super(...arguments)</code></p>
+
+<p>Given a htmlbars template like this:</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre><span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">my-component</span> <span class="attribute-name">handle</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">@tomdale</span><span class="delimiter">&quot;</span></span><span class="inline-delimiter">}}</span></span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>Before:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">default</span> Ember.Component.extend({
+  didInitAttrs() {
+    <span class="local-variable">this</span>._super(...<span class="local-variable">arguments</span>);
+    <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">handle</span><span class="delimiter">'</span></span>); <span class="comment">// @tomdale</span>
+  }
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>After:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">default</span> Ember.Component.extend({
+  init() {
+    <span class="local-variable">this</span>._super(...<span class="local-variable">arguments</span>);
+    <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">handle</span><span class="delimiter">'</span></span>); <span class="comment">// @tomdale</span>
+  }
+});
+</pre></td>
+</tr></table>
+</div></div><h4 class='anchorable-toc' id='toc_model-param-in-code-render-code-helper'>Model param in <code>{{render</code> helper</h4><h5 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h5><h5 class='anchorable-toc' id='toc_id-ember-template-compiler-deprecate-render-model'>id: ember-template-compiler.deprecate-render-model</h5>
+<p>Using the model param in the <code>{{render</code> helper is deprecated in favor of using
+components. Please refactor to a component and invoke thusly:</p>
+
+<p>For example, if you had:</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre><span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">render</span> <span class="error">'</span><span class="attribute-name">foo-bar</span><span class="error">'</span> <span class="attribute-name">someModel</span><span class="inline-delimiter">}}</span></span>
+</pre></td>
+</tr></table>
+</div></div><div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/templates/foo-bar.hbs</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre><span class="tag">&lt;p&gt;</span><span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">someProp</span><span class="inline-delimiter">}}</span></span> template stuff here<span class="tag">&lt;/p&gt;</span>
+</pre></td>
+</tr></table>
+</div></div><div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/controllers/foo-bar.js</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">default</span> Controller.extend({
+  <span class="key">someProp</span>: Ember.computed(<span class="string"><span class="delimiter">'</span><span class="content">model.yolo</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
+    <span class="keyword">return</span> <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">model.yolo</span><span class="delimiter">'</span></span>);
+  })
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>Would be refactored to:</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre><span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">foo-bar</span> <span class="attribute-name">model</span>=<span class="attribute-value">someModel</span><span class="inline-delimiter">}}</span></span>
+</pre></td>
+</tr></table>
+</div></div><div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/templates/components/foo-bar.hbs</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre><span class="tag">&lt;p&gt;</span><span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">someProp</span><span class="inline-delimiter">}}</span></span> template stuff here<span class="tag">&lt;/p&gt;</span>
+</pre></td>
+</tr></table>
+</div></div><div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/components/foo-bar.js</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">default</span> Component.extend({
+  <span class="key">someProp</span>: Ember.computed(<span class="string"><span class="delimiter">'</span><span class="content">model.yolo</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
+    <span class="keyword">return</span> <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">model.yolo</span><span class="delimiter">'</span></span>);
+  })
+});
+</pre></td>
+</tr></table>
+</div></div><h4 class='anchorable-toc' id='toc_legacy-support-addons'>Legacy support addons</h4>
+<p>Ember provides addons <a href="https://github.com/emberjs/ember-legacy-views">ember-legacy-views</a> and
+<a href="https://github.com/emberjs/ember-legacy-controllers">ember-legacy-controllers</a> that allow for projects to continue
+using some legacy concepts in 2.x.
+Beginning in 2.4, use of these addons is now deprecated.</p>
+
+<p>See the deprecation guide sections on <a href="http://emberjs.com/deprecations/v1.x/#toc_ember-view">removing views</a>,
+<a href="http://emberjs.com/deprecations/v1.x/#toc_arraycontroller"><code>ArrayController</code></a>,
+and <a href="http://emberjs.com/deprecations/v1.x/#toc_objectcontroller"><code>ObjectController</code></a>
+for information on migration.</p>
+
+<p>Once view and controller deprecations are removed, you can remove the addons with the command:
+<code>npm uninstall --save-dev ember-legacy-views &amp;&amp; npm uninstall ember-legacy-controllers</code></p>
+<h3 class='anchorable-toc' id='toc_deprecations-added-in-2-7'>Deprecations Added in 2.7</h3><h4 class='anchorable-toc' id='toc_ember-backburner'>Ember.Backburner</h4><h5 class='anchorable-toc' id='toc_until-2-8-0'>until: 2.8.0</h5><h5 class='anchorable-toc' id='toc_id-ember-metal-ember-backburner'>id: ember-metal.ember-backburner</h5>
+<p><code>Ember.Backburner</code> was private throughout the Ember 2.x series and will be
+removed <em>after</em> 2.8.</p>
+<h4 class='anchorable-toc' id='toc_ember-binding'>Ember.Binding</h4><h5 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h5><h5 class='anchorable-toc' id='toc_id-ember-metal-binding'>id: ember-metal.binding</h5>
+<p><code>Ember.Binding</code> has not been needed for some time and is deprecated in favor of
+computed properties and services (depending on what you were binding to). It is
+recommended that you take the following actions:</p>
+
+<ol>
+<li>Refactor global bindings to services</li>
+<li>Refactor <code>oneWay</code> bindings to <code>readOnly</code> computed properties</li>
+<li>Refactor all other bindings to <code>alias</code> computed properties</li>
+</ol>
+
+<p>The <a href="https://guides.emberjs.com/v2.5.0/applications/services/">guide on services</a> is a good place
+to start for creating and consuming services to replace your global bindings.
+In general though, you will replace your global with a service and consume it
+like this:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">default</span> Ember.Component.extend({
+  <span class="comment">// will load the service in file /app/services/cool-service.js</span>
+  <span class="key">coolService</span>: Ember.inject.service()
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>This would replace a binding that may have looked like this:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">default</span> Ember.Component.extend({
+  <span class="key">boringObjectBinding</span>: <span class="string"><span class="delimiter">'</span><span class="content">MyApp.boringObject</span><span class="delimiter">'</span></span>
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>Refactoring local bindings to computed properties can be achieved with
+less work:</p>
+
+<p>If you had this:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">default</span> Ember.Component.extend({
+  <span class="key">thingContainer</span>: <span class="error">…</span>,
+  <span class="key">thingOneBinding</span>: Ember.Binding.oneWay(<span class="string"><span class="delimiter">'</span><span class="content">thingContainer.thingOne</span><span class="delimiter">'</span></span>),
+  <span class="key">thingTwoBinding</span>: <span class="string"><span class="delimiter">'</span><span class="content">thingContainer.thingTwo</span><span class="delimiter">'</span></span>
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>You could change it to this:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">default</span> Ember.Component.extend({
+  <span class="key">thingContainer</span>: <span class="error">…</span>,
+  <span class="key">thingOne</span>: Ember.computed.readOnly(<span class="string"><span class="delimiter">'</span><span class="content">thingContainer.thingOne</span><span class="delimiter">'</span></span>),
+  <span class="key">thingTwo</span>: Ember.computed.alias(<span class="string"><span class="delimiter">'</span><span class="content">thingContainer.thingTwo</span><span class="delimiter">'</span></span>)
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>See the <a href="https://guides.emberjs.com/v2.5.0/object-model/computed-properties/">guide on computed properties</a> for
+further reading.</p>
+<h3 class='anchorable-toc' id='toc_deprecations-added-in-2-8'>Deprecations Added in 2.8</h3><h4 class='anchorable-toc' id='toc_use-ember-string-htmlsafe-over-ember-handlebars-safestring'>Use Ember.String.htmlSafe over Ember.Handlebars.SafeString</h4><h5 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h5><h5 class='anchorable-toc' id='toc_id-ember-htmlbars-ember-handlebars-safestring'>id: ember-htmlbars.ember-handlebars-safestring</h5>
+<p>Creating safe strings. Before:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> Ember from <span class="string"><span class="delimiter">'</span><span class="content">ember</span><span class="delimiter">'</span></span>;
+const { computed } = Ember;
+
+<span class="reserved">export</span> <span class="keyword">default</span> Ember.Component.extend({
+  <span class="key">myString</span>: computed(<span class="keyword">function</span>(){
+    <span class="keyword">return</span> <span class="keyword">new</span> Ember.Handlebars.SafeString(someString);
+  });
+})
+</pre></td>
+</tr></table>
+</div></div>
+<p>After:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> Ember from <span class="string"><span class="delimiter">'</span><span class="content">ember</span><span class="delimiter">'</span></span>;
+const { computed } = Ember;
+
+<span class="reserved">export</span> <span class="keyword">default</span> Ember.Component.extend({
+  <span class="key">myString</span>: computed(<span class="keyword">function</span>(){
+    <span class="keyword">return</span> Ember.String.htmlSafe(someString);
+  });
+)};
+</pre></td>
+</tr></table>
+</div></div>
+<p>Detecting safe strings. Before:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+11
+12
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> Ember from <span class="string"><span class="delimiter">'</span><span class="content">ember</span><span class="delimiter">'</span></span>;
+
+<span class="reserved">export</span> <span class="keyword">default</span> Ember.Component.extend({
+  <span class="key">actions</span>: {
+    save() {
+      let myString = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">myString</span><span class="delimiter">'</span></span>);
+      <span class="keyword">if</span> (myString <span class="keyword">instanceof</span> Ember.Handlebars.SafeString) {
+        <span class="comment">// ...</span>
+      }
+    }
+  }
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>After:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+11
+12
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> Ember from <span class="string"><span class="delimiter">'</span><span class="content">ember</span><span class="delimiter">'</span></span>;
+
+<span class="reserved">export</span> <span class="keyword">default</span> Ember.Component.extend({
+  <span class="key">actions</span>: {
+    save() {
+      let myString = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">myString</span><span class="delimiter">'</span></span>);
+      <span class="keyword">if</span> (Ember.String.isHTMLSafe(myString)) {
+        <span class="comment">// ...</span>
+      }
+    }
+  }
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>If you&#39;re an addon maintainer, there is a polyfill for safe string detection (<a href="https://github.com/workmanw/ember-string-ishtmlsafe-polyfill">ember-string-ishtmlsafe-polyfill</a>)
+that will help maintain backwards compatibility. Additionally, it&#39;s worth noting that <code>Ember.String.htmlSafe</code>
+is supported back to pre-1.0, so there should be no concerns of backwards compatibility there.</p>
+<h4 class='anchorable-toc' id='toc_enumerable-contains'>Enumerable#contains</h4><h5 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h5><h5 class='anchorable-toc' id='toc_id-ember-runtime-enumerable-contains'>id: ember-runtime.enumerable-contains</h5>
+<p>The <code>Enumerable#contains</code> and <code>Array#contains</code> methods were deprecated in favor of <code>Enumerable#includes</code> and <code>Array#includes</code>
+to stay in line with ES standards. See <a href="https://github.com/emberjs/rfcs/blob/master/text/0136-contains-to-includes.md">RFC</a> for details.</p>
+
+<p><code>contains</code> and <code>includes</code> have similar behaviors. A notable exception is how <code>NaN</code> values are handled.
+<code>contains</code> uses <a href="https://tc39.github.io/ecma262/#sec-strict-equality-comparison">Strict equality comparison algorithm</a>
+for testing inclusion while <code>includes</code> uses <a href="https://tc39.github.io/ecma262/#sec-samevaluezero">SameValueZero algorithm</a>.</p>
+
+<p>Before:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td>
+  <td class="code"><pre><span class="keyword">var</span> arr = [<span class="string"><span class="delimiter">'</span><span class="content">a</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">b</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">c</span><span class="delimiter">'</span></span>, <span class="predefined-constant">NaN</span>, <span class="predefined-constant">undefined</span>, <span class="predefined-constant">null</span>];
+
+arr.contains(<span class="string"><span class="delimiter">'</span><span class="content">b</span><span class="delimiter">'</span></span>);        <span class="comment">// true</span>
+arr.contains(<span class="string"><span class="delimiter">'</span><span class="content">d</span><span class="delimiter">'</span></span>);        <span class="comment">// false</span>
+arr.contains(<span class="predefined-constant">NaN</span>);        <span class="comment">// false</span>
+arr.contains(<span class="predefined-constant">null</span>);       <span class="comment">// false</span>
+arr.contains(<span class="predefined-constant">undefined</span>);  <span class="comment">// false</span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>After:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td>
+  <td class="code"><pre><span class="keyword">var</span> arr = [<span class="string"><span class="delimiter">'</span><span class="content">a</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">b</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">c</span><span class="delimiter">'</span></span>, <span class="predefined-constant">NaN</span>, <span class="predefined-constant">undefined</span>, <span class="predefined-constant">null</span>];
+
+arr.includes(<span class="string"><span class="delimiter">'</span><span class="content">b</span><span class="delimiter">'</span></span>);        <span class="comment">// true</span>
+arr.includes(<span class="string"><span class="delimiter">'</span><span class="content">d</span><span class="delimiter">'</span></span>);        <span class="comment">// false</span>
+arr.includes(<span class="predefined-constant">NaN</span>);        <span class="comment">// true</span>
+arr.includes(<span class="predefined-constant">null</span>);       <span class="comment">// true</span>
+arr.includes(<span class="predefined-constant">undefined</span>);  <span class="comment">// true</span>
+</pre></td>
+</tr></table>
+</div></div>
+<p><code>includes</code> also allows a second optional parameter <code>startAt</code> to specify the index at which to begin searching:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+</pre></td>
+  <td class="code"><pre><span class="keyword">var</span> arr = [<span class="string"><span class="delimiter">'</span><span class="content">a</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">b</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">c</span><span class="delimiter">'</span></span>, <span class="predefined-constant">NaN</span>];
+
+arr.includes(<span class="string"><span class="delimiter">'</span><span class="content">c</span><span class="delimiter">'</span></span>, <span class="integer">2</span>);   <span class="comment">// true</span>
+arr.includes(<span class="string"><span class="delimiter">'</span><span class="content">c</span><span class="delimiter">'</span></span>, -<span class="integer">2</span>);  <span class="comment">// true</span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>Note that the second <code>startAt</code> parameter is only available for <code>Ember.Array</code> because <code>Ember.Enumerable</code> does not rely on index-ordered access.</p>
+
+<p><code>Enumerable#without</code> and <code>MutableEnumerable#addObject</code> use now internally <code>includes</code> instead of <code>contains</code>. This leads to some minor breaking changes:</p>
+
+<p>Before:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+</pre></td>
+  <td class="code"><pre><span class="keyword">var</span> arr = [<span class="string"><span class="delimiter">'</span><span class="content">a</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">b</span><span class="delimiter">'</span></span>];
+
+arr.addObject(<span class="predefined-constant">NaN</span>);       <span class="comment">// ['a', 'b', NaN]</span>
+arr.addObject(<span class="predefined-constant">NaN</span>);       <span class="comment">// ['a', 'b', NaN, NaN]</span>
+arr.without(<span class="predefined-constant">NaN</span>);         <span class="comment">// ['a', 'b', NaN, NaN]</span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>After:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+</pre></td>
+  <td class="code"><pre><span class="keyword">var</span> arr = [<span class="string"><span class="delimiter">'</span><span class="content">a</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">b</span><span class="delimiter">'</span></span>];
+
+arr.addObject(<span class="predefined-constant">NaN</span>);       <span class="comment">// ['a', 'b', NaN]</span>
+arr.addObject(<span class="predefined-constant">NaN</span>);       <span class="comment">// ['a', 'b', NaN]</span>
+arr.without(<span class="predefined-constant">NaN</span>);         <span class="comment">// ['a', 'b']</span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>Addon authors should use <a href="https://github.com/rwjblue/ember-runtime-enumerable-includes-polyfill">ember-runtime-enumerable-includes-polyfill</a>
+to fix the deprecation in a backwards-compatible way.</p>
+
+<p>Added in <a href="https://github.com/emberjs/ember.js/pull/13553">PR #13553</a>.</p>
+<h3 class='anchorable-toc' id='toc_deprecations-added-in-2-11'>Deprecations Added in 2.11</h3><h4 class='anchorable-toc' id='toc_code-rendertoelement-code'><code>renderToElement</code></h4><h5 class='anchorable-toc' id='toc_until-2-12-0'>until: 2.12.0</h5><h5 class='anchorable-toc' id='toc_id-ember-views-render-to-element'>id: ember-views.render-to-element</h5>
+<p>Using the <code>renderToElement</code> is deprecated in favor of <code>appendTo</code>.
+Please refactor to use <code>appendTo</code>:</p>
+
+<p>For example, if you had:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre>component.renderToElement(<span class="string"><span class="delimiter">'</span><span class="content">div</span><span class="delimiter">'</span></span>);
+</pre></td>
+</tr></table>
+</div></div>
+<p>Would be refactored to:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+</pre></td>
+  <td class="code"><pre>let element = document.createElement(<span class="string"><span class="delimiter">'</span><span class="content">div</span><span class="delimiter">'</span></span>);
+component.appendTo(element);
+</pre></td>
+</tr></table>
+</div></div>
+<p>Note that both APIs are private, so no public API is being deprecated here.</p>
+<h4 class='anchorable-toc' id='toc_code-render-code-helper'><code>{{render</code> helper</h4><h5 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h5><h5 class='anchorable-toc' id='toc_id-ember-template-compiler-deprecate-render'>id: ember-template-compiler.deprecate-render</h5>
+<p>Using the <code>{{render</code> helper is deprecated in favor of using components.
+Please refactor uses of this helper to components:</p>
+
+<p>For example, if you had:</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre><span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">render</span> <span class="error">'</span><span class="attribute-name">my-sidebar</span><span class="error">'</span><span class="inline-delimiter">}}</span></span>
+</pre></td>
+</tr></table>
+</div></div><div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/templates/my-sidebar.hbs</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre><span class="tag">&lt;p&gt;</span>template stuff here<span class="tag">&lt;/p&gt;</span>
+</pre></td>
+</tr></table>
+</div></div><div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/controllers/my-sidebar.js</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">default</span> Ember.Controller.extend({
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>You would refactor to a component like so:</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre><span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">my-sidebar</span><span class="inline-delimiter">}}</span></span>
+</pre></td>
+</tr></table>
+</div></div><div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/templates/components/my-sidebar.hbs</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre><span class="tag">&lt;p&gt;</span>template stuff here<span class="tag">&lt;/p&gt;</span>
+</pre></td>
+</tr></table>
+</div></div><div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/components/my-sidebar.js</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">default</span> Ember.Component.extend({
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>Note that the render helper has several unique behaviors that may require further refactoring work during migration to a component.</p>
+
+<ul>
+<li>When using the render helper with no model argument, the controller instance is a singleton. For example the same controller instance is shared between <code>{{render &#39;post&#39;}}</code>, any other helper usage of <code>{{render &#39;post&#39;}}</code>, a route template named post, and dependency injections using <code>Ember.inject.service(&#39;post&#39;)</code>.</li>
+<li>When sendAction is called in a rendered controller, or when <code>{{action</code> is used in a render helper template, the bubbling target for those actions is the router and current active route. With components, those same actions would target only the component instance without bubbling.</li>
+</ul>
+<h4 class='anchorable-toc' id='toc_rendering-into-a-render-helper-that-resolves-to-an-outlet'>Rendering into a {{render}} helper that resolves to an {{outlet}}.</h4><h5 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h5><h5 class='anchorable-toc' id='toc_id-ember-routing-top-level-render-helper'>id: ember-routing.top-level-render-helper</h5>
+<p>Before named outlets were introduced to Ember the render helper was used to declare slots for <code>this.render</code> in routes. This usage is not common in modern, idiomatic applications and is deprecated. In general, the pattern of named outlets or named render helpers is discouraged. Instead use of <a href="https://github.com/ef4/ember-elsewhere">ember-elsewhere</a> or another DOM-redirection library should better serve these use cases.</p>
+
+<p>For example this code uses the render helper as a target for a special sidebar present on the index route. The special sidebar is in a template named <code>index-sidebar</code>:</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/templates/application.hbs</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+</pre></td>
+  <td class="code"><pre><span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">sidebar</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">render</span> <span class="error">'</span><span class="attribute-name">sidebar</span><span class="error">'</span><span class="inline-delimiter">}}</span></span><span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">main</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">outlet</span><span class="inline-delimiter">}}</span></span><span class="tag">&lt;/div&gt;</span>
+</pre></td>
+</tr></table>
+</div></div><div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/templates/index.hbs</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre>Index Content
+</pre></td>
+</tr></table>
+</div></div><div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/routes/index.js</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+11
+12
+13
+14
+</pre></td>
+  <td class="code"><pre>App.IndexRoute = Ember.Route.extend({
+  renderTemplate() {
+    <span class="local-variable">this</span>._super(...<span class="local-variable">arguments</span>);
+    <span class="local-variable">this</span>.render(<span class="string"><span class="delimiter">'</span><span class="content">index-sidebar</span><span class="delimiter">'</span></span>, { <span class="key">into</span>: <span class="string"><span class="delimiter">'</span><span class="content">sidebar</span><span class="delimiter">'</span></span> });
+  },
+  <span class="key">actions</span>: {
+    willTransition() {
+      <span class="local-variable">this</span>.disconnectOutlet({
+        <span class="key">parentView</span>: <span class="string"><span class="delimiter">'</span><span class="content">application</span><span class="delimiter">'</span></span>,
+        <span class="key">outlet</span>: <span class="string"><span class="delimiter">'</span><span class="content">sidebar</span><span class="delimiter">'</span></span>
+      });
+    }
+  }
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>It should be refactored to use <a href="https://github.com/ef4/ember-elsewhere">ember-elsewhere</a>. The sidebar content must be implemented as a component, in this case named <code>index-sidebar</code>. The logic previously used in the route file can be removed. The refactored example:</p>
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/templates/application.hbs</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+</pre></td>
+  <td class="code"><pre><span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">sidebar</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">from-elsewhere</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">'</span><span class="content">sidebar</span><span class="delimiter">'</span></span><span class="inline-delimiter">}}</span></span><span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">main</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span><span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">outlet</span><span class="inline-delimiter">}}</span></span><span class="tag">&lt;/div&gt;</span>
+</pre></td>
+</tr></table>
+</div></div><div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">app/templates/index.hbs</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+</pre></td>
+  <td class="code"><pre><span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">to-elsewhere</span> <span class="attribute-name">named</span>=<span class="string"><span class="delimiter">'</span><span class="content">sidebar</span><span class="delimiter">'</span></span> <span class="attribute-name">send</span>=<span class="error">(</span><span class="attribute-value">component</span> <span class="error">'</span><span class="attribute-name">index-sidebar</span><span class="error">'</span><span class="error">)</span><span class="inline-delimiter">}}</span></span>
+Index Content
+</pre></td>
+</tr></table>
+</div></div>
+<p>For more informations of how to use <code>ember-elsewhere</code>, please visit the official
+documentation <a href="https://github.com/ef4/ember-elsewhere#ember-elsewhere">here</a>.</p>
+<h3 class='anchorable-toc' id='toc_deprecations-added-in-2-12'>Deprecations Added in 2.12</h3><h4 class='anchorable-toc' id='toc_code-ember-k-code'><code>Ember.K</code></h4><h5 class='anchorable-toc' id='toc_until-3-0-0'>until: 3.0.0</h5><h5 class='anchorable-toc' id='toc_id-ember-metal-ember-k'>id: ember-metal.ember-k</h5>
+<p>Using <code>Ember.K</code> is deprecated in favor of defining a function inline. See <a href="https://github.com/emberjs/rfcs/blob/master/text/0178-deprecate-ember-k.md">RFC #178</a>.</p>
+
+<p>You can use the addon <a href="https://github.com/abuiles/ember-watson#remove-usages-of-emberk">ember-watson</a> to automate the removal of <code>Ember.K</code> from your application.</p>
+
+<p>Example object:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+</pre></td>
+  <td class="code"><pre>Ember.Object.extend({
+  <span class="key">someFun</span>: Ember.K
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>Command:</p>
+<div class="highlight sh "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre>ember watson:remove-ember-k --empty
+</pre></td>
+</tr></table>
+</div></div>
+<p>The result will be:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+</pre></td>
+  <td class="code"><pre>Ember.Object.extend({
+  someFun() {}
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>If for some reason your app depends on the ability to chain <code>Ember.K</code> invocations, you can use the flag <code>--return-this</code>. It will replace <code>Ember.K</code> with a function that returns <code>this</code>.</p>
+<h4 class='anchorable-toc' id='toc_migrating-from-_lookupfactory-to-factoryfor'>Migrating from _lookupFactory to factoryFor</h4><h5 class='anchorable-toc' id='toc_until-2-13-0'>until: 2.13.0</h5><h5 class='anchorable-toc' id='toc_id-container-lookupfactory'>id: container-lookupFactory</h5>
+<p>The private API method <code>_lookupFactory</code> is deprecated and replaced by <code>factoryFor</code> in public API. This API will return the original base class registered into or resolved by the container and a <code>create</code> function to generate a dependency-injected instance.</p>
+
+<p>Addon creators and maintainers can use <a href="https://github.com/rwjblue/ember-factory-for-polyfill">ember-factory-for-polyfill</a> for addons supporting versions 2.3+, or <a href="https://github.com/rwjblue/ember-getowner-polyfill">ember-getowner-polyfill</a> for 1.10+.</p>
+
+<p>Before:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">default</span> Component.extend(
+  init() {
+    <span class="local-variable">this</span>._super(...<span class="local-variable">arguments</span>);
+    let Factory = getOwner(<span class="local-variable">this</span>)._lookupFactory(<span class="string"><span class="delimiter">'</span><span class="content">logger:main</span><span class="delimiter">'</span></span>);
+    <span class="local-variable">this</span>.logger = Factory.create({ <span class="key">level</span>: <span class="string"><span class="delimiter">'</span><span class="content">low</span><span class="delimiter">'</span></span> });
+  }
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>After:</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">default</span> Component.extend(
+  init() {
+    <span class="local-variable">this</span>._super(...<span class="local-variable">arguments</span>);
+    let factory = getOwner(<span class="local-variable">this</span>).factoryFor(<span class="string"><span class="delimiter">'</span><span class="content">logger:main</span><span class="delimiter">'</span></span>);
+    <span class="local-variable">this</span>.logger = factory.create({ <span class="key">level</span>: <span class="string"><span class="delimiter">'</span><span class="content">low</span><span class="delimiter">'</span></span> });
+  }
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>Any methods or properties of the factory can be accessed through the <code>class</code> property when using <code>factoryFor</code>.</p>
+<div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+</pre></td>
+  <td class="code"><pre>let factory = owner.factoryFor(<span class="string"><span class="delimiter">'</span><span class="content">widget:slow</span><span class="delimiter">'</span></span>);
+let klass = factory.<span class="reserved">class</span>;
+klass.hasSpeed(<span class="string"><span class="delimiter">'</span><span class="content">slow</span><span class="delimiter">'</span></span>); <span class="comment">// true</span>
+</pre></td>
+</tr></table>
+</div></div><h4 class='anchorable-toc' id='toc_arguments-in-component-lifecycle-hooks'>Arguments in Component Lifecycle Hooks</h4><h5 class='anchorable-toc' id='toc_until-2-13-0'>until: 2.13.0</h5><h5 class='anchorable-toc' id='toc_id-ember-views-lifecycle-hook-arguments'>id: ember-views.lifecycle-hook-arguments</h5>
+<p>Previously, it was possible for component lifecycle hooks <code>didInitAttrs</code>, <code>didReceiveAttrs</code>, and <code>didUpdateAttrs</code> to receive arguments. However, this functionality was part of private API. Using the arguments is harmful to component performance, so they will trigger a deprecation. Alternative approaches for all three hooks are below:</p>
+<h5 class='anchorable-toc' id='toc_code-didinitattrs-code-arguments'><code>didInitAttrs</code> arguments</h5>
+<p>Since this lifecycle hook is <a href="http://emberjs.com/deprecations/v2.x/#toc_ember-component-didinitattrs">already deprecated</a>, we suggest taking this chance to address two deprecations at the same time.</p>
+
+<p>Imagine you have a component that stores a timestamp when it is initialized.</p>
+
+<p>Before:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+</pre></td>
+  <td class="code"><pre>Ember.Component.extend({
+  didInitAttrs({ attrs }) {
+    <span class="local-variable">this</span>.set(<span class="string"><span class="delimiter">'</span><span class="content">initialTimestamp</span><span class="delimiter">'</span></span>, attrs.timestamp);
+  }
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>After:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td>
+  <td class="code"><pre>Ember.Component.extend({
+  init() {
+    <span class="local-variable">this</span>._super(...<span class="local-variable">arguments</span>);
+
+    <span class="local-variable">this</span>.set(<span class="string"><span class="delimiter">'</span><span class="content">initialTimestamp</span><span class="delimiter">'</span></span>, <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">timestamp</span><span class="delimiter">'</span></span>));
+  }
+});
+</pre></td>
+</tr></table>
+</div></div><h5 class='anchorable-toc' id='toc_code-didreceiveattrs-code-and-code-didupdateattrs-code-arguments'><code>didReceiveAttrs</code> and <code>didUpdateAttrs</code> arguments</h5>
+<p>This example for <code>didReceiveAttrs</code> below also applies to <code>didUpdateAttrs</code>, a similar hook that only runs on re-renders. Let&#39;s say you want to animate a thermometer widget showing the change between today&#39;s high and low temperatures.</p>
+
+<p>Before:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td>
+  <td class="code"><pre>Ember.Component.extend({
+  didReceiveAttrs({ oldAttrs, newAttrs }) {
+    <span class="keyword">if</span> (oldAttrs.temp !== newAttrs.temp) {
+      <span class="local-variable">this</span>.thermometer.move({ <span class="key">from</span>: oldAttrs.temp, <span class="key">to</span>: newAttrs.temp });
+    }
+  }
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>After:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+11
+</pre></td>
+  <td class="code"><pre>Ember.Component.extend({
+  didReceiveAttrs() {
+    let oldTemp = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">_oldTemp</span><span class="delimiter">'</span></span>);
+    let newTemp = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">temp</span><span class="delimiter">'</span></span>);
+
+    <span class="keyword">if</span> (oldTemp &amp;&amp; oldTemp !== newTemp) {
+      <span class="local-variable">this</span>.thermometer.move({ <span class="key">from</span>: oldTemp, <span class="key">to</span>: newTemp });
+    }
+    <span class="local-variable">this</span>.set(<span class="string"><span class="delimiter">'</span><span class="content">_oldTemp</span><span class="delimiter">'</span></span>, newTemp);
+  }
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>Additionally, <a href="https://github.com/workmanw/ember-diff-attrs">ember-diff-attrs</a> is an addon that spun out of the discussions on the RFC. It provides a dry way to track attribute changes for this lifecycle hook.</p>
+<h3 class='anchorable-toc' id='toc_deprecations-added-in-2-13'>Deprecations Added in 2.13</h3><h4 class='anchorable-toc' id='toc_ember-router-router-renamed-to-ember-router-_routermicrolib'>Ember.Router.router renamed to Ember.Router._routerMicrolib</h4><h5 class='anchorable-toc' id='toc_until-2-16-0'>until: 2.16.0</h5><h5 class='anchorable-toc' id='toc_id-ember-router-router'>id: ember-router.router</h5>
+<p>The private <code>router</code> property of the <code>Ember.Router</code> instance (commonly found as <code>this.router</code> in <code>Ember.Route</code> instances or via router:main in the container)
+has been renamed to <code>_routerMicrolib</code> to identify it as <code>router.js</code>, the microlib used within <code>Ember.Router</code>.</p>
+
+<p>Addon and application developers that are using the internal <code>router</code> property of <code>Ember.Router</code> should replace those usages with <code>Ember.Router._routerMicrolib</code>.</p>
+
+<p>This example demonstrates a common use case for <code>.router</code>.</p>
+
+<p>Before:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">default</span> Ember.Service.extend({
+  getRouteNameFromUrl (url) {
+    const router = getContainer(<span class="local-variable">this</span>).lookup(<span class="string"><span class="delimiter">'</span><span class="content">router:main</span><span class="delimiter">'</span></span>);
+    const routes = router.router.recognizer.recognize(url);
+
+    <span class="keyword">if</span> (routes &amp;&amp; routes.length) {
+      <span class="keyword">return</span> routes[routes.length-<span class="integer">1</span>].handler;
+    }
+  }
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>After:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+</pre></td>
+  <td class="code"><pre><span class="reserved">export</span> <span class="keyword">default</span> Ember.Service.extend({
+  getRouteNameFromUrl (url) {
+    const router = getContainer(<span class="local-variable">this</span>).lookup(<span class="string"><span class="delimiter">'</span><span class="content">router:main</span><span class="delimiter">'</span></span>);
+    const routes = router._routerMicrolib.recognizer.recognize(url);
+
+    <span class="keyword">if</span> (routes &amp;&amp; routes.length) {
+      <span class="keyword">return</span> routes[routes.length-<span class="integer">1</span>].handler;
+    }
+  }
+});
+</pre></td>
+</tr></table>
+</div></div><h4 class='anchorable-toc' id='toc_ember-map-ember-mapwithdefault-and-ember-orderedset-are-deprecated'>Ember.Map, Ember.MapWithDefault, and Ember.OrderedSet are deprecated</h4><h5 class='anchorable-toc' id='toc_until-2-16-0'>until: 2.16.0</h5><h5 class='anchorable-toc' id='toc_id-ember-metal-map'>id: ember-metal.map</h5>
+<p>The private classes <code>Ember.Map</code>, <code>Ember.MapWithDefault</code>, and <code>Ember.OrderedSet</code>
+are being deprecated and will be removed in a later version of Ember.</p>
+
+<p>Developers using any of these classes should replace them by a custom
+implementation.</p>
+<h3 class='anchorable-toc' id='toc_deprecations-added-in-2-14'>Deprecations Added in 2.14</h3><h4 class='anchorable-toc' id='toc_ember-model_factory_injections-removed'>Ember.MODEL_FACTORY_INJECTIONS removed</h4><h5 class='anchorable-toc' id='toc_until-2-17-0'>until: 2.17.0</h5><h5 class='anchorable-toc' id='toc_id-ember-metal-model_factory_injections'>id: ember-metal.model_factory_injections</h5>
+<p>The flag <code>Ember.MODEL_FACTORY_INJECTIONS</code> is no longer required, and can be
+safely removed from your ember &gt;= 2.13 application.</p>
+
+<p>This flag was <a href="https://github.com/emberjs/ember.js/commit/ffd9314620005c16e6cc05589a9e8b7ffc1da090">added in 2013</a> for Ember Data compatibility with the Dependency Injection (DI) system.
+At the time, Ember&#39;s DI blurred the idea of a factory and a class which caused several issues,
+including one that resulted in this flag being required.</p>
+
+<p>Since then, both Ember and Ember Data have addressed the various issues which lead to this flag.
+Most recently, Ember&#39;s DI system introduced the <code>factoryFor</code> API which separates factores and classes.
+With this step, the flag in question no longer has any affect, and can be safely removed.</p>
+<h4 class='anchorable-toc' id='toc_custom-eventmanager-deprecated'>Custom eventManager deprecated</h4><h5 class='anchorable-toc' id='toc_until-2-17-0'>until: 2.17.0</h5><h5 class='anchorable-toc' id='toc_id-ember-views-event-dispatcher-candispatchtoeventmanager'>id: ember-views.event-dispatcher.canDispatchToEventManager</h5>
+<p><code>EventDispatcher</code> has long supported custom <code>eventManager</code>s containing their own
+event dispatching rules to be defined on components. This feature was initially
+added to allow components to differentiate between certain types of touch input,
+however the <a href="https://github.com/emberjs-addons/ember-touch/">addon</a> that originally
+used this has long been deprecated.</p>
+
+<p>If needed, an addon which allows for custom component <code>eventManager</code>s can be
+created. Please comment on the <a href="https://github.com/emberjs/rfcs/pull/194">original RFC</a>
+if you have a need for this in your app.</p>
+<h3 class='anchorable-toc' id='toc_deprecations-added-in-2-16'>Deprecations Added in 2.16</h3><h4 class='anchorable-toc' id='toc_controller-content-alias'>Controller#content alias</h4><h5 class='anchorable-toc' id='toc_until-2-17-0'>until: 2.17.0</h5><h5 class='anchorable-toc' id='toc_id-ember-runtime-controller-content-alias'>id: ember-runtime.controller.content-alias</h5>
+<p>For historical reasons, <code>Controller</code>s have a private property named <code>content</code> that
+aliases the <code>model</code> property.</p>
+
+<p>With the introduction of this deprecation, if you wish to continue using <code>content</code>
+in the controller without a deprecation warning, you will have to add an
+explicit alias:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> Controller from <span class="string"><span class="delimiter">'</span><span class="content">@ember/controller</span><span class="delimiter">'</span></span>;
+<span class="reserved">import</span> { alias } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/object/computed</span><span class="delimiter">'</span></span>;
+
+<span class="reserved">export</span> <span class="keyword">default</span> Controller {
+  <span class="key">content</span>: alias(<span class="string"><span class="delimiter">'</span><span class="content">model</span><span class="delimiter">'</span></span>)
+}
+</pre></td>
+</tr></table>
+</div></div><h3 class='anchorable-toc' id='toc_deprecations-added-in-2-18'>Deprecations Added in 2.18</h3><h4 class='anchorable-toc' id='toc_code-targetobject-code'><code>targetObject</code></h4><h5 class='anchorable-toc' id='toc_until-3-5-0'>until: 3.5.0</h5><h5 class='anchorable-toc' id='toc_id-ember-runtime-using-targetobject'>id: ember-runtime.using-targetObject</h5>
+<p>The <code>targetObject</code> property on <code>Component</code> was intended as a &quot;write-only API&quot;, meaning that the user was supposed to define their own if they desired, but not read the default one. It was never intended for <code>this.get(&#39;targetObject&#39;)</code> to be used, so it is now deprecated. The recommendation is to use <code>target</code> instead.</p>
+<h3 class='anchorable-toc' id='toc_ember-2-legacy'>Ember 2 Legacy</h3>
+<p>Ember provides <a href="https://github.com/emberjs/ember-2-legacy">ember-2-legacy</a> which is an addon to help
+app with deprecations during the transition from the 2.x series to 3.x. This addon provides app owners more
+time to upgrade off of the deprecations slated for removal in 3.0.0 and decouples that work from
+upgrading to the 3.x series.</p>
+
+<p>This addon will be supported until 3.4 at which point it will be deprecated.</p>
+
+<p>Once you have removed all deprecations, you can remove the addon with the <code>npm uninstall ember-2-legacy</code> command.</p>
+
+
+      </div>
+    </div>
+
+    <main-footer></main-footer>
+
+        <script type="text/javascript" src="/javascripts/deprecations-1921f6e5.js"></script>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
+    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
+  </body>
+</html>

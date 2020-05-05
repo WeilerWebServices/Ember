@@ -1,0 +1,28 @@
+{
+  "name": "website",
+  "scripts": {
+  },
+  "env": {
+    "DEPRECATION_APP_URL": {
+      "required": true
+    },
+    "EMBER_API_DOCS_URL": {
+      "required": true
+    },
+    "LOADERIO_API_KEY": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-static.git"
+    }
+  ]
+}

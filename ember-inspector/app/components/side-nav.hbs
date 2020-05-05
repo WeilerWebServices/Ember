@@ -1,0 +1,63 @@
+<nav class="nav nav--main">
+  <ul>
+    <li>
+      <LinkTo @route="component-tree" class="nav__item">
+        {{svg-jar "nav-components" width="20px" height="20px" class="nav__item-icon"}}
+        <span class="nav__item-label">Components</span>
+      </LinkTo>
+    </li>
+    <li>
+      <LinkTo @route="route-tree" class="nav__item">
+        {{svg-jar "nav-route-tree" width="20px" height="20px" class="nav__item-icon"}}
+        <span class="nav__item-label">Routes</span>
+      </LinkTo>
+    </li>
+    <li>
+      <LinkTo @route="data" class="nav__item">
+        {{svg-jar "nav-data" width="20px" height="20px" class="nav__item-icon"}}
+        <span class="nav__item-label">Data</span>
+      </LinkTo>
+    </li>
+    <li>
+      <LinkTo @route="deprecations" class="nav__item">
+        {{svg-jar "nav-deprecations" width="20px" height="20px" class="nav__item-icon"}}
+        <span class="nav__item-label">Deprecations</span>
+        <span class="pill">{{@deprecationCount}}</span>
+      </LinkTo>
+    </li>
+    <li>
+      <LinkTo @route="info" class="nav__item">
+        {{svg-jar "nav-info" width="20px" height="20px" class="nav__item-icon"}}
+        <span class="nav__item-label">Info</span>
+      </LinkTo>
+    </li>
+  </ul>
+
+  <h1 class="nav__title">Advanced</h1>
+
+  <ul>
+    <li>
+      <LinkTo @route="promise-tree" class="nav__item">
+        {{svg-jar "nav-promises" width="20px" height="20px" class="nav__item-icon"}}
+        <span class="nav__item-label">Promises</span>
+      </LinkTo>
+    </li>
+    <li>
+      <LinkTo @route="container-types" class="nav__item">
+        {{svg-jar "nav-container" width="20px" height="20px" class="nav__item-icon"}}
+        <span class="nav__item-label">Container</span>
+      </LinkTo>
+    </li>
+    <li>
+      <LinkTo @route="render-tree" class="nav__item">
+        {{svg-jar
+          "nav-render-performance"
+          width="20px"
+          height="20px"
+          class="nav__item-icon"
+        }}
+        <span class="nav__item-label">Render Performance</span>
+      </LinkTo>
+    </li>
+  </ul>
+</nav>

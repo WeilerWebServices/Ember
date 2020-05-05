@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#E04E39">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ember.js - Ember.js 2.4-LTS, 2.5, and 2.6 Beta Released</title>
+    <meta property="st:title" content="Ember.js: Ember.js 2.4-LTS, 2.5, and 2.6 Beta Released" />
+    <meta property="og:title" content="Ember.js: Ember.js 2.4-LTS, 2.5, and 2.6 Beta Released" />
+    <meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
+    <meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@emberjs" />
+    <meta name="twitter:title" content="Ember.js 2.4-LTS, 2.5, and 2.6 Beta Released"/>
+    <meta name="google-site-verification" content="N9yOP2jCLcZBMHUet-JRqU2jnLVPeLDaePpkCqXGQXM" />
+    <meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
+    <link rel="shortcut icon" href="/images/favicon-b8f150dd.png" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
+    <!--[if lte IE 7 ]><link href="/stylesheets/fonts/fontello-ie7-e008d616.css" rel="stylesheet" /><![endif]-->
+    <link href="/stylesheets/site-364c2a35.css" rel="stylesheet" />
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-cf72b59a166beb307683d9d0dae6bb0f.css" />
+    
+  </head>
+
+  <body class="blog blog_2016 blog_2016_04 blog_2016_04_11 blog_2016_04_11_ember-2-5-released responsive">
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/common-old-ie-a6691877.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script type="text/javascript" src="/javascripts/common-modern-7c867c7e.js"></script>
+    <!--<![endif]-->
+    <header>
+<nav class="navbar navbar-inverse">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="/"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home" /></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Docs <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="//guides.emberjs.com">Guides</a></li>
+      <li><a href="/api/ember/release">API Reference</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/learn">Learn Ember</a></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Releases <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/builds">Channels</a></li>
+      <li><a href="/builds/release">-- Stable</a></li>
+      <li><a href="/builds/beta">-- Beta</a></li>
+      <li><a href="/builds/canary">-- Canary</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="/deprecations">Deprecations</a></li>
+      <li><a href="/statusboard">Status Board</a></li>
+     </ul>
+    </li>
+    <li><a href="/blog">Blog</a></li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="/community">The Ember Community</a>
+       <li><a href="/guidelines">Guidelines</a></li>
+       <li><a href="http://github.com/emberjs/">Contribute (Github)</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/community/meetups">Meetups</a></li>
+       <li><a href="http://jobs.emberjs.com/">Job Board</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberconf.com/">Ember Conf</a></li>
+     </ul>
+     </li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="/team">The Team</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/logos">Logos</a></li>
+       <li><a href="/mascots">Mascots</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/ember-users">Who Uses Ember</a></li>
+       <li><a href="/sponsors">Sponsors</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="/legal">Legal</a></li>
+       <li><a href="/security">Security</a></li>       
+      </ul>
+     </li>
+   </ul>
+   <form class="navbar-form navbar-right searchbox">
+    <div class="input-group">
+      <label for="search-input" class="control-label sr-only">Search</label>
+        <input type="text" 
+        class="form-control search input ds-input" 
+        placeholder="Search..." 
+        id="search-input" 
+        role="combobox" 
+        aria-expanded="false" 
+        aria-owns="algolia-autocomplete-listbox-0" 
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false" 
+        />
+        <span></span>
+    </div>
+   </form>
+  </div>
+  <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container-fluid -->
+</nav>
+</header>
+
+
+    
+
+    <div id="content-wrapper" class="content-wrapper">
+        <div id="sidebar" class="sidebar" role="complementary">
+          <ol id='toc-list' class="blog-sidebar">
+  <li class='level-1'>
+    <a href="/blog/tags/recent-posts.html">Recent Posts</a>
+    <ol style="display:block">
+      <li class='level-3'><a href="/blog/2018/02/21/2018-ember-community-survey.html">2018 Ember Community Survey</a></li>
+      <li class='level-3'><a href="/blog/2017/10/10/glimmer-progress-report.html">Glimmer.js Progress Report</a></li>
+      <li class='level-3'><a href="/blog/2017/10/03/the-road-to-ember-3-0.html">The Road to Ember 3.0</a></li>
+      <li class='level-3'><a href="/blog/2017/04/05/emberconf-2017-state-of-the-union.html">EmberConf 2017: State of the Union</a></li>
+      <li class='level-3'><a href="/blog/2017/02/28/2017-ember-community-survey.html">2017 Ember Community Survey</a></li>
+    </ol>
+  </li>
+  <li class='level-1'>
+    <a href="/blog/tags/releases.html">Releases</a>
+    <ol style="display:block">
+      <li class='level-3'><a href="/blog/2018/04/13/ember-3-1-released.html">Ember 3.1 and 3.2 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2018/02/16/ember-3-1-beta-released.html">Ember 3.1 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2018/02/14/ember-3-0-released.html">Ember 3.0 Released</a></li>
+      <li class='level-3'><a href="/blog/2018/01/01/ember-2-18-released.html">Ember 2.18 and 3.0 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/11/20/ember-2-17-released.html">Ember 2.16-LTS, Ember 2.17 and 2.18 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/10/11/ember-2-16-released.html">Ember 2.16 and 2.17 Beta Released</a></li>
+      <li class='level-3'><a href="/blog/2017/09/01/ember-2-15-released.html">Ember 2.15 and 2.16 Beta Released</a></li>
+    </ol>
+  </li>
+</ol>
+
+          <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
+        </div>
+      <div id="content" class="main has-sidebar" role="main">
+          
+  <article class="blog-post">
+    <div class="blog-post-header">
+      <h1 class="blog-post-title">Ember.js 2.4-LTS, 2.5, and 2.6 Beta Released</h1>
+      <div class="blog-post-meta">
+          <time class="blog-post-date">April 11, 2016</time>
+          <div class="blog-post-author">By Matthew Beale</div>
+      </div>
+    </div>
+    <div class="blog-post-body" id="toc-content">
+      <p>Ember 2.4-LTS, the first Ember Long-Term Support release, lands today as Ember
+2.4.5. Future versions of 2.4 will be considered part of the LTS channel.
+The LTS channel comes with a commitment
+that low-risk critical bugfixes and security patches will be backported to
+these versions. Additionally, any change to commonly used private APIs must be deprecated
+in at least one LTS release before removal, making LTS releases a slower
+moving target for addons to support.</p>
+
+<p>2.4-LTS will receive critical bugfixes for the next 6 release cycles (until
+roughly November 2016) and security patches for the next 10 release cycles
+(until roughly April 2017). For more information about how the LTS process works,
+see the blog post <a href="http://emberjs.com/blog/2016/02/25/announcing-embers-first-lts.html">Announcing Ember&#39;s First LTS Release</a>.</p>
+
+<p>Ember 2.5, a minor version release of Ember with backwards compatible
+changes, is also released today.</p>
+
+<p>Ember 2.6 beta, the branch of Ember that will be released as stable in
+roughly six weeks, is released today.</p>
+<h3 class='anchorable-toc' id='toc_notable-deprecations-in-ember-2-4-lts'>Notable deprecations in Ember 2.4-LTS</h3>
+<p>Ember 2.4-LTS deprecates two private APIs. Support for these private APIs will
+be removed in Ember 2.6.</p>
+
+<ul>
+<li>The <a href="https://github.com/emberjs/ember-legacy-views">ember-legacy-views</a> and <a href="https://github.com/emberjs/ember-legacy-controllers">ember-legacy-controllers</a>
+addons, which rely upon private API, will be supported on Ember 2.4-LTS with a deprecation notice. Although Ember 2.5 will also
+support these addons, 2.4-LTS will be a supported platform for much longer than
+2.5. Ember 2.6 and 2.8-LTS, when they are released, will not support these addons.</li>
+<li>Use of the <code>{{#render}}</code> helper in block form is deprecated. Block form usage was an
+un-documented and un-intended feature, and will be removed in Ember 2.6. In general,
+uses of <code>{{render}}</code> should be replaced with components.</li>
+</ul>
+<h3 class='anchorable-toc' id='toc_changes-in-ember-2-5'>Changes in Ember 2.5</h3>
+<p>Ember 2.5 introduces several minor public API additions.</p>
+<h4 class='anchorable-toc' id='toc_code-ember-assign-code'><code>Ember.assign</code></h4>
+<p><code>Ember.assign</code> is a polyfill for the ES2015 <code>Object.assign</code> feature. <code>assign</code>
+copies the values of all enumerable own properties from one or more source
+objects to a target object. For example:</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td>
+  <td class="code"><pre>let a = {<span class="key">first</span>: <span class="string"><span class="delimiter">'</span><span class="content">John</span><span class="delimiter">'</span></span>};
+let b = {<span class="key">last</span>: <span class="string"><span class="delimiter">'</span><span class="content">Lennon</span><span class="delimiter">'</span></span>};
+let c = {<span class="key">band</span>: <span class="string"><span class="delimiter">'</span><span class="content">The Beatles</span><span class="delimiter">'</span></span>};
+
+Ember.assign(a, b, c);
+
+<span class="comment">// a === {first: 'John', last: 'Lennon', band: 'The Beatles'}</span>
+<span class="comment">// b === {last: 'Lennon'}</span>
+<span class="comment">// c === {band: 'The Beatles'}</span>
+</pre></td>
+</tr></table>
+</div></div>
+<p>For more specifics on <code>assign</code>, see the <a href="http://emberjs.com/api/#method_assign">Ember API documentation</a>
+and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign">MDN documentation</a>.</p>
+<h4 class='anchorable-toc' id='toc_local-lookup-compatibility'>Local Lookup Compatibility</h4>
+<p>As part of the new directory layout effort currently organized around the
+<a href="https://github.com/emberjs/rfcs/pull/124">Module Normalization RFC</a>,
+we intend to introduce a feature called
+&quot;local lookup&quot;. This feature will allow for the creation of components or helpers available
+only in a single template, instead of being globally scoped as they must be
+today. <code>lookup</code> and <code>resolve</code> in Ember 2.5 will accept an optional <code>source</code> property
+on their <code>options</code> argument. This API change will allow local
+lookup to be implemented outside of Ember via the
+<a href="https://github.com/ember-cli/ember-resolver">ember-cli/ember-resolver</a> library.</p>
+<h4 class='anchorable-toc' id='toc_native-event-test-helpers'>Native Event Test Helpers</h4>
+<p>Ember&#39;s acceptance test helpers, such as <code>click()</code>, have previously used
+jQuery event triggers. In 2.5 this behavior has been altered to trigger
+native events via <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent"><code>dispatchEvent</code></a>.
+This change is expected to be completely backwards compatible and was
+uncontroversial during the six week beta cycle. It allows the triggering of
+non-jQuery event listeners in acceptance tests.</p>
+
+<p>For more details on changes landing in Ember 2.5, review the
+<a href="https://github.com/emberjs/ember.js/blob/v2.5.0/CHANGELOG.md">Ember.js 2.5.0 CHANGELOG</a>.</p>
+<h3 class='anchorable-toc' id='toc_ember-js-2-6-beta'>Ember.js 2.6 beta</h3>
+<p>No new features are added in Ember core in 2.6. In
+general the core team and
+community have remained active around other highly visible parts of
+the Ember stack (Ember Data, FastBoot, Glimmer, etc).</p>
+<h4 class='anchorable-toc' id='toc_notable-deprecations'>Notable Deprecations</h4>
+<p>The following deprecations are scheduled for release with Ember 2.6 and will be
+removed in Ember 3.0:</p>
+
+<ul>
+<li><code>Ember.String.htmlSafe(aString)</code> is the preferred API for marking a string
+XSS safe for the rendering layer. Use of <code>Ember.Handlebars.SafeString</code> as
+a constructor for safe strings is deprecated, and will be removed.
+See the <a href="http://emberjs.com/deprecations/v2.x/#toc_use-ember-string-htmlsafe-over-ember-handlebars-safestring">deprecation guide</a> for more details.</li>
+<li>The <code>didInitAttrs</code> hook for component lifecycles is deprecated in favor of
+simply using <code>init</code>. <code>didInitAttrs</code> had confusing timing
+issues, and <code>init</code> fulfills the same role. See the <a href="http://emberjs.com/deprecations/v2.x/#toc_ember-component-didinitattrs">deprecation guide</a> for more details.</li>
+<li>Passing a <code>model</code> argument to <code>{{render}}</code> is deprecated in favor of using
+a component for the same cases. For example <code>{{render &#39;chat&#39; roomModel}}</code>
+can be refactored into a <code>chat-room</code> component.
+See the <a href="http://emberjs.com/deprecations/v2.x/#toc_model-param-in-code-render-code-helper">deprecation guide</a> for more details.</li>
+</ul>
+
+<p>For more details on changes landing in 2.6 beta, review the
+<a href="https://github.com/emberjs/ember.js/blob/v2.6.0-beta.1/CHANGELOG.md">Ember.js 2.6.0-beta.1 CHANGELOG</a>.</p>
+
+    </div>
+    <div class="blog-post-footer">
+    </div>
+  </article>
+  <hr>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'emberblog'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script type="text/javascript" src="/javascripts/blog-a90057c5.js"></script>
+
+      </div>
+    </div>
+
+    <main-footer></main-footer>
+
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
+    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
+  </body>
+</html>
+
